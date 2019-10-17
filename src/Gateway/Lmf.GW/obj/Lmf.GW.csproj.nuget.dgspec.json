@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "E:\\lmf\\proj\\Gateway\\Lmf.GW\\Lmf.GW.csproj": {}
+    "F:\\git\\proj\\src\\Gateway\\Lmf.GW\\Lmf.GW.csproj": {}
   },
   "projects": {
-    "E:\\lmf\\proj\\Gateway\\Lmf.GW\\Lmf.GW.csproj": {
+    "F:\\git\\proj\\src\\Gateway\\Lmf.GW\\Lmf.GW.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\lmf\\proj\\Gateway\\Lmf.GW\\Lmf.GW.csproj",
+        "projectUniqueName": "F:\\git\\proj\\src\\Gateway\\Lmf.GW\\Lmf.GW.csproj",
         "projectName": "Lmf.GW",
-        "projectPath": "E:\\lmf\\proj\\Gateway\\Lmf.GW\\Lmf.GW.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\lmf\\proj\\Gateway\\Lmf.GW\\obj\\",
+        "projectPath": "F:\\git\\proj\\src\\Gateway\\Lmf.GW\\Lmf.GW.csproj",
+        "packagesPath": "D:\\nuget\\.nuget\\packages",
+        "outputPath": "F:\\git\\proj\\src\\Gateway\\Lmf.GW\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {

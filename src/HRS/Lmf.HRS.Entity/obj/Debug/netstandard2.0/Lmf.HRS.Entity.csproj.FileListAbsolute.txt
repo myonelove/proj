@@ -1,8 +1,0 @@
-E:\lmf\proj\Lmf.HRS.Entity\bin\Debug\netstandard2.0\Lmf.HRS.Entity.deps.json
-E:\lmf\proj\Lmf.HRS.Entity\bin\Debug\netstandard2.0\Lmf.HRS.Entity.dll
-E:\lmf\proj\Lmf.HRS.Entity\bin\Debug\netstandard2.0\Lmf.HRS.Entity.pdb
-E:\lmf\proj\Lmf.HRS.Entity\obj\Debug\netstandard2.0\Lmf.HRS.Entity.csprojAssemblyReference.cache
-E:\lmf\proj\Lmf.HRS.Entity\obj\Debug\netstandard2.0\Lmf.HRS.Entity.AssemblyInfoInputs.cache
-E:\lmf\proj\Lmf.HRS.Entity\obj\Debug\netstandard2.0\Lmf.HRS.Entity.AssemblyInfo.cs
-E:\lmf\proj\Lmf.HRS.Entity\obj\Debug\netstandard2.0\Lmf.HRS.Entity.dll
-E:\lmf\proj\Lmf.HRS.Entity\obj\Debug\netstandard2.0\Lmf.HRS.Entity.pdb
