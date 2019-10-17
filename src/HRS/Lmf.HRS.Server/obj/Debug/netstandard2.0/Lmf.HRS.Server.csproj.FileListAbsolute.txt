@@ -1,0 +1,8 @@
+E:\lmf\proj\Lmf.HRS.Server\bin\Debug\netstandard2.0\Lmf.HRS.Server.deps.json
+E:\lmf\proj\Lmf.HRS.Server\bin\Debug\netstandard2.0\Lmf.HRS.Server.dll
+E:\lmf\proj\Lmf.HRS.Server\bin\Debug\netstandard2.0\Lmf.HRS.Server.pdb
+E:\lmf\proj\Lmf.HRS.Server\obj\Debug\netstandard2.0\Lmf.HRS.Server.csprojAssemblyReference.cache
+E:\lmf\proj\Lmf.HRS.Server\obj\Debug\netstandard2.0\Lmf.HRS.Server.AssemblyInfoInputs.cache
+E:\lmf\proj\Lmf.HRS.Server\obj\Debug\netstandard2.0\Lmf.HRS.Server.AssemblyInfo.cs
+E:\lmf\proj\Lmf.HRS.Server\obj\Debug\netstandard2.0\Lmf.HRS.Server.dll
+E:\lmf\proj\Lmf.HRS.Server\obj\Debug\netstandard2.0\Lmf.HRS.Server.pdb

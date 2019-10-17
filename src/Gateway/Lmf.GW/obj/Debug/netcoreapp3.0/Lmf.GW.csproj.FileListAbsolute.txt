@@ -1,0 +1,11 @@
+E:\lmf\proj\Lmf.GW\bin\Debug\netcoreapp3.0\Lmf.GW.exe
+E:\lmf\proj\Lmf.GW\bin\Debug\netcoreapp3.0\Lmf.GW.deps.json
+E:\lmf\proj\Lmf.GW\bin\Debug\netcoreapp3.0\Lmf.GW.runtimeconfig.json
+E:\lmf\proj\Lmf.GW\bin\Debug\netcoreapp3.0\Lmf.GW.runtimeconfig.dev.json
+E:\lmf\proj\Lmf.GW\bin\Debug\netcoreapp3.0\Lmf.GW.dll
+E:\lmf\proj\Lmf.GW\bin\Debug\netcoreapp3.0\Lmf.GW.pdb
+E:\lmf\proj\Lmf.GW\obj\Debug\netcoreapp3.0\Lmf.GW.csprojAssemblyReference.cache
+E:\lmf\proj\Lmf.GW\obj\Debug\netcoreapp3.0\Lmf.GW.AssemblyInfoInputs.cache
+E:\lmf\proj\Lmf.GW\obj\Debug\netcoreapp3.0\Lmf.GW.AssemblyInfo.cs
+E:\lmf\proj\Lmf.GW\obj\Debug\netcoreapp3.0\Lmf.GW.dll
+E:\lmf\proj\Lmf.GW\obj\Debug\netcoreapp3.0\Lmf.GW.pdb

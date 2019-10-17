@@ -1,0 +1,8 @@
+E:\lmf\proj\Lmf.HRS.IRepository\bin\Debug\netstandard2.0\Lmf.HRS.IRepository.deps.json
+E:\lmf\proj\Lmf.HRS.IRepository\bin\Debug\netstandard2.0\Lmf.HRS.IRepository.dll
+E:\lmf\proj\Lmf.HRS.IRepository\bin\Debug\netstandard2.0\Lmf.HRS.IRepository.pdb
+E:\lmf\proj\Lmf.HRS.IRepository\obj\Debug\netstandard2.0\Lmf.HRS.IRepository.csprojAssemblyReference.cache
+E:\lmf\proj\Lmf.HRS.IRepository\obj\Debug\netstandard2.0\Lmf.HRS.IRepository.AssemblyInfoInputs.cache
+E:\lmf\proj\Lmf.HRS.IRepository\obj\Debug\netstandard2.0\Lmf.HRS.IRepository.AssemblyInfo.cs
+E:\lmf\proj\Lmf.HRS.IRepository\obj\Debug\netstandard2.0\Lmf.HRS.IRepository.dll
+E:\lmf\proj\Lmf.HRS.IRepository\obj\Debug\netstandard2.0\Lmf.HRS.IRepository.pdb
