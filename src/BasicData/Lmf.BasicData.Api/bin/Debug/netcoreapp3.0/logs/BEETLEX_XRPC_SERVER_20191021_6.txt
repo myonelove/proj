@@ -1,0 +1,19 @@
+﻿[2019/10/21 2:08:19] [Info] listen 127.0.0.1@9800 success ssl:False
+[2019/10/21 2:08:19] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/21 2:08:19] [Info] BeetleX [V:1.3.2.0]
+[2019/10/21 2:08:19] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/21 2:08:19] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/10/21 2:08:42] [Info] session connected from 127.0.0.1:7079@2
+[2019/10/21 2:08:42] [Info] session connected from 127.0.0.1:7078@1
+[2019/10/21 2:08:42] [Debug] 127.0.0.1:7078 begin receive
+[2019/10/21 2:08:42] [Debug] 127.0.0.1:7079 begin receive
+[2019/10/21 2:08:42] [Debug]  127.0.0.1:7078 connected
+[2019/10/21 2:08:42] [Debug]  127.0.0.1:7079 connected
+[2019/10/21 2:08:42] [Error] session 127.0.0.1:7078@1 error 127.0.0.1:7078 session  buffer decoding error! @The message to long!
+   at BeetleX.XRPC.Request.Read(Options rpcOption, PipeStream stream)
+   at BeetleX.XRPC.Packets.ServerPacket.Decode(ISession session, Stream stream)
+   at BeetleX.TcpServer.SessionReceive(SessionReceiveEventArgs e)
+[2019/10/21 2:08:42] [Info] session 127.0.0.1:7078@1 disconnected
+[2019/10/21 2:08:42] [Info] session connected from 127.0.0.1:7081@3
+[2019/10/21 2:08:42] [Debug] 127.0.0.1:7081 begin receive
+[2019/10/21 2:08:42] [Debug]  127.0.0.1:7081 connected

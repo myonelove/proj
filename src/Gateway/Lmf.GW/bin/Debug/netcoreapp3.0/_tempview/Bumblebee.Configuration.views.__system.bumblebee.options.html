@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/ModuleLoader.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/FastHttpApi.js"></script>
+    <script src="js/ManagementController.js"></script>
+    <title>Beetlex webapi gateway management</title>
+</head>
+<body>
+
+    <div class="page-title">
+        <img src="images/title.png" /> <h3>Option</h3>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-left" slot="header">
+
+    </div>
+
+
+    <div class="container bs-docs-container" id="page">
+        <div class="row">
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Version info</div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">BeetleX</label>
+                            <div class="col-sm-10">
+                                <input type="text" :value="versions.BeetleX" readonly class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">FastHttpApi</label>
+                            <div class="col-sm-10">
+                                <input type="text" :value="versions.FastHttpApi" readonly class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Bumblebee</label>
+                            <div class="col-sm-10">
+                                <input type="text" :value="versions.Bumblebee" readonly class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Configuration</label>
+                            <div class="col-sm-10">
+                                <input type="text" :value="versions.Configuration" readonly class="form-control input-sm">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Log</div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Type</label>
+                            <div class="col-sm-10">
+                                <select v-model="setting.LogType" class="form-control input-sm">
+
+                                    <option v-for="item in setting.LogTypes" :value="item">
+                                        {{item}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Cache log size</label>
+                            <div class="col-sm-10">
+                                <input type="number" v-model="setting.LogCacheSize" class="form-control input-sm">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <button @click="changeLog" type="button" style="float:right;" class="btn btn-default btn-sm">Change</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Change password</div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">New</label>
+                            <div class="col-sm-10">
+                                <input type="password" v-model="newpwd" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Confirm</label>
+                            <div class="col-sm-10">
+                                <input type="password" v-model="confirmpwd" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <button @click="changepwd" type="button" style="float:right;" class="btn btn-default btn-sm">Change</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Token key</div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" :value="setting.TokenKey" class="form-control input-sm" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="button" @click="changekey" style="float:right;" class="btn btn-default btn-sm">Change</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container" style="text-align:center;" slot="footer">
+
+    </div>
+    <script>
+        var webapi = new Management();
+        var page = new Vue({
+            el: '#page',
+            data: {
+                newpwd: '',
+                confirmpwd: '',
+                setting: { LogType: '', LogTypes: [], TokenKey: '', LogCacheSize: 1000 },
+                versions: { BeetleX: 0, FastHttpApi: 0, Bumblebee: 0, Configuration: 0 }
+            },
+            methods: {
+                changepwd: function () {
+                    if (!this.newpwd) {
+                        alert("Enter new password!")
+                        return;
+                    }
+                    if (this.newpwd != this.confirmpwd) {
+                        alert("Wrong confirm password!")
+                        return;
+                    }
+                    webapi.ChangePassword(this.newpwd).$(function (r) {
+                        alert('Data saved successfully!');
+                    });
+                },
+                changeLog: function () {
+                    webapi.ChangeLogLevel(this.setting.LogType, this.setting.LogCacheSize, true).$(function (r) {
+                        alert('Data saved successfully!');
+                    });
+                },
+                changekey: function () {
+                    var _this = this;
+                    webapi.CreateTokenKey().$(function (r) {
+                        alert('Data saved successfully!');
+                        _this.Load();
+                    });
+                },
+                Load: function () {
+                    var _this = this;
+                    webapi.GetSetting().$(function (r) {
+                        _this.setting = r.Data;
+                    });
+                    webapi.GetVersions().$(function (r) {
+                        _this.versions = r.Data;
+                    });
+                }
+            }
+        });
+        page.Load();
+    </script>
+</body>
+
+</html>

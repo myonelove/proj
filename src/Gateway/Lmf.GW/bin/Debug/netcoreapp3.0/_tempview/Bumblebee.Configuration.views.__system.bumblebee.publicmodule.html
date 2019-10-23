@@ -1,0 +1,69 @@
+﻿<templates>
+
+    <template id="header">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://github.com/ikende" target="_blank" style="padding-left:30px; color:white;width:220px;font-size:16pt;">
+                <span>BeetleX</span>
+
+            </a>
+            <small style="float:right;color:#fff;margin-top:-20px;">web api gateway</small>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse ">
+
+            <ul class="nav navbar-nav main_menu" style="padding-top:10px;" id="mainMenu">
+                <li :class="[(!page.fileNameWithOutExt || page.fileNameWithOutExt=='index')?'selectMenu':'']">
+                    <a href="/__system/bumblebee/index.html"><img src="/__system/bumblebee/images/home.png" />Home</a>
+
+                </li>
+                <li :class="[page.fileNameWithOutExt=='servers' || page.folder.indexOf('server')>=0 ?'selectMenu':'']">
+                    <a href="/__system/bumblebee/servers.html"><img src="/__system/bumblebee/images/server.png" />Server</a>
+
+                </li>
+
+                <li :class="[page.fileNameWithOutExt=='routes' ?'selectMenu':'']">
+                    <a href="/__system/bumblebee/routes.html"><img src="/__system/bumblebee/images/route.png" />Routes</a>
+                </li>
+                <li :class="[page.fileNameWithOutExt=='plugins' || page.folder.indexOf('config')>=0 ?'selectMenu':'']">
+                    <a href="/__system/bumblebee/plugins.html"><img src="/__system/bumblebee/images/cluster.png" />Plugins</a>
+                </li>
+                <li :class="[page.fileNameWithOutExt=='log' ?'selectMenu':'']">
+                    <a href="/__system/bumblebee/log.html"><img src="/__system/bumblebee/images/log.png" />Log</a>
+                </li>
+
+                <li :class="[page.fileNameWithOutExt=='options' ?'selectMenu':'']">
+                    <a href="/__system/bumblebee/options.html"><img src="/__system/bumblebee/images/setting_w.png" />Options</a>
+                </li>
+
+
+
+
+                <li><a href="https://github.com/IKende/Bumblebee/issues" target="_blank"><img src="/__system/bumblebee/images/issues.png" />Issues</a></li>
+
+                <li :class="[page.fileNameWithOutExt=='donation' ?'selectMenu':'']">
+
+                    <a href="/__system/bumblebee/donation.html"><img src="/__system/bumblebee/images/money.png" />Donation</a>
+
+                </li>
+                <li><a href="/__system/bumblebee/management/Signout"><img src="/__system/bumblebee/images/exit.png" />Sign out</a></li>
+            </ul>
+
+            <script>
+                var mainMenu = new Vue({
+                    el: '#mainMenu', data: { page: _url, Donation: false }, methods: {
+                        test: function () {
+                            this.page == _url;
+                        }
+                    }
+                });
+                setTimeout(function () { mainMenu.page = _url }, 1000);
+            </script>
+        </div>
+    </template>
+
+
+    <template id="footer">
+        <div class="web-footer">
+            <p>BeetleX webapi gateway management copyright © 2019 <a href="http://www.ikende.com" target="_blank">ikende.com</a> email:henryfan@msn.com <a href="https://github.com/ikende" target="_blank">github.com</a></p>
+        </div>
+    </template>
+</templates>

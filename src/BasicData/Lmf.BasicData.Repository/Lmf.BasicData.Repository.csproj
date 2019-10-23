@@ -1,0 +1,28 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+            <PackageReference Include="MySql.Data" Version="8.0.17.0" />
+                    <PackageReference Include="SmartSql.TypeHandler" Version="4.1.9" />
+        <PackageReference Include="SmartSql.Schema" Version="4.1.9" />
+        <PackageReference Include="SmartSql.ScriptTag" Version="4.1.9" />
+        <PackageReference Include="SmartSql.DyRepository" Version="4.1.9" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Lmf.BasicData.Entity\Lmf.BasicData.Entity.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="Maps\*.xml">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="SmartSqlMapConfig.xml">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="SmartSqlMapConfig.Development.xml">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+</Project>
+

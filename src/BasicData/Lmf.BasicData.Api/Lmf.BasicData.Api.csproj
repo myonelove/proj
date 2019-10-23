@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Extensions\XRPCExtensions.cs~RFa19e07f.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="BeetleX.FastHttpApi.Hosting" Version="0.8.2" />
+    <PackageReference Include="BeetleX.XRPC" Version="0.6.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
+    <PackageReference Include="SmartSql" Version="4.1.32" />
+    <PackageReference Include="SmartSql.DIExtension" Version="4.1.32" />
+    <PackageReference Include="StackExchange.Redis" Version="2.0.601" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Lmf.Service\Lmf.Service.csproj" />
+    <ProjectReference Include="..\..\Common\Lmf.Util\Lmf.Util.csproj" />
+    <ProjectReference Include="..\Lmf.BasicData.Entity\Lmf.BasicData.Entity.csproj" />
+    <ProjectReference Include="..\Lmf.BasicData.Model\Lmf.BasicData.Model.csproj" />
+    <ProjectReference Include="..\Lmf.BasicData.Repository\Lmf.BasicData.Repository.csproj" />
+    <ProjectReference Include="..\Lmf.BasicData.Service\Lmf.BasicData.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+﻿[2019/10/23 3:40:20] [Error] Register StaffRPC error No parameterless constructor defined for type 'Lmf.BasicData.Api.RPC.StaffRPC'.@   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic, Boolean wrapExceptions)
+   at System.Activator.CreateInstance(Type type)
+   at EventNext.EventCenter.CreateController(Type type)
+   at EventNext.EventCenter.Register(Assembly[] assemblies)
+[2019/10/23 3:40:20] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/10/23 3:40:20] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/23 3:40:20] [Info] BeetleX [V:1.3.2.0]
+[2019/10/23 3:40:20] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/23 3:40:20] [Info] BeetleX XRPC started [0.6.2.0]

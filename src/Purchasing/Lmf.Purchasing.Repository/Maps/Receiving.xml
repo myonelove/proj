@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+//*******************************
+// Create By mengfengli
+// Date 2019-10-22 02:05
+// Code Generate By SmartCode
+// Code Generate Github : https://github.com/Ahoo-Wang/SmartCode
+//*******************************-->
+
+<SmartSqlMap Scope="Receiving" xmlns="http://SmartSql.net/schemas/SmartSqlMap.xsd">
+
+    <ResultMaps>
+        <ResultMap Id="ReceivingResultMap">
+                <Result Column="order_no" Property="OrderNo" />
+                <Result Column="procurement_order_no" Property="ProcurementOrderNo" />
+                <Result Column="operator_staff" Property="OperatorStaff" />
+                <Result Column="create_time" Property="CreateTime" />
+                <Result Column="status" Property="Status" />
+                <Result Column="remark" Property="Remark" />
+        </ResultMap>
+    </ResultMaps>
+    <Statements>
+
+<Statement Id="AllCols">
+T.Id,T.order_no,T.procurement_order_no,T.operator_staff,T.create_time,T.status,T.remark</Statement>        <Statement Id="QueryParams">
+            <Where>
+                    <IsNotEmpty Prepend="And" Property="Id">
+                        T.Id = ?Id
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="OrderNo">
+                        T.order_no = ?OrderNo
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="ProcurementOrderNo">
+                        T.procurement_order_no = ?ProcurementOrderNo
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="OperatorStaff">
+                        T.operator_staff = ?OperatorStaff
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="CreateTime">
+                        T.create_time = ?CreateTime
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="Status">
+                        T.status = ?Status
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="Remark">
+                        T.remark = ?Remark
+                    </IsNotEmpty>
+            </Where>
+        </Statement>
+
+
+<!--新增-->
+<Statement Id="Insert">
+    INSERT INTO receiving
+    (
+      order_no,
+      procurement_order_no,
+      operator_staff,
+      create_time,
+      status,
+      remark
+    )
+    VALUES
+    (
+      ?OrderNo,
+      ?ProcurementOrderNo,
+      ?OperatorStaff,
+      ?CreateTime,
+      ?Status,
+      ?Remark
+    )
+;Select Last_Insert_Id();
+</Statement>
+
+<!--删除-->
+<Statement Id="Delete">
+    Delete From receiving
+    Where Id=?Id
+</Statement>
+
+<!--更新-->
+<Statement Id="Update">
+    UPDATE receiving
+    <Set>
+                <IsProperty Prepend="," Property="OrderNo">
+                    order_no = ?OrderNo
+                </IsProperty>
+                <IsProperty Prepend="," Property="ProcurementOrderNo">
+                    procurement_order_no = ?ProcurementOrderNo
+                </IsProperty>
+                <IsProperty Prepend="," Property="OperatorStaff">
+                    operator_staff = ?OperatorStaff
+                </IsProperty>
+                <IsProperty Prepend="," Property="CreateTime">
+                    create_time = ?CreateTime
+                </IsProperty>
+                <IsProperty Prepend="," Property="Status">
+                    status = ?Status
+                </IsProperty>
+                <IsProperty Prepend="," Property="Remark">
+                    remark = ?Remark
+                </IsProperty>
+    </Set>
+    Where Id=?Id
+</Statement>
+
+<!--获取数据列-->
+<Statement Id="Query" ResultMap="ReceivingResultMap">
+    SELECT 
+    <Include RefId="AllCols"/>
+    From receiving T
+    <Include RefId="QueryParams" />
+    <Switch Prepend="Order By" Property="OrderBy">
+        <Default>
+            T.Id Desc
+        </Default>
+    </Switch>
+    <IsNotEmpty Prepend="Limit" Property="Taken">?Taken</IsNotEmpty>
+</Statement>
+
+    <!--获取分页数据-->
+    <Statement Id="QueryByPage" ResultMap="ReceivingResultMap">
+        Select 
+        <Include RefId="AllCols"/>
+        From receiving As T
+        <Include RefId="QueryParams" />
+        <Switch Prepend="Order By" Property="OrderBy">
+            <Default>
+                T.Id Desc
+            </Default>
+        </Switch>
+        Limit ?Offset,?PageSize
+    </Statement>
+
+
+<!--获取记录数-->
+<Statement Id="GetRecord">
+    Select Count(1) From receiving T
+    <Include RefId="QueryParams" />
+</Statement>
+
+<!--获取表映射实体-->
+<Statement Id="GetEntity" ResultMap="ReceivingResultMap">
+    Select 
+    <Include RefId="AllCols"/>
+    From receiving As T
+    <Where Min="1">
+            <IsNotEmpty Prepend="And" Property="Id">
+                T.Id= ?Id
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="OrderNo">
+                T.order_no= ?OrderNo
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="ProcurementOrderNo">
+                T.procurement_order_no= ?ProcurementOrderNo
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="OperatorStaff">
+                T.operator_staff= ?OperatorStaff
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="CreateTime">
+                T.create_time= ?CreateTime
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="Status">
+                T.status= ?Status
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="Remark">
+                T.remark= ?Remark
+            </IsNotEmpty>
+    </Where>
+    Limit 1
+</Statement>
+
+<!--是否存在该记录-->
+<Statement Id="IsExist">
+    Select Count(1) From receiving T
+    <Include RefId="QueryParams" />
+</Statement>
+
+
+    </Statements>
+</SmartSqlMap>

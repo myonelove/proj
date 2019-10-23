@@ -1,0 +1,29 @@
+﻿[2019/10/23 4:01:49] [Info] rewrite url [/api/basicdata/healthcheck] to [/api/basicdata/healthcheck]
+[2019/10/23 4:01:49] [Info] register HomeController.HealthCheck to [GET:/api/basicdata/healthcheck]
+[2019/10/23 4:01:49] [Info] rewrite url [/api/basicdata/staff/add] to [/api/basicdata/staff/addstaff]
+[2019/10/23 4:01:49] [Info] register StaffController.AddStaff to [POST:/api/basicdata/staff/addstaff]
+[2019/10/23 4:01:49] [Info] rewrite url [/api/basicdata/staff/modify] to [/api/basicdata/staff/modifystaff]
+[2019/10/23 4:01:49] [Info] register StaffController.ModifyStaff to [PUT:/api/basicdata/staff/modifystaff]
+[2019/10/23 4:01:49] [Info] init BeetleX.FastHttpApi.ServerController controller path F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\
+[2019/10/23 4:01:49] [Info] register ServerController.__ServerStatus to [GET:/__serverstatus]
+[2019/10/23 4:01:49] [Info] register ServerController.__SetSettings to [POST:/__setsettings]
+[2019/10/23 4:01:49] [Info] register ServerController.__ChangeAccessKey to [GET:/__changeaccesskey]
+[2019/10/23 4:01:49] [Info] register ServerController.__GetSettings to [GET:/__getsettings]
+[2019/10/23 4:01:49] [Info] register ServerController.__LogConnect to [GET:/__logconnect]
+[2019/10/23 4:01:49] [Info] register ServerController.__ListLog to [GET:/__listlog]
+[2019/10/23 4:01:49] [Info] register ServerController.__GetOptions to [GET:/__getoptions]
+[2019/10/23 4:01:49] [Info] register ServerController.__UploadModule to [POST:/__uploadmodule]
+[2019/10/23 4:01:49] [Info] register ServerController.__SetActionMaxrps to [POST:/__setactionmaxrps]
+[2019/10/23 4:01:49] [Info] register ServerController.__SetOptions to [POST:/__setoptions]
+[2019/10/23 4:01:49] [Info] detection sessions timeout with 3600s
+[2019/10/23 4:01:49] [Info] listen 127.0.0.1@8100 success ssl:False
+[2019/10/23 4:01:49] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/23 4:01:49] [Info] BeetleX [V:1.3.2.0]
+[2019/10/23 4:01:49] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|2048KB]
+[2019/10/23 4:01:49] [Info] BeetleX FastHttpApi [IOQueue:False|Threads:4] [V:1.5.4.2]
+[2019/10/23 4:02:04] [Info] System.IO.Pipelines, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 load assembly System.IO.Pipelines.resources, Version=4.0.0.0, Culture=zh-CN, PublicKeyToken=cc7b13ffcd2ddd51
+[2019/10/23 4:02:04] [Error] System.IO.Pipelines, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 load assembly System.IO.Pipelines.resources, Version=4.0.0.0, Culture=zh-CN, PublicKeyToken=cc7b13ffcd2ddd51 error Could not load file or assembly 'F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\System.IO.Pipelines.resources.dll'. 系统找不到指定的文件。
+[2019/10/23 4:02:04] [Info] System.IO.Pipelines, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 load assembly System.IO.Pipelines.resources, Version=4.0.0.0, Culture=zh-Hans, PublicKeyToken=cc7b13ffcd2ddd51
+[2019/10/23 4:02:04] [Error] System.IO.Pipelines, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 load assembly System.IO.Pipelines.resources, Version=4.0.0.0, Culture=zh-Hans, PublicKeyToken=cc7b13ffcd2ddd51 error Could not load file or assembly 'F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\System.IO.Pipelines.resources.dll'. 系统找不到指定的文件。
+[2019/10/23 4:02:04] [Info] System.IO.Pipelines, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 load assembly System.IO.Pipelines.resources, Version=4.0.0.0, Culture=zh, PublicKeyToken=cc7b13ffcd2ddd51
+[2019/10/23 4:02:04] [Error] System.IO.Pipelines, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51 load assembly System.IO.Pipelines.resources, Version=4.0.0.0, Culture=zh, PublicKeyToken=cc7b13ffcd2ddd51 error Could not load file or assembly 'F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\System.IO.Pipelines.resources.dll'. 系统找不到指定的文件。

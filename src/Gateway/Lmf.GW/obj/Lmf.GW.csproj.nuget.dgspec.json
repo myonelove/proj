@@ -40,6 +40,32 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "BeetleX.Bumblebee": {
+              "target": "Package",
+              "version": "[1.1.6.2, )"
+            },
+            "BeetleX.Bumblebee.Caching": {
+              "target": "Package",
+              "version": "[1.0.4.5, )"
+            },
+            "BeetleX.Bumblebee.ConcurrentLimits": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "BeetleX.Bumblebee.Configuration": {
+              "target": "Package",
+              "version": "[1.1.8.2, )"
+            },
+            "BeetleX.Bumblebee.Jwt": {
+              "target": "Package",
+              "version": "[1.0.9.2, )"
+            },
+            "BeetleX.Bumblebee.Logs": {
+              "target": "Package",
+              "version": "[1.0.7.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

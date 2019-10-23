@@ -1,0 +1,5 @@
+﻿[2019/10/23 0:46:52] [Info] listen 127.0.0.1@9710 success ssl:False
+[2019/10/23 0:46:52] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/23 0:46:52] [Info] BeetleX [V:1.3.2.0]
+[2019/10/23 0:46:52] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/23 0:46:52] [Info] BeetleX XRPC started [0.6.2.0]

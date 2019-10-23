@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/ModuleLoader.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/FastHttpApi.js"></script>
+    <script src="js/ManagementController.js"></script>
+    <title>Beetlex webapi gateway management</title>
+</head>
+<body>
+
+    <div class="page-title">
+        <img src="images/title.png" /> <h3>Server</h3>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-left" slot="header">
+
+    </div>
+
+
+    <div class="container bs-docs-container" id="page">
+
+
+        <div class="row">
+
+
+            <div class="tool-bar-l">
+                <input type="text" class="form-control input-sm" style="width:300px;" v-model="AddName" placeholder="Webapi host(sample http://abc.com)">
+                <a href="javascript:void(0)" @click="Add"><img src="images/new.png" /></a>
+                <a href="javascript:void(0)" @click="Save"><img src="images/save.png" /></a>
+                <a href="javascript:void(0)" @click="Refresh"><img src="images/refresh.png" /></a>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Host</th>
+                        <th>Category</th>
+                        <th style="text-align:right">Max</th>
+                        <th style="text-align:right">Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,i) in Servers">
+
+
+                        <td style="width:280px;vertical-align:middle;">
+                            <a v-if="item.Available==false && item.Editor"><img style="width:16px;" src="images/server_error.png" /></a>
+                            <a v-if="item.Available && item.Editor"><img style="width:16px;" src="images/server_ok.png" /></a>
+                            <input class="form-control input-sm" v-if="!item.Editor" type="text" v-model="item.Host" style="width:100%" />
+                            <span style="" v-else>{{item.Host}}</span>
+                        </td>
+                        <td style="width:180px;">
+
+                            <div class="input-group">
+                                <input type="text" class="form-control input-sm" v-model="item.Category" aria-label="...">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li v-for="c in Categories"><a href="javascript:void(0)" @click="item.Category=c">{{c}}</a></li>
+
+                                    </ul>
+                                </div><!-- /btn-group -->
+                            </div><!-- /input-group -->
+                        </td>
+                        <td style="width:80px;text-align:right">
+                            <input class="form-control input-sm" title="max connections" style="width:100%;text-align:right;" type="number" v-model="item.MaxConnections" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle">
+                            <span class="label label-default">
+                                Queue:{{new Intl.NumberFormat().format(item.Status.WaitQueue)}}
+                            </span>
+                            <span style="color:#808080">|</span>
+                            <span class="label label-success" title="2xx status">
+                                Success:{{new Intl.NumberFormat().format(item.Status._2xRps)}}/{{new Intl.NumberFormat().format(item.Status._2xCount)}}
+                            </span>
+                            <span style="color:#808080">|</span>
+                            <span class="label label-danger" title="5xx status">
+                                Error:{{new Intl.NumberFormat().format(item.Status._5xRps)}}/{{new Intl.NumberFormat().format(item.Status._5xCount)}}
+                            </span>
+
+                        </td>
+                        <td style="width:20px;" scope="row">
+                            <div class="tool-bar">
+
+                                <a v-if="item.Editor" href="javascript:void(0)" @click="Delete(item)"><img src="images/delete.png" /></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container" style="text-align:center;" slot="footer">
+
+    </div>
+    <script>
+        var webapi = new Management();
+        var page = new Vue({
+            el: '#page',
+            data: { Servers: [], Categories: [], AddName: '' },
+            methods: {
+                ListServer: function () {
+                    var _this = this;
+                    webapi.ListServer().$(function (r) {
+                        _this.Servers = r.Data;
+                    });
+                },
+                Add: function () {
+                    if (!this.AddName) {
+                        alert('Enter webapi server host name!');
+                        return;
+                    }
+                    var _this = this;
+                    webapi.AddServer(this.AddName, 200).$(function (r) {
+                        _this.ListCategories();
+                        _this.ListServer();
+                        _this.AddName = '';
+                    });
+                },
+                ListCategories: function () {
+                    var _this = this;
+                    webapi.ListServerCategories().$(function (r) {
+                        _this.Categories = r.Data;
+                    });
+                },
+                Delete: function (item) {
+                    var _this = this;
+                    if (confirm('Do you want to delete [' + item.Host + '] server?')) {
+                        webapi.RemoveServer(item.Host).$(function (r) {
+                            _this.ListCategories();
+                            _this.ListServer();
+                        });
+                    }
+                },
+
+                GetStatus: function () {
+                    var _this = this;
+                    webapi.ServiceStatus().$(function (r) {
+                        r.Data.forEach(function (v) {
+                            _this.Servers.forEach(function (i) {
+                                if (v.Host == i.Host) {
+                                    i.Status = v;
+                                    i.Available = v.Available;
+                                }
+                            });
+                        });
+                    });
+                },
+
+                Refresh: function () {
+                    this.ListCategories();
+                    this.ListServer();
+                },
+                Save: function () {
+                    var _this = this;
+                    if (confirm('Do you want to save the servers configuration?')) {
+                        webapi.SetServers(this.Servers).$(function (r) {
+                            _this.ListCategories();
+                            _this.ListServer();
+                        });
+                    }
+                },
+            }
+        });
+        page.ListCategories();
+        page.ListServer();
+        setInterval(page.GetStatus, 1000);
+    </script>
+</body>
+
+</html>

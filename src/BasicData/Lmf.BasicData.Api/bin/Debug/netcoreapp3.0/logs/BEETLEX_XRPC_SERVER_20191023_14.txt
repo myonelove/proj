@@ -1,0 +1,11 @@
+﻿[2019/10/23 2:30:34] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/10/23 2:30:34] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/23 2:30:34] [Info] BeetleX [V:1.3.2.0]
+[2019/10/23 2:30:34] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/23 2:30:34] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/10/23 2:30:57] [Info] session connected from 127.0.0.1:34537@1
+[2019/10/23 2:30:57] [Debug] 127.0.0.1:34537 begin receive
+[2019/10/23 2:30:57] [Debug]  127.0.0.1:34537 connected
+[2019/10/23 2:30:57] [Debug] 127.0.0.1:34537 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 2:30:57] [Debug] [2]127.0.0.1:34537 receive message /IStaffRPC/GetStaff@2
+[2019/10/23 2:30:57] [Debug] [2]127.0.0.1:34537 request /IStaffRPC/GetStaff not found!

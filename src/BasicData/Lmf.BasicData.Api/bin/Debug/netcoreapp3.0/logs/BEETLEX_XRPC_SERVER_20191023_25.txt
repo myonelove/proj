@@ -1,0 +1,45 @@
+﻿[2019/10/23 3:10:39] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/10/23 3:10:39] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/23 3:10:39] [Info] BeetleX [V:1.3.2.0]
+[2019/10/23 3:10:39] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/23 3:10:39] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/10/23 3:11:56] [Info] session connected from 127.0.0.1:36393@1
+[2019/10/23 3:11:56] [Debug] 127.0.0.1:36393 begin receive
+[2019/10/23 3:11:56] [Debug]  127.0.0.1:36393 connected
+[2019/10/23 3:11:56] [Debug] 127.0.0.1:36393 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:11:56] [Debug] [2]127.0.0.1:36393 receive message /IStaffRPC/GetStaff@2
+[2019/10/23 3:11:56] [Debug] [2]127.0.0.1:36393 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:07] [Info] session connected from 127.0.0.1:36450@2
+[2019/10/23 3:13:07] [Debug] 127.0.0.1:36450 begin receive
+[2019/10/23 3:13:07] [Debug]  127.0.0.1:36450 connected
+[2019/10/23 3:13:07] [Debug] 127.0.0.1:36450 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:07] [Debug] [3]127.0.0.1:36450 receive message /IStaffRPC/GetStaff@3
+[2019/10/23 3:13:07] [Debug] [3]127.0.0.1:36450 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:08] [Debug] 127.0.0.1:36393 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:08] [Debug] [4]127.0.0.1:36393 receive message /IStaffRPC/GetStaff@4
+[2019/10/23 3:13:08] [Debug] [4]127.0.0.1:36393 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:09] [Debug] 127.0.0.1:36450 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:09] [Debug] [5]127.0.0.1:36450 receive message /IStaffRPC/GetStaff@5
+[2019/10/23 3:13:09] [Debug] [5]127.0.0.1:36450 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:09] [Debug] 127.0.0.1:36393 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:09] [Debug] [6]127.0.0.1:36393 receive message /IStaffRPC/GetStaff@6
+[2019/10/23 3:13:09] [Debug] [6]127.0.0.1:36393 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:09] [Debug] 127.0.0.1:36450 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:09] [Debug] [7]127.0.0.1:36450 receive message /IStaffRPC/GetStaff@7
+[2019/10/23 3:13:09] [Debug] [7]127.0.0.1:36450 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:09] [Debug] 127.0.0.1:36393 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:09] [Debug] [8]127.0.0.1:36393 receive message /IStaffRPC/GetStaff@8
+[2019/10/23 3:13:09] [Debug] [8]127.0.0.1:36393 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:10] [Debug] 127.0.0.1:36450 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:10] [Debug] [9]127.0.0.1:36450 receive message /IStaffRPC/GetStaff@9
+[2019/10/23 3:13:10] [Debug] [9]127.0.0.1:36450 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:10] [Debug] 127.0.0.1:36393 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:10] [Debug] [10]127.0.0.1:36393 receive message /IStaffRPC/GetStaff@10
+[2019/10/23 3:13:10] [Debug] [10]127.0.0.1:36393 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:10] [Debug] 127.0.0.1:36450 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:10] [Debug] [11]127.0.0.1:36450 receive message /IStaffRPC/GetStaff@11
+[2019/10/23 3:13:10] [Debug] [11]127.0.0.1:36450 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:10] [Debug] 127.0.0.1:36393 session packet decode completed BeetleX.XRPC.Request
+[2019/10/23 3:13:10] [Debug] [12]127.0.0.1:36393 receive message /IStaffRPC/GetStaff@12
+[2019/10/23 3:13:10] [Debug] [12]127.0.0.1:36393 request /IStaffRPC/GetStaff not found!
+[2019/10/23 3:13:32] [Debug] 127.0.0.1:36393 receive close error ConnectionReset receive:0

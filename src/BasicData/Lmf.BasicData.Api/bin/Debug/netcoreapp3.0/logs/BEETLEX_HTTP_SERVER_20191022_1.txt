@@ -1,0 +1,44 @@
+﻿[2019/10/22 1:03:49] [Info] rewrite url [/basicdata/healthcheck] to [/basicdata/healthcheck]
+[2019/10/22 1:03:49] [Info] register HomeController.HealthCheck to [GET:/basicdata/healthcheck]
+[2019/10/22 1:03:49] [Info] rewrite url [/basicdata/staff/add] to [/basicdata/staff/addstaff]
+[2019/10/22 1:03:49] [Info] register StaffController.AddStaff to [POST:/basicdata/staff/addstaff]
+[2019/10/22 1:03:49] [Info] rewrite url [/basicdata/staff/modify] to [/basicdata/staff/modifystaff]
+[2019/10/22 1:03:49] [Info] register StaffController.ModifyStaff to [PUT:/basicdata/staff/modifystaff]
+[2019/10/22 1:03:49] [Info] init BeetleX.FastHttpApi.ServerController controller path F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\
+[2019/10/22 1:03:49] [Info] register ServerController.__ServerStatus to [GET:/__serverstatus]
+[2019/10/22 1:03:49] [Info] register ServerController.__SetSettings to [POST:/__setsettings]
+[2019/10/22 1:03:49] [Info] register ServerController.__ChangeAccessKey to [GET:/__changeaccesskey]
+[2019/10/22 1:03:49] [Info] register ServerController.__GetSettings to [GET:/__getsettings]
+[2019/10/22 1:03:49] [Info] register ServerController.__LogConnect to [GET:/__logconnect]
+[2019/10/22 1:03:49] [Info] register ServerController.__ListLog to [GET:/__listlog]
+[2019/10/22 1:03:49] [Info] register ServerController.__GetOptions to [GET:/__getoptions]
+[2019/10/22 1:03:49] [Info] register ServerController.__UploadModule to [POST:/__uploadmodule]
+[2019/10/22 1:03:49] [Info] register ServerController.__SetActionMaxrps to [POST:/__setactionmaxrps]
+[2019/10/22 1:03:49] [Info] register ServerController.__SetOptions to [POST:/__setoptions]
+[2019/10/22 1:03:49] [Info] detection sessions timeout with 3600s
+[2019/10/22 1:03:49] [Info] listen 127.0.0.1@8100 success ssl:False
+[2019/10/22 1:03:49] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/22 1:03:49] [Info] BeetleX [V:1.3.2.0]
+[2019/10/22 1:03:49] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|2048KB]
+[2019/10/22 1:03:49] [Info] BeetleX FastHttpApi [IOQueue:False|Threads:4] [V:1.5.4.2]
+[2019/10/22 1:04:16] [Error] ::1 http POST /basicdata/staff/addstaff inner error After parsing a value an unexpected character was encountered: N. Path 'Mobile', line 4, position 2.@   at Newtonsoft.Json.JsonTextReader.ParsePostValue(Boolean ignoreComments)
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader)
+   at BeetleX.FastHttpApi.Data.JsonDataConvertAttribute.Execute(IDataContext dataContext, HttpRequest request)
+   at BeetleX.FastHttpApi.ActionHandlerFactory.Execute(HttpRequest request, HttpResponse response, HttpApiServer server)
+[2019/10/22 1:04:31] [Info] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a
+[2019/10/22 1:04:31] [Error] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a error Could not load file or assembly 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.0.0\System.Net.Sockets.resources.dll'. 系统找不到指定的文件。
+[2019/10/22 1:04:31] [Info] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh-Hans, PublicKeyToken=b03f5f7f11d50a3a
+[2019/10/22 1:04:31] [Error] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh-Hans, PublicKeyToken=b03f5f7f11d50a3a error Could not load file or assembly 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.0.0\System.Net.Sockets.resources.dll'. 系统找不到指定的文件。
+[2019/10/22 1:04:31] [Info] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh, PublicKeyToken=b03f5f7f11d50a3a
+[2019/10/22 1:04:31] [Error] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh, PublicKeyToken=b03f5f7f11d50a3a error Could not load file or assembly 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.0.0\System.Net.Sockets.resources.dll'. 系统找不到指定的文件。
+[2019/10/22 1:05:36] [Warring] ::1POST /basicdata/staff/modifystaff not support
+[2019/10/22 1:20:53] [Error] 127.0.0.1@8100 accept error 一个封锁操作被对 WSACancelBlockingCall 的调用中断。|   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.Accept()
+   at BeetleX.ListenHandler.OnSyncAccept()!
+[2019/10/22 1:20:53] [Error] 127.0.0.1@8100 accept stoped!

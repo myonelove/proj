@@ -1,0 +1,8 @@
+{
+  "Usename": "admin",
+  "Password": "123456",
+  "Bandwidth": 100,
+  "Memory": 2000,
+  "Rps": 100000,
+  "JWTKey": "aaJTvPUA9TFzPESoe/jQckbqsXeB/uJpGUcN9OuYXtBu+TJ8DSH3vvGll5PqiuB3taaCJiSpsGq/6qOu8gBG2t1zOYHFU2Ul8/OF3GdPfo5nlj5FFjisxEnIvCJ9SMvxX7y1dlFesmJAXDIxJNQDcGsVR1zCAMSlxnQ4/JdCqKo="
+}

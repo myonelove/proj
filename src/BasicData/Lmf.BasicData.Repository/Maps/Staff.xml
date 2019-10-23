@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+//*******************************
+// Create By mengfeng
+// Date 2019-10-19 00:05
+// Code Generate By SmartCode
+// Code Generate Github : https://github.com/Ahoo-Wang/SmartCode
+//*******************************-->
+
+<SmartSqlMap Scope="Staff" xmlns="http://SmartSql.net/schemas/SmartSqlMap.xsd">
+
+  <ResultMaps>
+    <ResultMap Id="StaffResultMap">
+      <Result Column="departure_time" Property="DepartureTime" />
+      <Result Column="email" Property="Email" />
+      <Result Column="hiredate" Property="Hiredate" />
+      <Result Column="is_dimission" Property="IsDimission" />
+      <Result Column="lead_no" Property="LeadNo" />
+      <Result Column="mobile" Property="Mobile" />
+      <Result Column="name" Property="Name" />
+      <Result Column="no" Property="No" />
+    </ResultMap> 
+  </ResultMaps>
+  <Statements>
+
+    <Statement Id="AllCols">
+      T.departure_time,T.email,T.hiredate,T.Id,T.is_dimission,T.lead_no,T.mobile,T.name,T.no
+    </Statement>
+    <Statement Id="QueryParams">
+      <Where>
+        <IsNotEmpty Prepend="And" Property="DepartureTime">
+          T.departure_time = ?DepartureTime
+        </IsNotEmpty> 
+        <IsNotEmpty Prepend="And" Property="Email">
+          T.email = ?Email
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Hiredate">
+          T.hiredate = ?Hiredate
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Id">
+          T.Id = ?Id
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="IsDimission">
+          T.is_dimission = ?IsDimission
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="LeadNo">
+          T.lead_no = ?LeadNo
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Mobile">
+          T.mobile = ?Mobile
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Name">
+          T.name = ?Name
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="No">
+          T.no = ?No
+        </IsNotEmpty>
+      </Where>
+    </Statement>
+
+
+    <!--新增-->
+    <Statement Id="Insert">
+      INSERT INTO staff
+      (
+          departure_time,
+          email,
+          hiredate,
+          is_dimission,
+          lead_no,
+          mobile,
+          name,
+          no
+      )
+      VALUES
+      (
+        ?DepartureTime,
+        ?Email,
+        ?Hiredate,
+        ?IsDimission,
+        ?LeadNo,
+        ?Mobile,
+        ?Name,
+        ?No
+      )
+      ;Select Last_Insert_Id();
+    </Statement>
+
+    <!--删除-->
+    <Statement Id="Delete">
+      Delete From staff
+      Where Id=?Id
+    </Statement>
+
+    <!--更新-->
+    <Statement Id="Update">
+      UPDATE staff
+      <Set>
+        <IsProperty Prepend="," Property="DepartureTime">
+          departure_time = ?DepartureTime
+        </IsProperty>
+        <IsProperty Prepend="," Property="Email">
+          email = ?Email
+        </IsProperty> 
+        <IsProperty Prepend="," Property="IsDimission">
+          is_dimission = ?IsDimission
+        </IsProperty>
+        <IsProperty Prepend="," Property="LeadNo">
+          lead_no = ?LeadNo
+        </IsProperty>
+        <IsProperty Prepend="," Property="Mobile">
+          mobile = ?Mobile
+        </IsProperty>
+        <IsProperty Prepend="," Property="Name">
+          name = ?Name
+        </IsProperty>
+        <IsProperty Prepend="," Property="No">
+          no = ?No
+        </IsProperty>
+      </Set>
+      Where Id=?Id
+    </Statement>
+
+    <!--获取数据列-->
+    <Statement Id="Query" ResultMap="StaffResultMap">
+      SELECT
+      <Include RefId="AllCols"/>
+      From staff T
+      <Include RefId="QueryParams" />
+      <Switch Prepend="Order By" Property="OrderBy">
+        <Default>
+          T.Id Desc
+        </Default>
+      </Switch>
+      <IsNotEmpty Prepend="Limit" Property="Taken">?Taken</IsNotEmpty>
+    </Statement>
+
+    <!--获取分页数据-->
+    <Statement Id="QueryByPage" ResultMap="StaffResultMap">
+      Select
+      <Include RefId="AllCols"/>
+      From staff As T
+      <Include RefId="QueryParams" />
+      <Switch Prepend="Order By" Property="OrderBy">
+        <Default>
+          T.Id Desc
+        </Default>
+      </Switch>
+      Limit ?Offset,?PageSize
+    </Statement>
+
+
+    <!--获取记录数-->
+    <Statement Id="GetRecord">
+      Select Count(1) From staff T
+      <Include RefId="QueryParams" />
+    </Statement>
+
+    <!--获取表映射实体-->
+    <Statement Id="GetEntity" ResultMap="StaffResultMap">
+      Select
+      <Include RefId="AllCols"/>
+      From staff As T
+      <Where Min="1">
+        <IsNotEmpty Prepend="And" Property="DepartureTime">
+          T.departure_time= ?DepartureTime
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Email">
+          T.email= ?Email
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Hiredate">
+          T.hiredate= ?Hiredate
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Id">
+          T.Id= ?Id
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="IsDimission">
+          T.is_dimission= ?IsDimission
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="LeadNo">
+          T.lead_no= ?LeadNo
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Mobile">
+          T.mobile= ?Mobile
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="Name">
+          T.name= ?Name
+        </IsNotEmpty>
+        <IsNotEmpty Prepend="And" Property="No">
+          T.no= ?No
+        </IsNotEmpty>
+      </Where>
+      Limit 1
+    </Statement>
+
+    <!--是否存在该记录-->
+    <Statement Id="IsExist">
+      Select Count(1) From staff T
+      <Include RefId="QueryParams" />
+    </Statement>
+
+
+  </Statements>
+</SmartSqlMap>

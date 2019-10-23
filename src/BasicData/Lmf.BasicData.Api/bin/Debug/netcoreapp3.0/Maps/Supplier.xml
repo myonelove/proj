@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+//*******************************
+// Create By mengfeng
+// Date 2019-10-19 00:05
+// Code Generate By SmartCode
+// Code Generate Github : https://github.com/Ahoo-Wang/SmartCode
+//*******************************-->
+
+<SmartSqlMap Scope="Supplier" xmlns="http://SmartSql.net/schemas/SmartSqlMap.xsd">
+
+    <ResultMaps>
+        <ResultMap Id="SupplierResultMap">
+                <Result Column="address" Property="Address" />
+                <Result Column="category" Property="Category" />
+                <Result Column="contact" Property="Contact" />
+                <Result Column="id" Property="Id" />
+                <Result Column="join_us_time" Property="JoinUsTime" />
+                <Result Column="mobile" Property="Mobile" />
+                <Result Column="no" Property="No" />
+                <Result Column="supplier_name" Property="SupplierName" />
+        </ResultMap>
+    </ResultMaps>
+    <Statements>
+
+<Statement Id="AllCols">
+T.address,T.category,T.contact,T.id,T.join_us_time,T.mobile,T.no,T.supplier_name</Statement>        <Statement Id="QueryParams">
+            <Where>
+                    <IsNotEmpty Prepend="And" Property="Address">
+                        T.address = ?Address
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="Category">
+                        T.category = ?Category
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="Contact">
+                        T.contact = ?Contact
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="Id">
+                        T.id = ?Id
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="JoinUsTime">
+                        T.join_us_time = ?JoinUsTime
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="Mobile">
+                        T.mobile = ?Mobile
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="No">
+                        T.no = ?No
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="SupplierName">
+                        T.supplier_name = ?SupplierName
+                    </IsNotEmpty>
+            </Where>
+        </Statement>
+
+
+<!--新增-->
+<Statement Id="Insert">
+    INSERT INTO supplier
+    (
+      address,
+      category,
+      contact,
+      join_us_time,
+      mobile,
+      no,
+      supplier_name
+    )
+    VALUES
+    (
+      ?Address,
+      ?Category,
+      ?Contact,
+      ?JoinUsTime,
+      ?Mobile,
+      ?No,
+      ?SupplierName
+    )
+;Select Last_Insert_Id();
+</Statement>
+
+<!--删除-->
+<Statement Id="Delete">
+    Delete From supplier
+    Where id=?Id
+</Statement>
+
+<!--更新-->
+<Statement Id="Update">
+    UPDATE supplier
+    <Set>
+                <IsProperty Prepend="," Property="Address">
+                    address = ?Address
+                </IsProperty>
+                <IsProperty Prepend="," Property="Category">
+                    category = ?Category
+                </IsProperty>
+                <IsProperty Prepend="," Property="Contact">
+                    contact = ?Contact
+                </IsProperty>
+                <IsProperty Prepend="," Property="JoinUsTime">
+                    join_us_time = ?JoinUsTime
+                </IsProperty>
+                <IsProperty Prepend="," Property="Mobile">
+                    mobile = ?Mobile
+                </IsProperty>
+                <IsProperty Prepend="," Property="No">
+                    no = ?No
+                </IsProperty>
+                <IsProperty Prepend="," Property="SupplierName">
+                    supplier_name = ?SupplierName
+                </IsProperty>
+    </Set>
+    Where id=?Id
+</Statement>
+
+<!--获取数据列-->
+<Statement Id="Query" ResultMap="SupplierResultMap">
+    SELECT 
+    <Include RefId="AllCols"/>
+    From supplier T
+    <Include RefId="QueryParams" />
+    <Switch Prepend="Order By" Property="OrderBy">
+        <Default>
+            T.id Desc
+        </Default>
+    </Switch>
+    <IsNotEmpty Prepend="Limit" Property="Taken">?Taken</IsNotEmpty>
+</Statement>
+
+    <!--获取分页数据-->
+    <Statement Id="QueryByPage" ResultMap="SupplierResultMap">
+        Select 
+        <Include RefId="AllCols"/>
+        From supplier As T
+        <Include RefId="QueryParams" />
+        <Switch Prepend="Order By" Property="OrderBy">
+            <Default>
+                T.id Desc
+            </Default>
+        </Switch>
+        Limit ?Offset,?PageSize
+    </Statement>
+
+
+<!--获取记录数-->
+<Statement Id="GetRecord">
+    Select Count(1) From supplier T
+    <Include RefId="QueryParams" />
+</Statement>
+
+<!--获取表映射实体-->
+<Statement Id="GetEntity" ResultMap="SupplierResultMap">
+    Select 
+    <Include RefId="AllCols"/>
+    From supplier As T
+    <Where Min="1">
+            <IsNotEmpty Prepend="And" Property="Address">
+                T.address= ?Address
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="Category">
+                T.category= ?Category
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="Contact">
+                T.contact= ?Contact
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="Id">
+                T.id= ?Id
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="JoinUsTime">
+                T.join_us_time= ?JoinUsTime
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="Mobile">
+                T.mobile= ?Mobile
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="No">
+                T.no= ?No
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="SupplierName">
+                T.supplier_name= ?SupplierName
+            </IsNotEmpty>
+    </Where>
+    Limit 1
+</Statement>
+
+<!--是否存在该记录-->
+<Statement Id="IsExist">
+    Select Count(1) From supplier T
+    <Include RefId="QueryParams" />
+</Statement>
+
+
+    </Statements>
+</SmartSqlMap>
