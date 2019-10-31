@@ -32,32 +32,13 @@ namespace Lmf.BasicData.Api.Extensions
         public static IServiceCollection AddProjServer(this IServiceCollection services)
         {
             var assembly = Assembly.Load("Lmf.BasicData.Service");
-            var types = assembly.GetTypes();
+            var types = assembly.GetTypes().Where(w=> !w.Name.EndsWith("RPCService"));
             foreach (var type in types)
             {
                 services.AddSingleton(type);
             }
             return services;
-        }
-
-        /// <summary>
-        /// 注册RPC
-        /// </summary>
-        /// <param name="services"></param>
-        /// <returns></returns>
-        public static IServiceCollection AddProjRPC(this IServiceCollection services)
-        {
-            var assembly = Assembly.GetExecutingAssembly().DefinedTypes.Where(w => w.Name.EndsWith("RPCService"));
-            foreach (var item in assembly)
-            {
-                if (item.GetInterfaces().Count() == 0)
-                {
-                    continue;
-                }
-                services.AddTransient(item.GetInterfaces().FirstOrDefault(), item);
-            }
-            return services;
-        }
+        } 
 
     }
 }

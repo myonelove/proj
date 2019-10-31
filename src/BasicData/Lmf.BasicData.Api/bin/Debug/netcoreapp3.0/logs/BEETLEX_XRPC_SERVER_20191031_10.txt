@@ -1,0 +1,25 @@
+﻿[2019/10/31 8:55:59] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/10/31 8:55:59] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/31 8:55:59] [Info] BeetleX [V:1.4.6.2]
+[2019/10/31 8:55:59] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/31 8:55:59] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/10/31 8:56:21] [Info] session connected from 127.0.0.1:52737@1
+[2019/10/31 8:56:21] [Info] 127.0.0.1:52737 begin receive
+[2019/10/31 8:56:21] [Debug]  127.0.0.1:52737 connected
+[2019/10/31 8:56:21] [Info] 127.0.0.1:52737 receive 40 length completed
+[2019/10/31 8:56:21] [Debug] 127.0.0.1:52737 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 8:56:21] [Debug] [2]127.0.0.1:52737 receive message /IStaffService/GetStaff@2
+[2019/10/31 8:56:21] [Info] 127.0.0.1:52737 begin receive
+[2019/10/31 8:56:21] [Debug] [2]127.0.0.1:52737 request /IStaffService/GetStaff not found!
+[2019/10/31 8:56:24] [Info] session connected from 127.0.0.1:52754@2
+[2019/10/31 8:56:24] [Info] 127.0.0.1:52754 begin receive
+[2019/10/31 8:56:24] [Info] 127.0.0.1:52754 receive 40 length completed
+[2019/10/31 8:56:24] [Debug] 127.0.0.1:52754 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 8:56:24] [Debug] [3]127.0.0.1:52754 receive message /IStaffService/GetStaff@3
+[2019/10/31 8:56:24] [Info] 127.0.0.1:52754 begin receive
+[2019/10/31 8:56:24] [Debug] [3]127.0.0.1:52754 request /IStaffService/GetStaff not found!
+[2019/10/31 8:56:24] [Debug]  127.0.0.1:52754 connected
+[2019/10/31 8:56:33] [Debug] 127.0.0.1:52737 receive close error ConnectionReset receive:0
+[2019/10/31 8:56:33] [Debug] 127.0.0.1:52754 receive close error ConnectionReset receive:0
+[2019/10/31 8:56:33] [Info] session 127.0.0.1:52737@1 disconnected
+[2019/10/31 8:56:33] [Info] session 127.0.0.1:52754@2 disconnected

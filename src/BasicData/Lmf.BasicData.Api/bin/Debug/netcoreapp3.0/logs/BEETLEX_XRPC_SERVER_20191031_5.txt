@@ -1,0 +1,19 @@
+﻿[2019/10/31 8:06:23] [Error] Register StaffRPCService error No parameterless constructor defined for type 'Lmf.BasicData.Api.RPC.StaffRPCService'.@   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic, Boolean wrapExceptions)
+   at System.Activator.CreateInstance(Type type)
+   at EventNext.EventCenter.CreateController(Type type)
+   at EventNext.EventCenter.Register(Assembly[] assemblies)
+[2019/10/31 8:06:23] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/10/31 8:06:23] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/31 8:06:23] [Info] BeetleX [V:1.4.6.2]
+[2019/10/31 8:06:23] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/31 8:06:23] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/10/31 8:09:13] [Info] session connected from 127.0.0.1:52096@1
+[2019/10/31 8:09:13] [Info] 127.0.0.1:52096 begin receive
+[2019/10/31 8:09:13] [Debug]  127.0.0.1:52096 connected
+[2019/10/31 8:09:13] [Info] 127.0.0.1:52096 receive 40 length completed
+[2019/10/31 8:09:13] [Debug] 127.0.0.1:52096 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 8:09:13] [Debug] [2]127.0.0.1:52096 receive message /IStaffService/GetStaff@2
+[2019/10/31 8:09:13] [Info] 127.0.0.1:52096 begin receive
+[2019/10/31 8:09:13] [Debug] [2]127.0.0.1:52096 request /IStaffService/GetStaff not found!

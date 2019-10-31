@@ -1,0 +1,41 @@
+﻿[2019/10/31 9:02:03] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/10/31 9:02:03] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/31 9:02:03] [Info] BeetleX [V:1.4.6.2]
+[2019/10/31 9:02:03] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/31 9:02:03] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/10/31 9:02:19] [Info] session connected from 127.0.0.1:53508@1
+[2019/10/31 9:02:19] [Info] 127.0.0.1:53508 begin receive
+[2019/10/31 9:02:19] [Debug]  127.0.0.1:53508 connected
+[2019/10/31 9:02:19] [Info] 127.0.0.1:53508 receive 40 length completed
+[2019/10/31 9:02:19] [Debug] 127.0.0.1:53508 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 9:02:19] [Debug] [2]127.0.0.1:53508 receive message /IStaffService/GetStaff@2
+[2019/10/31 9:02:19] [Info] 127.0.0.1:53508 begin receive
+[2019/10/31 9:02:19] [Debug] [2]127.0.0.1:53508 request /IStaffService/GetStaff not found!
+[2019/10/31 9:02:22] [Info] session connected from 127.0.0.1:53513@2
+[2019/10/31 9:02:22] [Info] 127.0.0.1:53513 begin receive
+[2019/10/31 9:02:22] [Info] 127.0.0.1:53513 receive 40 length completed
+[2019/10/31 9:02:22] [Debug] 127.0.0.1:53513 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 9:02:22] [Debug] [3]127.0.0.1:53513 receive message /IStaffService/GetStaff@3
+[2019/10/31 9:02:22] [Info] 127.0.0.1:53513 begin receive
+[2019/10/31 9:02:22] [Debug] [3]127.0.0.1:53513 request /IStaffService/GetStaff not found!
+[2019/10/31 9:02:22] [Debug]  127.0.0.1:53513 connected
+[2019/10/31 9:02:35] [Info] 127.0.0.1:53508 receive 40 length completed
+[2019/10/31 9:02:35] [Debug] 127.0.0.1:53508 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 9:02:35] [Debug] [4]127.0.0.1:53508 receive message /IStaffService/GetStaff@4
+[2019/10/31 9:02:35] [Info] 127.0.0.1:53508 begin receive
+[2019/10/31 9:02:35] [Debug] [4]127.0.0.1:53508 request /IStaffService/GetStaff not found!
+[2019/10/31 9:02:37] [Info] 127.0.0.1:53513 receive 40 length completed
+[2019/10/31 9:02:37] [Debug] 127.0.0.1:53513 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 9:02:37] [Debug] [5]127.0.0.1:53513 receive message /IStaffService/GetStaff@5
+[2019/10/31 9:02:37] [Info] 127.0.0.1:53513 begin receive
+[2019/10/31 9:02:37] [Debug] [5]127.0.0.1:53513 request /IStaffService/GetStaff not found!
+[2019/10/31 9:02:57] [Info] 127.0.0.1:53508 receive 40 length completed
+[2019/10/31 9:02:57] [Debug] 127.0.0.1:53508 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 9:02:57] [Debug] [6]127.0.0.1:53508 receive message /IStaffService/GetStaff@6
+[2019/10/31 9:02:57] [Info] 127.0.0.1:53508 begin receive
+[2019/10/31 9:02:57] [Debug] [6]127.0.0.1:53508 request /IStaffService/GetStaff not found!
+[2019/10/31 9:04:19] [Info] 127.0.0.1:53513 receive 40 length completed
+[2019/10/31 9:04:19] [Debug] 127.0.0.1:53513 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 9:04:19] [Debug] [7]127.0.0.1:53513 receive message /IStaffService/GetStaff@7
+[2019/10/31 9:04:19] [Info] 127.0.0.1:53513 begin receive
+[2019/10/31 9:04:19] [Debug] [7]127.0.0.1:53513 request /IStaffService/GetStaff not found!

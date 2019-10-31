@@ -10,22 +10,22 @@
         "projectUniqueName": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Api\\Lmf.BasicData.Api.csproj",
         "projectName": "Lmf.BasicData.Api",
         "projectPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Api\\Lmf.BasicData.Api.csproj",
-        "packagesPath": "D:\\nuget\\.nuget\\packages",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
@@ -70,7 +70,7 @@
             },
             "BeetleX.FastHttpApi.Hosting": {
               "target": "Package",
-              "version": "[0.8.2, )"
+              "version": "[0.8.8, )"
             },
             "BeetleX.XRPC": {
               "target": "Package",
@@ -78,19 +78,19 @@
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.0.0, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.0.0, )"
             },
             "SmartSql": {
               "target": "Package",
-              "version": "[4.1.32, )"
+              "version": "[4.1.38, )"
             },
             "SmartSql.DIExtension": {
               "target": "Package",
-              "version": "[4.1.32, )"
+              "version": "[4.1.38, )"
             },
             "StackExchange.Redis": {
               "target": "Package",
@@ -122,22 +122,22 @@
         "projectUniqueName": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Entity\\Lmf.BasicData.Entity.csproj",
         "projectName": "Lmf.BasicData.Entity",
         "projectPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Entity\\Lmf.BasicData.Entity.csproj",
-        "packagesPath": "D:\\nuget\\.nuget\\packages",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -180,22 +180,22 @@
         "projectUniqueName": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Model\\Lmf.BasicData.Model.csproj",
         "projectName": "Lmf.BasicData.Model",
         "projectPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Model\\Lmf.BasicData.Model.csproj",
-        "packagesPath": "D:\\nuget\\.nuget\\packages",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -238,22 +238,22 @@
         "projectUniqueName": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Repository\\Lmf.BasicData.Repository.csproj",
         "projectName": "Lmf.BasicData.Repository",
         "projectPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Repository\\Lmf.BasicData.Repository.csproj",
-        "packagesPath": "D:\\nuget\\.nuget\\packages",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -275,7 +275,7 @@
           "dependencies": {
             "MySql.Data": {
               "target": "Package",
-              "version": "[8.0.17, )"
+              "version": "[8.0.18, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -285,19 +285,19 @@
             },
             "SmartSql.DyRepository": {
               "target": "Package",
-              "version": "[4.1.9, )"
+              "version": "[4.1.38, )"
             },
             "SmartSql.Schema": {
               "target": "Package",
-              "version": "[4.1.9, )"
+              "version": "[4.1.30, )"
             },
             "SmartSql.ScriptTag": {
               "target": "Package",
-              "version": "[4.1.9, )"
+              "version": "[4.1.38, )"
             },
             "SmartSql.TypeHandler": {
               "target": "Package",
-              "version": "[4.1.9, )"
+              "version": "[4.1.38, )"
             }
           },
           "imports": [
@@ -320,22 +320,22 @@
         "projectUniqueName": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Service\\Lmf.BasicData.Service.csproj",
         "projectName": "Lmf.BasicData.Service",
         "projectPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Service\\Lmf.BasicData.Service.csproj",
-        "packagesPath": "D:\\nuget\\.nuget\\packages",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
@@ -348,6 +348,9 @@
               },
               "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Repository\\Lmf.BasicData.Repository.csproj": {
                 "projectPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Repository\\Lmf.BasicData.Repository.csproj"
+              },
+              "F:\\git\\proj\\src\\Common\\Lmf.Service\\Lmf.Service.csproj": {
+                "projectPath": "F:\\git\\proj\\src\\Common\\Lmf.Service\\Lmf.Service.csproj"
               }
             }
           }
@@ -395,22 +398,22 @@
         "projectUniqueName": "F:\\git\\proj\\src\\Common\\Lmf.Service\\Lmf.Service.csproj",
         "projectName": "Lmf.Service",
         "projectPath": "F:\\git\\proj\\src\\Common\\Lmf.Service\\Lmf.Service.csproj",
-        "packagesPath": "D:\\nuget\\.nuget\\packages",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "F:\\git\\proj\\src\\Common\\Lmf.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -428,7 +431,7 @@
           "dependencies": {
             "MessagePack": {
               "target": "Package",
-              "version": "[1.7.3.7, )"
+              "version": "[1.8.74, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -457,22 +460,22 @@
         "projectUniqueName": "F:\\git\\proj\\src\\Common\\Lmf.Util\\Lmf.Util.csproj",
         "projectName": "Lmf.Util",
         "projectPath": "F:\\git\\proj\\src\\Common\\Lmf.Util\\Lmf.Util.csproj",
-        "packagesPath": "D:\\nuget\\.nuget\\packages",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
         "outputPath": "F:\\git\\proj\\src\\Common\\Lmf.Util\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -490,7 +493,7 @@
           "dependencies": {
             "Microsoft.Extensions.Options": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[3.0.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

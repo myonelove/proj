@@ -4,11 +4,11 @@
         <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
-            <PackageReference Include="MySql.Data" Version="8.0.17.0" />
-                    <PackageReference Include="SmartSql.TypeHandler" Version="4.1.9" />
-        <PackageReference Include="SmartSql.Schema" Version="4.1.9" />
-        <PackageReference Include="SmartSql.ScriptTag" Version="4.1.9" />
-        <PackageReference Include="SmartSql.DyRepository" Version="4.1.9" />
+            <PackageReference Include="MySql.Data" Version="8.0.18" />
+                    <PackageReference Include="SmartSql.TypeHandler" Version="4.1.38" />
+        <PackageReference Include="SmartSql.Schema" Version="4.1.30" />
+        <PackageReference Include="SmartSql.ScriptTag" Version="4.1.38" />
+        <PackageReference Include="SmartSql.DyRepository" Version="4.1.38" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Lmf.BasicData.Entity\Lmf.BasicData.Entity.csproj" />

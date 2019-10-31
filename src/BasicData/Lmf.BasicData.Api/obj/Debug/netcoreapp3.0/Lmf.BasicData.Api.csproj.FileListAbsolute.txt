@@ -83,3 +83,15 @@ F:\git\proj\src\BasicData\Lmf.BasicData.Api\obj\Debug\netcoreapp3.0\Lmf.BasicDat
 F:\git\proj\src\BasicData\Lmf.BasicData.Api\obj\Debug\netcoreapp3.0\Lmf.BasicData.Api.csproj.CopyComplete
 F:\git\proj\src\BasicData\Lmf.BasicData.Api\obj\Debug\netcoreapp3.0\Lmf.BasicData.Api.dll
 F:\git\proj\src\BasicData\Lmf.BasicData.Api\obj\Debug\netcoreapp3.0\Lmf.BasicData.Api.pdb
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Configuration.CommandLine.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Logging.Configuration.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Logging.Console.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Logging.Debug.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Logging.EventLog.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Logging.EventSource.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\System.Diagnostics.EventLog.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\System.Resources.Extensions.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll

@@ -8,6 +8,7 @@ using AutoMapper;
 using Lmf.Util.Algorithm;
 using System.Linq;
 using BeetleX.XRPC;
+using System.Reflection;
 
 namespace Lmf.Purchasing.Api.Extensions
 {
@@ -15,7 +16,7 @@ namespace Lmf.Purchasing.Api.Extensions
     {
         public static IServiceCollection Settings(this IServiceCollection services, IConfiguration configuration)
         {
-            RPCHostRun(configuration);
+            OpenRPCServer(configuration);
             services
                 .AddBeetlexHttp(configuration)
                 .AddRedisExchange(configuration)
@@ -26,7 +27,7 @@ namespace Lmf.Purchasing.Api.Extensions
             return services;
         }
 
-        public static void RPCHostRun(IConfiguration configuration)
+        public static void OpenRPCServer(IConfiguration configuration)
         {
             var hosts = configuration.GetSection("XRPCHosts").Value;
             var arr = hosts.Split(";").ToList();
@@ -39,7 +40,8 @@ namespace Lmf.Purchasing.Api.Extensions
             xRPCServer.ServerOptions.DefaultListen.Host = host.Split(":")[0];
             xRPCServer.ServerOptions.DefaultListen.Port = Convert.ToInt32(host.Split(":")[1]);
             xRPCServer.ServerOptions.LogLevel = BeetleX.EventArgs.LogType.Debug;
-            xRPCServer.Register(typeof(Program).Assembly);
+            var assembly = Assembly.Load("Lmf.Purchasing.Service");
+            xRPCServer.Register(assembly);
             xRPCServer.Open();
         }
     }

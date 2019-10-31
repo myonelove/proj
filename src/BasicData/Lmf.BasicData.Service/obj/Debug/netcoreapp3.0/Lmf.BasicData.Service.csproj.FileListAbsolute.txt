@@ -20,3 +20,5 @@ F:\git\proj\src\BasicData\Lmf.BasicData.Service\obj\Debug\netcoreapp3.0\Lmf.Basi
 F:\git\proj\src\BasicData\Lmf.BasicData.Service\obj\Debug\netcoreapp3.0\Lmf.BasicData.Service.csproj.CopyComplete
 F:\git\proj\src\BasicData\Lmf.BasicData.Service\obj\Debug\netcoreapp3.0\Lmf.BasicData.Service.dll
 F:\git\proj\src\BasicData\Lmf.BasicData.Service\obj\Debug\netcoreapp3.0\Lmf.BasicData.Service.pdb
+F:\git\proj\src\BasicData\Lmf.BasicData.Service\bin\Debug\netcoreapp3.0\Lmf.Service.dll
+F:\git\proj\src\BasicData\Lmf.BasicData.Service\bin\Debug\netcoreapp3.0\Lmf.Service.pdb

@@ -7,11 +7,11 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
-    <PackageReference Include="BeetleX.FastHttpApi.Hosting" Version="0.8.2" />
+    <PackageReference Include="BeetleX.FastHttpApi.Hosting" Version="0.8.8" />
     <PackageReference Include="BeetleX.XRPC" Version="0.6.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0" />
-    <PackageReference Include="SmartSql" Version="4.1.32" />
-    <PackageReference Include="SmartSql.DIExtension" Version="4.1.32" />
+    <PackageReference Include="SmartSql" Version="4.1.38" />
+    <PackageReference Include="SmartSql.DIExtension" Version="4.1.38" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,10 +26,6 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="RPC\" />
   </ItemGroup>
 
 </Project>

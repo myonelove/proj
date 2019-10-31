@@ -1,7 +1,6 @@
 F:\git\proj\src\BasicData\Lmf.BasicData.Model\bin\Debug\netstandard2.0\Lmf.BasicData.Model.deps.json
 F:\git\proj\src\BasicData\Lmf.BasicData.Model\bin\Debug\netstandard2.0\Lmf.BasicData.Model.dll
 F:\git\proj\src\BasicData\Lmf.BasicData.Model\bin\Debug\netstandard2.0\Lmf.BasicData.Model.pdb
-F:\git\proj\src\BasicData\Lmf.BasicData.Model\obj\Debug\netstandard2.0\Lmf.BasicData.Model.csprojAssemblyReference.cache
 F:\git\proj\src\BasicData\Lmf.BasicData.Model\obj\Debug\netstandard2.0\Lmf.BasicData.Model.AssemblyInfoInputs.cache
 F:\git\proj\src\BasicData\Lmf.BasicData.Model\obj\Debug\netstandard2.0\Lmf.BasicData.Model.AssemblyInfo.cs
 F:\git\proj\src\BasicData\Lmf.BasicData.Model\obj\Debug\netstandard2.0\Lmf.BasicData.Model.dll

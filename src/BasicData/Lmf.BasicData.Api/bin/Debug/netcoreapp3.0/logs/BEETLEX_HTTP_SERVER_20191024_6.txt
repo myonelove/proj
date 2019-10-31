@@ -1,0 +1,23 @@
+﻿[2019/10/24 3:09:29] [Info] rewrite url [/api/basicdata/healthcheck] to [/api/basicdata/healthcheck]
+[2019/10/24 3:09:29] [Info] register HomeController.HealthCheck to [GET:/api/basicdata/healthcheck]
+[2019/10/24 3:09:30] [Info] rewrite url [/api/basicdata/staff/add] to [/api/basicdata/staff/addstaff]
+[2019/10/24 3:09:30] [Info] register StaffController.AddStaff to [POST:/api/basicdata/staff/addstaff]
+[2019/10/24 3:09:30] [Info] rewrite url [/api/basicdata/staff/modify] to [/api/basicdata/staff/modifystaff]
+[2019/10/24 3:09:30] [Info] register StaffController.ModifyStaff to [PUT:/api/basicdata/staff/modifystaff]
+[2019/10/24 3:09:30] [Info] init BeetleX.FastHttpApi.ServerController controller path F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\
+[2019/10/24 3:09:30] [Info] register ServerController.__ServerStatus to [GET:/__serverstatus]
+[2019/10/24 3:09:30] [Info] register ServerController.__SetSettings to [POST:/__setsettings]
+[2019/10/24 3:09:30] [Info] register ServerController.__ChangeAccessKey to [GET:/__changeaccesskey]
+[2019/10/24 3:09:30] [Info] register ServerController.__GetSettings to [GET:/__getsettings]
+[2019/10/24 3:09:30] [Info] register ServerController.__LogConnect to [GET:/__logconnect]
+[2019/10/24 3:09:30] [Info] register ServerController.__ListLog to [GET:/__listlog]
+[2019/10/24 3:09:30] [Info] register ServerController.__GetOptions to [GET:/__getoptions]
+[2019/10/24 3:09:30] [Info] register ServerController.__UploadModule to [POST:/__uploadmodule]
+[2019/10/24 3:09:30] [Info] register ServerController.__SetActionMaxrps to [POST:/__setactionmaxrps]
+[2019/10/24 3:09:30] [Info] register ServerController.__SetOptions to [POST:/__setoptions]
+[2019/10/24 3:09:30] [Info] detection sessions timeout with 3600s
+[2019/10/24 3:09:30] [Info] listen 127.0.0.1@8100 success ssl:False
+[2019/10/24 3:09:30] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/24 3:09:30] [Info] BeetleX [V:1.3.2.0]
+[2019/10/24 3:09:30] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|2048KB]
+[2019/10/24 3:09:30] [Info] BeetleX FastHttpApi [IOQueue:False|Threads:4] [V:1.5.4.2]

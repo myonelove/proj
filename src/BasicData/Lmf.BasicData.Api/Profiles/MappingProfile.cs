@@ -13,8 +13,7 @@ namespace Lmf.BasicData.Api.Profiles
         public MappingProfile()
         {
             CreateMap<AddStaffModel, Staff>();
-            CreateMap<ModifyStaffModel, Staff>();
-            CreateMap<Staff,StaffModel>();
+            CreateMap<ModifyStaffModel, Staff>(); 
         }
     }
 }

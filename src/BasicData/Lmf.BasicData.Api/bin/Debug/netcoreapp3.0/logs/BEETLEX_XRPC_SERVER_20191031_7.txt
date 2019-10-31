@@ -1,0 +1,27 @@
+﻿[2019/10/31 8:11:22] [Info] Register IStaffService->StaffRPCService@GetStaff to /IStaffService/GetStaff[ThreadType:None|UniqueID:]
+[2019/10/31 8:11:22] [Info] Register IStaffService->StaffRPCService@GetStaffs to /IStaffService/GetStaffs[ThreadType:None|UniqueID:]
+[2019/10/31 8:11:22] [Info] Register IStaffService->StaffRPCService@AddStaff to /IStaffService/AddStaff[ThreadType:None|UniqueID:]
+[2019/10/31 8:11:22] [Info] Register IStaffService->StaffRPCService@ModifyStaff to /IStaffService/ModifyStaff[ThreadType:None|UniqueID:]
+[2019/10/31 8:11:22] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/10/31 8:11:22] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/31 8:11:22] [Info] BeetleX [V:1.4.6.2]
+[2019/10/31 8:11:22] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/31 8:11:22] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/10/31 8:11:44] [Info] session connected from 127.0.0.1:52135@1
+[2019/10/31 8:11:44] [Info] 127.0.0.1:52135 begin receive
+[2019/10/31 8:11:44] [Debug]  127.0.0.1:52135 connected
+[2019/10/31 8:11:44] [Info] 127.0.0.1:52135 receive 40 length completed
+[2019/10/31 8:11:44] [Debug] 127.0.0.1:52135 session packet decode completed BeetleX.XRPC.Request
+[2019/10/31 8:11:44] [Debug] [2]127.0.0.1:52135 receive message /IStaffService/GetStaff@2
+[2019/10/31 8:11:44] [Info] 127.0.0.1:52135 begin receive
+[2019/10/31 8:11:44] [Debug] [2]127.0.0.1:52135 receive event data:{"ID":2,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[1],"Token":"Localhost"}
+[2019/10/31 8:11:44] [Debug] [2]127.0.0.1:52135 Process event /IStaffService/GetStaff
+[2019/10/31 8:11:44] [Debug] [2]127.0.0.1:52135 process event /IStaffService/GetStaff beginning invoke method
+[2019/10/31 8:11:50] [Error] [2]127.0.0.1:52135 process event /IStaffService/GetStaff invoke method error Object reference not set to an instance of an object.@   at SmartSql.DbSession.DefaultDbSession.InvokeAsync[TResult](AbstractRequestContext requestContext)
+   at SmartSql.DbSession.DefaultDbSession.QuerySingleAsync[TResult](AbstractRequestContext requestContext)
+   at SmartSql.SqlMapper.ExecuteImplAsync[TResult](Func`2 executeFunc)
+   at SmartSql.SqlMapper.QuerySingleAsync[TResult](AbstractRequestContext requestContext)
+   at Lmf.BasicData.Api.RPC.StaffRPCService.GetStaff(Int32 id) in F:\git\proj\src\BasicData\Lmf.BasicData.Api\RPC\StaffRPCService.cs:line 34
+   at EventNext.EventActionHandlerContext.Execute()
+[2019/10/31 8:11:50] [Debug] [2]127.0.0.1:52135 send event data:{"ID":2,"EventPath":null,"Properties":{},"Data":["Process event /IStaffService/GetStaff error Object reference not set to an instance of an object."],"EventError":500,"ResponseTime":0.0,"Token":null}
+[2019/10/31 8:12:02] [Debug] 127.0.0.1:52135 receive close error ConnectionReset receive:0

@@ -30,9 +30,9 @@ namespace Lmf.Purchasing.Api.Extensions
         /// <param name="services"></param>
         /// <returns></returns>
         public static IServiceCollection AddProjServer(this IServiceCollection services)
-        {
+        { 
             var assembly = Assembly.Load("Lmf.Purchasing.Service");
-            var types = assembly.GetTypes();
+            var types = assembly.GetTypes().Where(w => !w.Name.EndsWith("RPCService"));
             foreach (var type in types)
             {
                 services.AddSingleton(type);

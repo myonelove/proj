@@ -10,12 +10,12 @@
       "Lmf.BasicData.Repository/1.0.0": {
         "dependencies": {
           "Lmf.BasicData.Entity": "1.0.0",
-          "MySql.Data": "8.0.17",
+          "MySql.Data": "8.0.18",
           "NETStandard.Library": "2.0.3",
-          "SmartSql.DyRepository": "4.1.9",
-          "SmartSql.Schema": "4.1.9",
-          "SmartSql.ScriptTag": "4.1.9",
-          "SmartSql.TypeHandler": "4.1.9"
+          "SmartSql.DyRepository": "4.1.38",
+          "SmartSql.Schema": "4.1.30",
+          "SmartSql.ScriptTag": "4.1.38",
+          "SmartSql.TypeHandler": "4.1.38"
         },
         "runtime": {
           "Lmf.BasicData.Repository.dll": {}
@@ -89,19 +89,20 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "MySql.Data/8.0.17": {
+      "MySql.Data/8.0.18": {
         "dependencies": {
           "BouncyCastle.NetCore": "1.8.3",
           "Google.Protobuf": "3.6.1",
           "SSH.NET": "2016.1.0",
           "System.Configuration.ConfigurationManager": "4.4.1",
+          "System.Resources.Extensions": "4.6.0-preview8.19405.3",
           "System.Security.Permissions": "4.4.1",
           "System.Text.Encoding.CodePages": "4.4.0"
         },
         "runtime": {
           "lib/netstandard2.0/MySql.Data.dll": {
-            "assemblyVersion": "8.0.17.0",
-            "fileVersion": "8.0.17.0"
+            "assemblyVersion": "8.0.18.0",
+            "fileVersion": "8.0.18.0"
           }
         }
       },
@@ -130,7 +131,7 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "SmartSql/4.1.9": {
+      "SmartSql/4.1.38": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "System.Diagnostics.DiagnosticSource": "4.5.1",
@@ -139,44 +140,44 @@
         },
         "runtime": {
           "lib/netstandard2.0/SmartSql.dll": {
-            "assemblyVersion": "4.1.9.0",
-            "fileVersion": "4.1.9.0"
+            "assemblyVersion": "4.1.38.0",
+            "fileVersion": "4.1.38.0"
           }
         }
       },
-      "SmartSql.DyRepository/4.1.9": {
+      "SmartSql.DyRepository/4.1.38": {
         "dependencies": {
-          "SmartSql": "4.1.9"
+          "SmartSql": "4.1.38"
         },
         "runtime": {
           "lib/netstandard2.0/SmartSql.DyRepository.dll": {
-            "assemblyVersion": "4.1.9.0",
-            "fileVersion": "4.1.9.0"
+            "assemblyVersion": "4.1.38.0",
+            "fileVersion": "4.1.38.0"
           }
         }
       },
-      "SmartSql.Schema/4.1.9": {},
-      "SmartSql.ScriptTag/4.1.9": {
+      "SmartSql.Schema/4.1.30": {},
+      "SmartSql.ScriptTag/4.1.38": {
         "dependencies": {
           "Jint": "2.11.58",
-          "SmartSql": "4.1.9"
+          "SmartSql": "4.1.38"
         },
         "runtime": {
           "lib/netstandard2.0/SmartSql.ScriptTag.dll": {
-            "assemblyVersion": "4.1.9.0",
-            "fileVersion": "4.1.9.0"
+            "assemblyVersion": "4.1.38.0",
+            "fileVersion": "4.1.38.0"
           }
         }
       },
-      "SmartSql.TypeHandler/4.1.9": {
+      "SmartSql.TypeHandler/4.1.38": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
-          "SmartSql": "4.1.9"
+          "SmartSql": "4.1.38"
         },
         "runtime": {
           "lib/netstandard2.0/SmartSql.TypeHandler.dll": {
-            "assemblyVersion": "4.1.9.0",
-            "fileVersion": "4.1.9.0"
+            "assemblyVersion": "4.1.38.0",
+            "fileVersion": "4.1.38.0"
           }
         }
       },
@@ -221,6 +222,14 @@
           "lib/netstandard1.3/SshNet.Security.Cryptography.dll": {
             "assemblyVersion": "1.2.0.0",
             "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
           }
         }
       },
@@ -410,6 +419,19 @@
           }
         }
       },
+      "System.Memory/4.5.3": {
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {
+            "assemblyVersion": "4.0.1.1",
+            "fileVersion": "4.6.27617.2"
+          }
+        }
+      },
       "System.Net.NameResolution/4.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -444,6 +466,14 @@
           "System.Net.Primitives": "4.0.11",
           "System.Runtime": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.3.0",
+            "fileVersion": "4.6.25519.3"
+          }
         }
       },
       "System.ObjectModel/4.0.12": {
@@ -539,6 +569,17 @@
           }
         }
       },
+      "System.Resources.Extensions/4.6.0-preview8.19405.3": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Resources.Extensions.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.19.40503"
+          }
+        }
+      },
       "System.Resources.ResourceManager/4.0.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -552,6 +593,14 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.26919.2"
+          }
         }
       },
       "System.Runtime.Extensions/4.1.0": {
@@ -881,21 +930,21 @@
     "BouncyCastle.NetCore/1.8.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-An0cxp/uGPkMWfjAVyHJWBQ9igea74Ma8rtMnpkEwjemx8EoVo7IUIFpFfxpBgVuSbpQueKo2m/CoSxxfLHTtw==",
+      "sha512": "sha512-jAy3uHN1U9DpoT/TgLqDTEhlccn/4doOVxhSmmNsnoSsGfHT9Lwr634ac9D0YFujAhNw61nWF4UIpHyzv0aQww==",
       "path": "bouncycastle.netcore/1.8.3",
       "hashPath": "bouncycastle.netcore.1.8.3.nupkg.sha512"
     },
     "Google.Protobuf/3.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-D/h9IZl76jjfM5VlPzG235Zdys9RKXNLYbRGm2fa6Y2UshTqAvYBPIydNOvNTEa24DER/m/zvelHlLO9n1GtNQ==",
+      "sha512": "sha512-741fGeDQjixBJaU2j+0CbrmZXsNJkTn/hWbOh4fLVXndHsCclJmWznCPWrJmPoZKvajBvAz3e8ECJOUvRtwjNQ==",
       "path": "google.protobuf/3.6.1",
       "hashPath": "google.protobuf.3.6.1.nupkg.sha512"
     },
     "Jint/2.11.58": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PBndl2QmfOVxXEoOGXSUuCCfIJ0XouYFNR0fO8+1UOEhKiLZONeCysZ+Ya9xjMK9yDubgrKQf1hbxwDflPMwMA==",
+      "sha512": "sha512-obRlPnuSmbjO7I2bfuKc1d+K1LB3xyg1Cnm2MT7PGUOHOntcdR96pDhsQnWBI5Dhxqr1Bj5/odpNi/B+AwVlPA==",
       "path": "jint/2.11.58",
       "hashPath": "jint.2.11.58.nupkg.sha512"
     },
@@ -927,12 +976,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "MySql.Data/8.0.17": {
+    "MySql.Data/8.0.18": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sOZDjxPC7zcgt4IvR14cMdSqwF3Dp6ER2jNkbGpP4bf/n+v55vzLC2TO4qskB+qBhjt0Q2B+w38V31ogo3cQaw==",
-      "path": "mysql.data/8.0.17",
-      "hashPath": "mysql.data.8.0.17.nupkg.sha512"
+      "sha512": "sha512-BgzDO6yitNn0np6kUbNpgRsXj7o1Km0lZoSdDi3++HuWQdFxbaERuxcYbmkDZEqEtvySxf5ww+dqSE0uf9F5+A==",
+      "path": "mysql.data/8.0.18",
+      "hashPath": "mysql.data.8.0.18.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",
@@ -962,54 +1011,61 @@
       "path": "runtime.native.system.security.cryptography/4.0.0",
       "hashPath": "runtime.native.system.security.cryptography.4.0.0.nupkg.sha512"
     },
-    "SmartSql/4.1.9": {
+    "SmartSql/4.1.38": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2ZAHl5dAxqakmGoP/6bSH+Lg3bikcq9bBjxQw2Wl7bgtDlZ78+bmNefbIa1RlZ3cXHsa4obanDLhqYHy5vZ5Ag==",
-      "path": "smartsql/4.1.9",
-      "hashPath": "smartsql.4.1.9.nupkg.sha512"
+      "sha512": "sha512-eKW0G4/wMOu77l8imUxHqf4vBKXVjmgT7kGrM31P5XHH+h30BwCgamaVSLa90V03H2TQVBFzDapgu22X7Jil4Q==",
+      "path": "smartsql/4.1.38",
+      "hashPath": "smartsql.4.1.38.nupkg.sha512"
     },
-    "SmartSql.DyRepository/4.1.9": {
+    "SmartSql.DyRepository/4.1.38": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QElQt2N4DVgHeRN2JRlm6xL7w2HahzvLp6rnr6sy5m6vcWOlhXbz6ve5XxOeugArxaCshVIGOgOWDQBoWoh/7g==",
-      "path": "smartsql.dyrepository/4.1.9",
-      "hashPath": "smartsql.dyrepository.4.1.9.nupkg.sha512"
+      "sha512": "sha512-g4ESniNpYY79eNwIkV3eb6uXYb8Ud4ZM6W/XQKzTgc8Q7PPIft0+OHfkjU7TnCMS5M6SMvQiRxW4vKU9TXyA8A==",
+      "path": "smartsql.dyrepository/4.1.38",
+      "hashPath": "smartsql.dyrepository.4.1.38.nupkg.sha512"
     },
-    "SmartSql.Schema/4.1.9": {
+    "SmartSql.Schema/4.1.30": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zW0FIZ0dz9foEQnibrw5tuoUPji7E/uM4svXSUleOiEJCA5jRzs1PsFyxglewjKFIF3VVgP0OlKddFHWhDHjTQ==",
-      "path": "smartsql.schema/4.1.9",
-      "hashPath": "smartsql.schema.4.1.9.nupkg.sha512"
+      "sha512": "sha512-plwd9R9oBOh0C86ZJNOPE4SJCW4rtfwzU1qFNsGcEVzNxxshUK/cRE09t6ydA97B8pnhPe+IhuZcY4YVEzvVog==",
+      "path": "smartsql.schema/4.1.30",
+      "hashPath": "smartsql.schema.4.1.30.nupkg.sha512"
     },
-    "SmartSql.ScriptTag/4.1.9": {
+    "SmartSql.ScriptTag/4.1.38": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TXMV0B+YDrZkF4bgtACyoG1i3vRCP1M+3mVxOqgdVOOR4TLMlUeieYRNvKozjFAnyM5HbhD3Mu5q0ZDv5WOjtA==",
-      "path": "smartsql.scripttag/4.1.9",
-      "hashPath": "smartsql.scripttag.4.1.9.nupkg.sha512"
+      "sha512": "sha512-MQMP9OMVOyCAsWNI82pzZ9OAd530OMKL5PCX4ZGflHWDz2iDQl76TjZw8x6mlwiqhu4Hq7AfbNIgBWCcC2ge+Q==",
+      "path": "smartsql.scripttag/4.1.38",
+      "hashPath": "smartsql.scripttag.4.1.38.nupkg.sha512"
     },
-    "SmartSql.TypeHandler/4.1.9": {
+    "SmartSql.TypeHandler/4.1.38": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-igF/jvENZGX8expNcauo3a9SyjMdXfTHYPYR646/ATpkHNGmc2XjkEcy7gjWHw4/jXJ+/Z+nkUt60wdaxFvBqg==",
-      "path": "smartsql.typehandler/4.1.9",
-      "hashPath": "smartsql.typehandler.4.1.9.nupkg.sha512"
+      "sha512": "sha512-qSNKMOl2p8CNThuQCDHNc28GNq9pjdPilhQhFR3m4KLwatXMWmvbvwbkffUduvcaW6PxV13Gmlr0UkhewUvgwQ==",
+      "path": "smartsql.typehandler/4.1.38",
+      "hashPath": "smartsql.typehandler.4.1.38.nupkg.sha512"
     },
     "SSH.NET/2016.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ky0PcLxFj7UyK7zAfNDtdnQEEFKdIc8COiSqe69k13ACuSJNiHmvOwHkARAVFQ4VgsbVFLupgYiXes0O00wEWA==",
+      "sha512": "sha512-b0fcFFOE044KNRhq1uGujmK04ab+OzA9xARdeVCoZrY6I4D1IIaR6dn6qBIa+er4bJapGBhznDitwcRQpSRC0w==",
       "path": "ssh.net/2016.1.0",
       "hashPath": "ssh.net.2016.1.0.nupkg.sha512"
     },
     "SshNet.Security.Cryptography/1.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Gd87t3O1luT7tpoyx3NgH+ee2Xn7K1qh9VpDdayYf2HhddeempTX82ezGL7uIjxo48i/oIl7WNZZd6sTjjfVdQ==",
+      "sha512": "sha512-EeFsirrrkIK+cdlYsxukNjBN98cbU7eHfTYZEwxsbOa3dvgR/OhOD06C0sTxvNPhe4UQ6yM0p1sKcT69jqgjTw==",
       "path": "sshnet.security.cryptography/1.2.0",
       "hashPath": "sshnet.security.cryptography.1.2.0.nupkg.sha512"
+    },
+    "System.Buffers/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "path": "system.buffers/4.4.0",
+      "hashPath": "system.buffers.4.4.0.nupkg.sha512"
     },
     "System.Collections/4.0.11": {
       "type": "package",
@@ -1028,7 +1084,7 @@
     "System.Configuration.ConfigurationManager/4.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LoSjM/kLDpyLyoGsmwS5oVMRzHf/0XHkRpr3QZu/HuAv6Sfk919usTMLqD9N9VK3S4Q2+bd3tKJ0ko4MYFfq4Q==",
+      "sha512": "sha512-jz3TWKMAeuDEyrPCK5Jyt4bzQcmzUIMcY9Ud6PkElFxTfnsihV+9N/UCqvxe1z5gc7jMYAnj7V1COMS9QKIuHQ==",
       "path": "system.configuration.configurationmanager/4.4.1",
       "hashPath": "system.configuration.configurationmanager.4.4.1.nupkg.sha512"
     },
@@ -1116,6 +1172,13 @@
       "path": "system.linq.expressions/4.1.0",
       "hashPath": "system.linq.expressions.4.1.0.nupkg.sha512"
     },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
     "System.Net.NameResolution/4.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1136,6 +1199,13 @@
       "sha512": "sha512-xAz0N3dAV/aR/9g8r0Y5oEqU1JRsz29F5EGb/WVHmX3jVSLqi2/92M5hTad2aNWovruXrJpJtgZ9fccPMG9uSw==",
       "path": "system.net.sockets/4.1.0",
       "hashPath": "system.net.sockets.4.1.0.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "path": "system.numerics.vectors/4.4.0",
+      "hashPath": "system.numerics.vectors.4.4.0.nupkg.sha512"
     },
     "System.ObjectModel/4.0.12": {
       "type": "package",
@@ -1193,6 +1263,13 @@
       "path": "system.reflection.typeextensions/4.1.0",
       "hashPath": "system.reflection.typeextensions.4.1.0.nupkg.sha512"
     },
+    "System.Resources.Extensions/4.6.0-preview8.19405.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6GWlVqlVxY8bHHD2SSoWmI8o86BJXZT8LSadE8BIbUa5UzHYi95WFnYU6Xaif58D6fduDN/Dv0ZOindx4L7YYA==",
+      "path": "system.resources.extensions/4.6.0-preview8.19405.3",
+      "hashPath": "system.resources.extensions.4.6.0-preview8.19405.3.nupkg.sha512"
+    },
     "System.Resources.ResourceManager/4.0.1": {
       "type": "package",
       "serviceable": true,
@@ -1206,6 +1283,13 @@
       "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.1.0": {
       "type": "package",
@@ -1266,14 +1350,14 @@
     "System.Security.Cryptography.ProtectedData/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WwEexvBd+17yfY7fcS+fBGl+HADEfCJuKeDJqBT7D6j6vKwYvfLyGuq2y/MmrKORC6mbYwth7kjinO1mPhTL3g==",
+      "sha512": "sha512-cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
       "path": "system.security.cryptography.protecteddata/4.4.0",
       "hashPath": "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
     },
     "System.Security.Permissions/4.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tXBMO8OJEuw9c4KjLj4fwxJusely90azF24Uktz/evgvowAtU963HYl+G93gaRZr6pvYvsSPrjkN4+2pdVUbgw==",
+      "sha512": "sha512-l8IxQ9mEAkKv85uoEcjcYhrh+yTLZtLgNqb2T7QChTdKXh45EUnmKd+Ckdt1D+VYW2dk2Pb5MT+0zwQ74Jd2Xg==",
       "path": "system.security.permissions/4.4.1",
       "hashPath": "system.security.permissions.4.4.1.nupkg.sha512"
     },

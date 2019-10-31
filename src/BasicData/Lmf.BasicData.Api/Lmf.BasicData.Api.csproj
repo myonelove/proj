@@ -12,12 +12,12 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
-    <PackageReference Include="BeetleX.FastHttpApi.Hosting" Version="0.8.2" />
+    <PackageReference Include="BeetleX.FastHttpApi.Hosting" Version="0.8.8" />
     <PackageReference Include="BeetleX.XRPC" Version="0.6.2" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
-    <PackageReference Include="SmartSql" Version="4.1.32" />
-    <PackageReference Include="SmartSql.DIExtension" Version="4.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
+    <PackageReference Include="SmartSql" Version="4.1.38" />
+    <PackageReference Include="SmartSql.DIExtension" Version="4.1.38" />
     <PackageReference Include="StackExchange.Redis" Version="2.0.601" />
   </ItemGroup>
 

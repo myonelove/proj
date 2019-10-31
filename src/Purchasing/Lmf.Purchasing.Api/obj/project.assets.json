@@ -28,7 +28,7 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "BeetleX/1.3.2": {
+      "BeetleX/1.4.6.2": {
         "type": "package",
         "compile": {
           "lib/netcoreapp2.1/BeetleX.dll": {}
@@ -37,10 +37,10 @@
           "lib/netcoreapp2.1/BeetleX.dll": {}
         }
       },
-      "BeetleX.FastHttpApi/1.5.4.2": {
+      "BeetleX.FastHttpApi/1.7.1": {
         "type": "package",
         "dependencies": {
-          "BeetleX": "1.3.2",
+          "BeetleX": "1.4.6.2",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -50,10 +50,10 @@
           "lib/netcoreapp2.1/BeetleX.FastHttpApi.dll": {}
         }
       },
-      "BeetleX.FastHttpApi.Hosting/0.8.2": {
+      "BeetleX.FastHttpApi.Hosting/0.8.8": {
         "type": "package",
         "dependencies": {
-          "BeetleX.FastHttpApi": "1.5.4.2",
+          "BeetleX.FastHttpApi": "1.7.1",
           "Microsoft.Extensions.Hosting": "2.2.0"
         },
         "compile": {
@@ -125,14 +125,14 @@
           "lib/netstandard2.0/Jint.dll": {}
         }
       },
-      "MessagePack/1.7.3.7": {
+      "MessagePack/1.8.74": {
         "type": "package",
         "dependencies": {
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Runtime.Serialization.Primitives": "4.3.0",
-          "System.Threading.Tasks.Extensions": "4.3.0",
-          "System.ValueTuple": "4.3.0"
+          "System.Threading.Tasks.Extensions": "4.5.2",
+          "System.ValueTuple": "4.5.0"
         },
         "compile": {
           "lib/netstandard2.0/MessagePack.dll": {}
@@ -224,7 +224,7 @@
           "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/2.2.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -322,18 +322,17 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/2.2.0": {
+      "Microsoft.Extensions.Options/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
-          "Microsoft.Extensions.Primitives": "2.2.0",
-          "System.ComponentModel.Annotations": "4.5.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0",
+          "Microsoft.Extensions.Primitives": "3.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+          "lib/netcoreapp3.0/Microsoft.Extensions.Options.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+          "lib/netcoreapp3.0/Microsoft.Extensions.Options.dll": {}
         }
       },
       "Microsoft.Extensions.Primitives/3.0.0": {
@@ -471,7 +470,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "SmartSql/4.1.32": {
+      "SmartSql/4.1.38": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
@@ -486,13 +485,13 @@
           "lib/netstandard2.0/SmartSql.dll": {}
         }
       },
-      "SmartSql.DIExtension/4.1.32": {
+      "SmartSql.DIExtension/4.1.38": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
-          "SmartSql": "4.1.32",
-          "SmartSql.DyRepository": "4.1.32"
+          "SmartSql": "4.1.38",
+          "SmartSql.DyRepository": "4.1.38"
         },
         "compile": {
           "lib/netstandard2.0/SmartSql.DIExtension.dll": {}
@@ -501,10 +500,10 @@
           "lib/netstandard2.0/SmartSql.DIExtension.dll": {}
         }
       },
-      "SmartSql.DyRepository/4.1.32": {
+      "SmartSql.DyRepository/4.1.38": {
         "type": "package",
         "dependencies": {
-          "SmartSql": "4.1.32"
+          "SmartSql": "4.1.38"
         },
         "compile": {
           "lib/netstandard2.0/SmartSql.DyRepository.dll": {}
@@ -513,7 +512,7 @@
           "lib/netstandard2.0/SmartSql.DyRepository.dll": {}
         }
       },
-      "SmartSql.Schema/4.1.29": {
+      "SmartSql.Schema/4.1.30": {
         "type": "package",
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -523,11 +522,11 @@
           }
         }
       },
-      "SmartSql.ScriptTag/4.1.32": {
+      "SmartSql.ScriptTag/4.1.38": {
         "type": "package",
         "dependencies": {
           "Jint": "2.11.58",
-          "SmartSql": "4.1.32"
+          "SmartSql": "4.1.38"
         },
         "compile": {
           "lib/netstandard2.0/SmartSql.ScriptTag.dll": {}
@@ -536,11 +535,11 @@
           "lib/netstandard2.0/SmartSql.ScriptTag.dll": {}
         }
       },
-      "SmartSql.TypeHandler/4.1.32": {
+      "SmartSql.TypeHandler/4.1.38": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
-          "SmartSql": "4.1.32"
+          "SmartSql": "4.1.38"
         },
         "compile": {
           "lib/netstandard2.0/SmartSql.TypeHandler.dll": {}
@@ -619,12 +618,12 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "System.Collections/4.3.0": {
+      "System.Collections/4.0.11": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "System.Runtime": "4.3.0"
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Collections.dll": {}
@@ -649,15 +648,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
-        }
-      },
-      "System.ComponentModel.Annotations/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/netcoreapp2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Configuration.ConfigurationManager/4.6.0": {
@@ -1034,7 +1024,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/System.Resources.ResourceManager.dll": {}
+          "ref/netstandard1.0/_._": {}
         }
       },
       "System.Runtime/4.3.0": {
@@ -1356,18 +1346,13 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "System.Threading.Tasks.Extensions/4.3.0": {
+      "System.Threading.Tasks.Extensions/4.5.2": {
         "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading.Tasks": "4.3.0"
-        },
         "compile": {
-          "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll": {}
+          "ref/netcoreapp2.1/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll": {}
+          "lib/netcoreapp2.1/_._": {}
         }
       },
       "System.Threading.Thread/4.0.0": {
@@ -1406,18 +1391,13 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {}
         }
       },
-      "System.ValueTuple/4.3.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "lib/netstandard1.0/System.ValueTuple.dll": {}
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.0/System.ValueTuple.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Windows.Extensions/4.6.0": {
@@ -1552,10 +1532,10 @@
         "dependencies": {
           "Lmf.Purchasing.Entity": "1.0.0",
           "MySql.Data": "8.0.18",
-          "SmartSql.DyRepository": "4.1.32",
-          "SmartSql.Schema": "4.1.29",
-          "SmartSql.ScriptTag": "4.1.32",
-          "SmartSql.TypeHandler": "4.1.32"
+          "SmartSql.DyRepository": "4.1.38",
+          "SmartSql.Schema": "4.1.30",
+          "SmartSql.ScriptTag": "4.1.38",
+          "SmartSql.TypeHandler": "4.1.38"
         },
         "compile": {
           "bin/placeholder/Lmf.Purchasing.Repository.dll": {}
@@ -1585,7 +1565,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "MessagePack": "1.7.3.7"
+          "MessagePack": "1.8.74"
         },
         "compile": {
           "bin/placeholder/Lmf.Service.dll": {}
@@ -1598,7 +1578,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.Extensions.Options": "2.2.0",
+          "Microsoft.Extensions.Options": "3.0.0",
           "Newtonsoft.Json": "12.0.2",
           "StackExchange.Redis": "2.0.601",
           "System.Configuration.ConfigurationManager": "4.6.0"
@@ -1643,43 +1623,41 @@
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.pdb"
       ]
     },
-    "BeetleX/1.3.2": {
-      "sha512": "iG12z6WhIhK1DQ0iFIaGbUyBt0FQ5MtDnr2VmWOhB48dhoiFcCGddvqZd3GJaP5TduQE06xkS1LGR68JXdnuNg==",
+    "BeetleX/1.4.6.2": {
+      "sha512": "jJCIYwsrnx5tA9Vc6PXdlnh9h3kZ8xvdc7BwtuQZFwp9BgnO0pQ4dlBM2/9Ec3njrZG1X8TKCnLOqw+Qi7pWQg==",
       "type": "package",
-      "path": "beetlex/1.3.2",
+      "path": "beetlex/1.4.6.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.1.3.2.nupkg.sha512",
+        "beetlex.1.4.6.2.nupkg.sha512",
         "beetlex.nuspec",
         "lib/netcoreapp2.1/BeetleX.dll",
         "lib/netstandard2.0/BeetleX.dll"
       ]
     },
-    "BeetleX.FastHttpApi/1.5.4.2": {
-      "sha512": "asrjpkeBqwRVdFXUrWDcPJEl9KyjSY7mGtoTjRQLfgXvUtw1cEGVEop1qDlrg814BK9mLdFjl1j3wfTnEICpfQ==",
+    "BeetleX.FastHttpApi/1.7.1": {
+      "sha512": "vaAY/NV9DDSi8hvdKFweNLjDZbI7PY8Si32hH2wf6ijD0rerjzATUhea0zjtplxC7XnziQabIOAnTVy7OmKVtQ==",
       "type": "package",
-      "path": "beetlex.fasthttpapi/1.5.4.2",
+      "path": "beetlex.fasthttpapi/1.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.fasthttpapi.1.5.4.2.nupkg.sha512",
+        "beetlex.fasthttpapi.1.7.1.nupkg.sha512",
         "beetlex.fasthttpapi.nuspec",
-        "lib/netcoreapp2.1/BeetleX.FastHttpApi.dll",
-        "lib/netstandard2.0/BeetleX.FastHttpApi.dll"
+        "lib/netcoreapp2.1/BeetleX.FastHttpApi.dll"
       ]
     },
-    "BeetleX.FastHttpApi.Hosting/0.8.2": {
-      "sha512": "G8G9uKObodZjXHoLh1CDxp71WPEYvybe/XCvC1Q+mb4MHJ2XV/laqSsF/bxlCrkR/9LhEfT4nC5Ru9F06e6+FA==",
+    "BeetleX.FastHttpApi.Hosting/0.8.8": {
+      "sha512": "ALdyi1dH+66zWuHeAUd39qzkqmmmRzqgnmRXa4wHbSR6Ft/RzOUlOCTNdF+fEP0iGRDciyjgWoeWXENKAFuNxw==",
       "type": "package",
-      "path": "beetlex.fasthttpapi.hosting/0.8.2",
+      "path": "beetlex.fasthttpapi.hosting/0.8.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.fasthttpapi.hosting.0.8.2.nupkg.sha512",
+        "beetlex.fasthttpapi.hosting.0.8.8.nupkg.sha512",
         "beetlex.fasthttpapi.hosting.nuspec",
-        "lib/netcoreapp2.1/BeetleX.FastHttpApi.Hosting.dll",
-        "lib/netstandard2.0/BeetleX.FastHttpApi.Hosting.dll"
+        "lib/netcoreapp2.1/BeetleX.FastHttpApi.Hosting.dll"
       ]
     },
     "BeetleX.XRPC/0.6.2": {
@@ -1695,7 +1673,7 @@
       ]
     },
     "BouncyCastle.NetCore/1.8.3": {
-      "sha512": "An0cxp/uGPkMWfjAVyHJWBQ9igea74Ma8rtMnpkEwjemx8EoVo7IUIFpFfxpBgVuSbpQueKo2m/CoSxxfLHTtw==",
+      "sha512": "jAy3uHN1U9DpoT/TgLqDTEhlccn/4doOVxhSmmNsnoSsGfHT9Lwr634ac9D0YFujAhNw61nWF4UIpHyzv0aQww==",
       "type": "package",
       "path": "bouncycastle.netcore/1.8.3",
       "files": [
@@ -1734,7 +1712,7 @@
       ]
     },
     "Google.Protobuf/3.6.1": {
-      "sha512": "D/h9IZl76jjfM5VlPzG235Zdys9RKXNLYbRGm2fa6Y2UshTqAvYBPIydNOvNTEa24DER/m/zvelHlLO9n1GtNQ==",
+      "sha512": "741fGeDQjixBJaU2j+0CbrmZXsNJkTn/hWbOh4fLVXndHsCclJmWznCPWrJmPoZKvajBvAz3e8ECJOUvRtwjNQ==",
       "type": "package",
       "path": "google.protobuf/3.6.1",
       "files": [
@@ -1749,7 +1727,7 @@
       ]
     },
     "Jint/2.11.58": {
-      "sha512": "PBndl2QmfOVxXEoOGXSUuCCfIJ0XouYFNR0fO8+1UOEhKiLZONeCysZ+Ya9xjMK9yDubgrKQf1hbxwDflPMwMA==",
+      "sha512": "obRlPnuSmbjO7I2bfuKc1d+K1LB3xyg1Cnm2MT7PGUOHOntcdR96pDhsQnWBI5Dhxqr1Bj5/odpNi/B+AwVlPA==",
       "type": "package",
       "path": "jint/2.11.58",
       "files": [
@@ -1764,22 +1742,27 @@
         "lib/netstandard2.0/Jint.dll"
       ]
     },
-    "MessagePack/1.7.3.7": {
-      "sha512": "gyJ8m987yI1O7h4P2DS7YjOfOWqJ+WcvX/jST+vYxCt004FYRm6cHfCK20fa1ehpQhOwRIezVennku+pFWwtiw==",
+    "MessagePack/1.8.74": {
+      "sha512": "1Lu2xavH/xsmOxKyifxYGydPyqMOnHJYKurqoMHOZhFiMAHCOQ+uc4509OiU2mr4Mja5WE+PGdOsq/XgG59Mpg==",
       "type": "package",
-      "path": "messagepack/1.7.3.7",
+      "path": "messagepack/1.8.74",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "LICENSE",
         "lib/net45/MessagePack.dll",
+        "lib/net45/MessagePack.pdb",
         "lib/net45/MessagePack.xml",
         "lib/net47/MessagePack.dll",
+        "lib/net47/MessagePack.pdb",
         "lib/net47/MessagePack.xml",
         "lib/netstandard1.6/MessagePack.dll",
+        "lib/netstandard1.6/MessagePack.pdb",
         "lib/netstandard1.6/MessagePack.xml",
         "lib/netstandard2.0/MessagePack.dll",
+        "lib/netstandard2.0/MessagePack.pdb",
         "lib/netstandard2.0/MessagePack.xml",
-        "messagepack.1.7.3.7.nupkg.sha512",
+        "messagepack.1.8.74.nupkg.sha512",
         "messagepack.nuspec"
       ]
     },
@@ -1941,16 +1924,16 @@
         "microsoft.extensions.dependencyinjection.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/2.2.0": {
-      "sha512": "f9hstgjVmr6rmrfGSpfsVOl2irKAgr1QjrSi3FgnS7kulxband50f2brRLwySAQTADPZeTdow0mpSMcoAdadCw==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0": {
+      "sha512": "ofQRroDlzJ0xKOtzNuaVt6QKNImFkhkG0lIMpGl7PtXnIf5SuLWBeiQZAP8DNSxDBJJdcsPkiJiMYK2WA5H8dQ==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/2.2.0",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
@@ -2049,16 +2032,18 @@
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Options/2.2.0": {
-      "sha512": "UpZLNLBpIZ0GTebShui7xXYh6DmBHjWM8NxGxZbdQh/bPZ5e6YswqI+bru6BnEL5eWiOdodsXtEz3FROcgi/qg==",
+    "Microsoft.Extensions.Options/3.0.0": {
+      "sha512": "aZuVhN/TC872Yb55nrb7an82sfSAdNYxIyzu3zbYHOnhwal5hdkBUxzuoYj1khI2sw0tWq6i82i624zEFmiJhg==",
       "type": "package",
-      "path": "microsoft.extensions.options/2.2.0",
+      "path": "microsoft.extensions.options/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Options.dll",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Options.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.2.2.0.nupkg.sha512",
+        "microsoft.extensions.options.3.0.0.nupkg.sha512",
         "microsoft.extensions.options.nuspec"
       ]
     },
@@ -2275,49 +2260,49 @@
         "runtime.native.system.security.cryptography.nuspec"
       ]
     },
-    "SmartSql/4.1.32": {
-      "sha512": "xC8XMo2dEoMzWF9+cQeurcSttJALMjvV2szfSjYkyasO6aV62r659CrrAskO+SOj/YZY8MA7MEZyQX0ISdqzeA==",
+    "SmartSql/4.1.38": {
+      "sha512": "eKW0G4/wMOu77l8imUxHqf4vBKXVjmgT7kGrM31P5XHH+h30BwCgamaVSLa90V03H2TQVBFzDapgu22X7Jil4Q==",
       "type": "package",
-      "path": "smartsql/4.1.32",
+      "path": "smartsql/4.1.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SmartSql.dll",
         "lib/netstandard2.0/SmartSql.pdb",
-        "smartsql.4.1.32.nupkg.sha512",
+        "smartsql.4.1.38.nupkg.sha512",
         "smartsql.nuspec"
       ]
     },
-    "SmartSql.DIExtension/4.1.32": {
-      "sha512": "dVFjaiZtmrOOtflAarEqHAiOcTbM0LrKTtjsZHuVefI6MfU98hi3imGOQKEF0gmUf1oCyBwxfSAZVCbs6DkoDA==",
+    "SmartSql.DIExtension/4.1.38": {
+      "sha512": "QUySgK5Rj/g6z7lTTP7oD24BC9Vg7M373bF64B2tKnjksByGOrgMcDLL3z0fZv1A+990ddN8E5xG8yZyxI86cA==",
       "type": "package",
-      "path": "smartsql.diextension/4.1.32",
+      "path": "smartsql.diextension/4.1.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SmartSql.DIExtension.dll",
         "lib/netstandard2.0/SmartSql.DIExtension.pdb",
-        "smartsql.diextension.4.1.32.nupkg.sha512",
+        "smartsql.diextension.4.1.38.nupkg.sha512",
         "smartsql.diextension.nuspec"
       ]
     },
-    "SmartSql.DyRepository/4.1.32": {
-      "sha512": "uLS+WF8dYAeQ/d8BIsJJCQusqbit+nLRFGIMVa8+bM3M71CPW6tRz8j0SnGuh1J+JLw/+g+ojYiu4rlYl1LSmA==",
+    "SmartSql.DyRepository/4.1.38": {
+      "sha512": "g4ESniNpYY79eNwIkV3eb6uXYb8Ud4ZM6W/XQKzTgc8Q7PPIft0+OHfkjU7TnCMS5M6SMvQiRxW4vKU9TXyA8A==",
       "type": "package",
-      "path": "smartsql.dyrepository/4.1.32",
+      "path": "smartsql.dyrepository/4.1.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SmartSql.DyRepository.dll",
         "lib/netstandard2.0/SmartSql.DyRepository.pdb",
-        "smartsql.dyrepository.4.1.32.nupkg.sha512",
+        "smartsql.dyrepository.4.1.38.nupkg.sha512",
         "smartsql.dyrepository.nuspec"
       ]
     },
-    "SmartSql.Schema/4.1.29": {
-      "sha512": "3XAy1wOTM4gSF/16Xu4gikjcZw3vLuzvKI+1HWWos7hG/QVp4jrMlqkhKlHD7EYQ2NWFXKazJfWUFKsaP9tIhg==",
+    "SmartSql.Schema/4.1.30": {
+      "sha512": "plwd9R9oBOh0C86ZJNOPE4SJCW4rtfwzU1qFNsGcEVzNxxshUK/cRE09t6ydA97B8pnhPe+IhuZcY4YVEzvVog==",
       "type": "package",
-      "path": "smartsql.schema/4.1.29",
+      "path": "smartsql.schema/4.1.30",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2325,38 +2310,38 @@
         "content/SmartSqlMapConfig.xsd",
         "contentFiles/any/any/SmartSqlMap.xsd",
         "contentFiles/any/any/SmartSqlMapConfig.xsd",
-        "smartsql.schema.4.1.29.nupkg.sha512",
+        "smartsql.schema.4.1.30.nupkg.sha512",
         "smartsql.schema.nuspec"
       ]
     },
-    "SmartSql.ScriptTag/4.1.32": {
-      "sha512": "Zp1IwRWcmE/40w0RstioJ2csz/I/B4SBAKM7WW3hwVVo2Gb8a/CgEDDaPjaywQhk62qwtz1Vi5LQrLjJstaSRw==",
+    "SmartSql.ScriptTag/4.1.38": {
+      "sha512": "MQMP9OMVOyCAsWNI82pzZ9OAd530OMKL5PCX4ZGflHWDz2iDQl76TjZw8x6mlwiqhu4Hq7AfbNIgBWCcC2ge+Q==",
       "type": "package",
-      "path": "smartsql.scripttag/4.1.32",
+      "path": "smartsql.scripttag/4.1.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SmartSql.ScriptTag.dll",
         "lib/netstandard2.0/SmartSql.ScriptTag.pdb",
-        "smartsql.scripttag.4.1.32.nupkg.sha512",
+        "smartsql.scripttag.4.1.38.nupkg.sha512",
         "smartsql.scripttag.nuspec"
       ]
     },
-    "SmartSql.TypeHandler/4.1.32": {
-      "sha512": "yfzaC/GpKmcgaKqH3NnCR/zL8f3G14gkwyvhBut50xBAflpwPhYeQiznZkNZiFLEZA9Oz4Cwc8lMJz96L3jl0g==",
+    "SmartSql.TypeHandler/4.1.38": {
+      "sha512": "qSNKMOl2p8CNThuQCDHNc28GNq9pjdPilhQhFR3m4KLwatXMWmvbvwbkffUduvcaW6PxV13Gmlr0UkhewUvgwQ==",
       "type": "package",
-      "path": "smartsql.typehandler/4.1.32",
+      "path": "smartsql.typehandler/4.1.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SmartSql.TypeHandler.dll",
         "lib/netstandard2.0/SmartSql.TypeHandler.pdb",
-        "smartsql.typehandler.4.1.32.nupkg.sha512",
+        "smartsql.typehandler.4.1.38.nupkg.sha512",
         "smartsql.typehandler.nuspec"
       ]
     },
     "SSH.NET/2016.1.0": {
-      "sha512": "Ky0PcLxFj7UyK7zAfNDtdnQEEFKdIc8COiSqe69k13ACuSJNiHmvOwHkARAVFQ4VgsbVFLupgYiXes0O00wEWA==",
+      "sha512": "b0fcFFOE044KNRhq1uGujmK04ab+OzA9xARdeVCoZrY6I4D1IIaR6dn6qBIa+er4bJapGBhznDitwcRQpSRC0w==",
       "type": "package",
       "path": "ssh.net/2016.1.0",
       "files": [
@@ -2383,7 +2368,7 @@
       ]
     },
     "SshNet.Security.Cryptography/1.2.0": {
-      "sha512": "Gd87t3O1luT7tpoyx3NgH+ee2Xn7K1qh9VpDdayYf2HhddeempTX82ezGL7uIjxo48i/oIl7WNZZd6sTjjfVdQ==",
+      "sha512": "EeFsirrrkIK+cdlYsxukNjBN98cbU7eHfTYZEwxsbOa3dvgR/OhOD06C0sTxvNPhe4UQ6yM0p1sKcT69jqgjTw==",
       "type": "package",
       "path": "sshnet.security.cryptography/1.2.0",
       "files": [
@@ -2457,10 +2442,10 @@
         "version.txt"
       ]
     },
-    "System.Collections/4.3.0": {
-      "sha512": "3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
+    "System.Collections/4.0.11": {
+      "sha512": "YUJGz6eFKqS0V//mLt25vFGrrCvOnsXjlvFQs+KimpwNxug9x0Pzy4PlFMU3Q2IzqAa9G2L4LsK3+9vCBK7oTg==",
       "type": "package",
-      "path": "system.collections/4.3.0",
+      "path": "system.collections/4.0.11",
       "files": [
         ".nupkg.metadata",
         "ThirdPartyNotices.txt",
@@ -2520,7 +2505,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.collections.4.3.0.nupkg.sha512",
+        "system.collections.4.0.11.nupkg.sha512",
         "system.collections.nuspec"
       ]
     },
@@ -2589,95 +2574,6 @@
         "ref/xamarinwatchos10/_._",
         "system.collections.concurrent.4.0.12.nupkg.sha512",
         "system.collections.concurrent.nuspec"
-      ]
-    },
-    "System.ComponentModel.Annotations/4.5.0": {
-      "sha512": "UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
-      "type": "package",
-      "path": "system.componentmodel.annotations/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/net461/System.ComponentModel.Annotations.dll",
-        "lib/netcore50/System.ComponentModel.Annotations.dll",
-        "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
-        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
-        "lib/portable-net45+win8/_._",
-        "lib/uap10.0.16299/_._",
-        "lib/win8/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/net461/System.ComponentModel.Annotations.dll",
-        "ref/net461/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/System.ComponentModel.Annotations.dll",
-        "ref/netcore50/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
-        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
-        "ref/portable-net45+win8/_._",
-        "ref/uap10.0.16299/_._",
-        "ref/win8/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.4.5.0.nupkg.sha512",
-        "system.componentmodel.annotations.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "System.Configuration.ConfigurationManager/4.6.0": {
@@ -5124,21 +5020,39 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "System.Threading.Tasks.Extensions/4.3.0": {
-      "sha512": "npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
+    "System.Threading.Tasks.Extensions/4.5.2": {
+      "sha512": "BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
       "type": "package",
-      "path": "system.threading.tasks.extensions/4.3.0",
+      "path": "system.threading.tasks.extensions/4.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/netcoreapp2.1/_._",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
-        "system.threading.tasks.extensions.4.3.0.nupkg.sha512",
-        "system.threading.tasks.extensions.nuspec"
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Threading.Thread/4.0.0": {
@@ -5275,20 +5189,48 @@
         "system.threading.timer.nuspec"
       ]
     },
-    "System.ValueTuple/4.3.0": {
-      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
-      "path": "system.valuetuple/4.3.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
         ".nupkg.metadata",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/netstandard1.0/.xml",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
         "lib/netstandard1.0/System.ValueTuple.dll",
-        "lib/portable-net40+sl4+win8+wp8/.xml",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "system.valuetuple.4.3.0.nupkg.sha512",
-        "system.valuetuple.nuspec"
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Windows.Extensions/4.6.0": {
@@ -5529,7 +5471,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
-      "BeetleX.FastHttpApi.Hosting >= 0.8.2",
+      "BeetleX.FastHttpApi.Hosting >= 0.8.8",
       "BeetleX.XRPC >= 0.6.2",
       "Lmf.Purchasing.Entity >= 1.0.0",
       "Lmf.Purchasing.Model >= 1.0.0",
@@ -5537,12 +5479,12 @@
       "Lmf.Purchasing.Service >= 1.0.0",
       "Lmf.Util >= 1.0.0",
       "Microsoft.Extensions.Configuration.Json >= 3.0.0",
-      "SmartSql >= 4.1.32",
-      "SmartSql.DIExtension >= 4.1.32"
+      "SmartSql >= 4.1.38",
+      "SmartSql.DIExtension >= 4.1.38"
     ]
   },
   "packageFolders": {
-    "D:\\nuget\\.nuget\\packages": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -5551,22 +5493,22 @@
       "projectUniqueName": "F:\\git\\proj\\src\\Purchasing\\Lmf.Purchasing.Api\\Lmf.Purchasing.Api.csproj",
       "projectName": "Lmf.Purchasing.Api",
       "projectPath": "F:\\git\\proj\\src\\Purchasing\\Lmf.Purchasing.Api\\Lmf.Purchasing.Api.csproj",
-      "packagesPath": "D:\\nuget\\.nuget\\packages",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\git\\proj\\src\\Purchasing\\Lmf.Purchasing.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
@@ -5604,7 +5546,7 @@
           },
           "BeetleX.FastHttpApi.Hosting": {
             "target": "Package",
-            "version": "[0.8.2, )"
+            "version": "[0.8.8, )"
           },
           "BeetleX.XRPC": {
             "target": "Package",
@@ -5616,11 +5558,11 @@
           },
           "SmartSql": {
             "target": "Package",
-            "version": "[4.1.32, )"
+            "version": "[4.1.38, )"
           },
           "SmartSql.DIExtension": {
             "target": "Package",
-            "version": "[4.1.32, )"
+            "version": "[4.1.38, )"
           }
         },
         "imports": [

@@ -41,7 +41,7 @@ namespace Lmf.BasicData.Api.Extensions
             var defaultPage = configuration.GetSection("HttpConfig:DefaultPage").Value;
 
             #endregion
-
+             
             services.UseBeetlexHttp(o =>
             {
                 #region 判断是否配置，并且指定配置

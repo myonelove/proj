@@ -8,6 +8,7 @@ using AutoMapper;
 using System.Linq;
 using BeetleX.XRPC;
 using Lmf.Util.Algorithm;
+using System.Reflection;
 
 namespace Lmf.BasicData.Api.Extensions
 {
@@ -15,19 +16,21 @@ namespace Lmf.BasicData.Api.Extensions
     {
         public static IServiceCollection Settings(this IServiceCollection services, IConfiguration configuration)
         {
-            RPCHostRun(configuration);
+            OpenRPCServer(configuration);
             services
                 .AddBeetlexHttp(configuration)
                 .AddRedisExchange(configuration) 
                 .AddProjRepository()
-                .AddProjServer()
-                .AddProjRPC()
+                .AddProjServer() 
                 .AddAutoMapper(typeof(Program).Assembly);
             return services;
         }
 
-
-        public static void RPCHostRun(IConfiguration configuration)
+        /// <summary>
+        /// 启动RPC服务
+        /// </summary>
+        /// <param name="configuration"></param>
+        public static void OpenRPCServer(IConfiguration configuration)
         {
             var hosts = configuration.GetSection("XRPCHosts").Value;
             var arr = hosts.Split(";").ToList();
@@ -39,8 +42,9 @@ namespace Lmf.BasicData.Api.Extensions
             xRPCServer.RPCOptions.LogToConsole = true;
             xRPCServer.ServerOptions.DefaultListen.Host = host.Split(":")[0];
             xRPCServer.ServerOptions.DefaultListen.Port = Convert.ToInt32(host.Split(":")[1]);
-            xRPCServer.ServerOptions.LogLevel = BeetleX.EventArgs.LogType.Debug;
-            xRPCServer.Register(typeof(Program).Assembly);
+            xRPCServer.ServerOptions.LogLevel = BeetleX.EventArgs.LogType.Debug; 
+            var assembly = Assembly.Load("Lmf.BasicData.Service"); //加载RPC程序集
+            xRPCServer.Register(assembly);
             xRPCServer.Open();
         }
 

@@ -1,28 +1,19 @@
-﻿using AutoMapper;
-using BeetleX.FastHttpApi;
-using EventNext;
+﻿using EventNext;
 using Lmf.BasicData.Entity;
-using Lmf.BasicData.Repository;
-using Lmf.BasicData.Service;
 using Lmf.Service.Model;
 using Lmf.Service.PRC.BasicData;
+using SmartSql;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Lmf.BasicData.Api.RPC
-{  
+namespace Lmf.BasicData.Service
+{
     [Service(typeof(IStaffService))]
     public class StaffRPCService : IStaffService
     {
-        private readonly StaffService _staffService;
-        private readonly IMapper _mapper;
-
-        public StaffRPCService(StaffService staffService, IMapper mapper)
+        public StaffRPCService()
         {
-            _staffService = staffService;
-            _mapper = mapper;
         }
 
         public Task<string> AddStaff(StaffModel param)
@@ -32,10 +23,24 @@ namespace Lmf.BasicData.Api.RPC
 
         public async Task<StaffModel> GetStaff(int id)
         {
-            var entity = await _staffService.GetById(id);
-            var model = _mapper.Map<Staff, StaffModel>(entity);
-            return model; 
-        } 
+            ISqlMapper mapper = SmartSqlContainer.Instance.GetSmartSql("SmartSql").GetSqlMapper();
+            var data = await mapper.QuerySingleAsync<Staff>(new RequestContext
+            {
+                Scope = "Staff",
+                SqlId = "GetEntity",
+                Request = new { Id = id }
+            });
+
+            return new StaffModel()
+            {
+                Email = data.Email,
+                Id = data.Id,
+                LeadNo = data.LeadNo,
+                Mobile = data.Mobile,
+                Name = data.Name,
+                No = data.No
+            };
+        }
 
         public Task<List<StaffModel>> GetStaffs(IList<string> staffnos)
         {

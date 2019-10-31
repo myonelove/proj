@@ -22,7 +22,7 @@ namespace Lmf.Purchasing.Api.Extensions
             var hosts = configuration.GetSection("XRPCClient").Value;
             var timeOut = configuration.GetSection("XRPCClientTimeOut").Value; 
             var arr = hosts.Split(";").ToList(); 
-            KetamaNodeLocator ketamaNodeLocator = new KetamaNodeLocator(arr);
+            KetamaNodeLocator ketamaNodeLocator = new KetamaNodeLocator(arr); 
             var host = ketamaNodeLocator.GetPrimary(Guid.NewGuid().ToString());
              
             var client = new XRPCClient(host.Split(":")[0], Convert.ToInt32(host.Split(":")[1]));

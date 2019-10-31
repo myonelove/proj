@@ -1,0 +1,13 @@
+﻿[2019/10/24 3:08:49] [Info] Register IStaffService->StaffRPCService@GetStaff to /IStaffService/GetStaff[ThreadType:None|UniqueID:]
+[2019/10/24 3:08:49] [Info] Register IStaffService->StaffRPCService@GetStaffs to /IStaffService/GetStaffs[ThreadType:None|UniqueID:]
+[2019/10/24 3:08:49] [Info] Register IStaffService->StaffRPCService@AddStaff to /IStaffService/AddStaff[ThreadType:None|UniqueID:]
+[2019/10/24 3:08:49] [Info] Register IStaffService->StaffRPCService@ModifyStaff to /IStaffService/ModifyStaff[ThreadType:None|UniqueID:]
+[2019/10/24 3:08:49] [Warring] IStaffService->StaffRPCService.GetStaff action already exists, can add ActionAttribute on the method
+[2019/10/24 3:08:49] [Warring] IStaffService->StaffRPCService.GetStaffs action already exists, can add ActionAttribute on the method
+[2019/10/24 3:08:49] [Warring] IStaffService->StaffRPCService.AddStaff action already exists, can add ActionAttribute on the method
+[2019/10/24 3:08:49] [Warring] IStaffService->StaffRPCService.ModifyStaff action already exists, can add ActionAttribute on the method
+[2019/10/24 3:08:49] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/10/24 3:08:49] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/24 3:08:49] [Info] BeetleX [V:1.3.2.0]
+[2019/10/24 3:08:49] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/24 3:08:49] [Info] BeetleX XRPC started [0.6.2.0]

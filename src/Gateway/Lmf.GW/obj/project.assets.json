@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "BeetleX/1.4.6.2": {
+      "BeetleX/1.4.7": {
         "type": "package",
         "compile": {
           "lib/netcoreapp2.1/BeetleX.dll": {}
@@ -11,10 +11,10 @@
           "lib/netcoreapp2.1/BeetleX.dll": {}
         }
       },
-      "BeetleX.Bumblebee/1.1.6.2": {
+      "BeetleX.Bumblebee/1.2.0.3": {
         "type": "package",
         "dependencies": {
-          "BeetleX.FastHttpApi": "1.6.2"
+          "BeetleX.FastHttpApi": "1.7.2.2"
         },
         "compile": {
           "lib/netcoreapp2.1/Bumblebee.dll": {}
@@ -23,10 +23,10 @@
           "lib/netcoreapp2.1/Bumblebee.dll": {}
         }
       },
-      "BeetleX.Bumblebee.Caching/1.0.4.5": {
+      "BeetleX.Bumblebee.Caching/1.0.9": {
         "type": "package",
         "dependencies": {
-          "BeetleX.Bumblebee": "1.1.6.2",
+          "BeetleX.Bumblebee": "1.1.8",
           "System.Runtime.Caching": "4.6.0"
         },
         "compile": {
@@ -36,10 +36,10 @@
           "lib/netcoreapp2.1/Bumblebee.Caching.dll": {}
         }
       },
-      "BeetleX.Bumblebee.ConcurrentLimits/1.0.6": {
+      "BeetleX.Bumblebee.ConcurrentLimits/1.1.0": {
         "type": "package",
         "dependencies": {
-          "BeetleX.Bumblebee": "1.1.6.2"
+          "BeetleX.Bumblebee": "1.2.0"
         },
         "compile": {
           "lib/netcoreapp2.1/Bumblebee.ConcurrentLimits.dll": {}
@@ -48,10 +48,10 @@
           "lib/netcoreapp2.1/Bumblebee.ConcurrentLimits.dll": {}
         }
       },
-      "BeetleX.Bumblebee.Configuration/1.1.8.2": {
+      "BeetleX.Bumblebee.Configuration/1.2.5.2": {
         "type": "package",
         "dependencies": {
-          "BeetleX.Bumblebee": "1.1.6.2",
+          "BeetleX.Bumblebee": "1.1.9.5",
           "System.IdentityModel.Tokens.Jwt": "5.4.0"
         },
         "compile": {
@@ -61,10 +61,10 @@
           "lib/netcoreapp2.1/Bumblebee.Configuration.dll": {}
         }
       },
-      "BeetleX.Bumblebee.Jwt/1.0.9.2": {
+      "BeetleX.Bumblebee.Jwt/1.1.3": {
         "type": "package",
         "dependencies": {
-          "BeetleX.Bumblebee": "1.1.6.2",
+          "BeetleX.Bumblebee": "1.1.8",
           "MySql.Data": "8.0.17",
           "Npgsql": "4.1.0",
           "System.Data.SqlClient": "4.7.0",
@@ -77,10 +77,10 @@
           "lib/netcoreapp2.1/Bumblebee.Jwt.dll": {}
         }
       },
-      "BeetleX.Bumblebee.Logs/1.0.7.6": {
+      "BeetleX.Bumblebee.Logs/1.1.2": {
         "type": "package",
         "dependencies": {
-          "BeetleX.Bumblebee": "1.1.6.2",
+          "BeetleX.Bumblebee": "1.1.8",
           "MySql.Data": "8.0.17",
           "Npgsql": "4.1.0",
           "System.Data.SqlClient": "4.7.0"
@@ -92,10 +92,10 @@
           "lib/netcoreapp2.1/Bumblebee.Logs.dll": {}
         }
       },
-      "BeetleX.FastHttpApi/1.6.2": {
+      "BeetleX.FastHttpApi/1.7.2.2": {
         "type": "package",
         "dependencies": {
-          "BeetleX": "1.4.6.2",
+          "BeetleX": "1.4.7",
           "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
@@ -2062,106 +2062,105 @@
     }
   },
   "libraries": {
-    "BeetleX/1.4.6.2": {
-      "sha512": "jJCIYwsrnx5tA9Vc6PXdlnh9h3kZ8xvdc7BwtuQZFwp9BgnO0pQ4dlBM2/9Ec3njrZG1X8TKCnLOqw+Qi7pWQg==",
+    "BeetleX/1.4.7": {
+      "sha512": "phnzcDEiZI+ovXxnJp7VbmMd/dbMS8vkygo5O2nAnIbKugHRpK9oPgadlyRL4L01NFmmRkE37yAn9t5kZMeDsg==",
       "type": "package",
-      "path": "beetlex/1.4.6.2",
+      "path": "beetlex/1.4.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.1.4.6.2.nupkg.sha512",
+        "beetlex.1.4.7.nupkg.sha512",
         "beetlex.nuspec",
         "lib/netcoreapp2.1/BeetleX.dll",
         "lib/netstandard2.0/BeetleX.dll"
       ]
     },
-    "BeetleX.Bumblebee/1.1.6.2": {
-      "sha512": "d4gqapSyFCWWXQ9Q/0aCKj1feMIKO+Scp7cHGU2CRhURBpTShrDdhYpxyU5C06zedIXChTJQfz1TZwEJg0gFbg==",
+    "BeetleX.Bumblebee/1.2.0.3": {
+      "sha512": "Ts3GHX35p+CBZeHC64FEtziuYdrNsFAo83z67uz96PpbHbRhCxcJ5TxHQNgQ3NpDPpxPfjrpHtdVWdWMDPL9Kw==",
       "type": "package",
-      "path": "beetlex.bumblebee/1.1.6.2",
+      "path": "beetlex.bumblebee/1.2.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.bumblebee.1.1.6.2.nupkg.sha512",
+        "beetlex.bumblebee.1.2.0.3.nupkg.sha512",
         "beetlex.bumblebee.nuspec",
         "lib/netcoreapp2.1/Bumblebee.dll"
       ]
     },
-    "BeetleX.Bumblebee.Caching/1.0.4.5": {
-      "sha512": "I3jeDSMwKsqSpqflYaqB38Z/B4+joYUgYHnLk+ap1fOFa8J0y2xyqsgBbtFlo4sTkokWYBIpTJ7BetE8IZfSLg==",
+    "BeetleX.Bumblebee.Caching/1.0.9": {
+      "sha512": "gS5ZJlpdbPAHvNh8VWUoPM3TQXjj4e3fio6QXbqRy4KcvhyScrWA0dvGg4EqnWr0wUEvoSAniSv8qW38piLN4g==",
       "type": "package",
-      "path": "beetlex.bumblebee.caching/1.0.4.5",
+      "path": "beetlex.bumblebee.caching/1.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.bumblebee.caching.1.0.4.5.nupkg.sha512",
+        "beetlex.bumblebee.caching.1.0.9.nupkg.sha512",
         "beetlex.bumblebee.caching.nuspec",
         "lib/netcoreapp2.1/Bumblebee.Caching.dll"
       ]
     },
-    "BeetleX.Bumblebee.ConcurrentLimits/1.0.6": {
-      "sha512": "KH2eymKdTYk0ltRkLgLgsaY1icrt+xC3PEamY6i2D/cTd7IrPztkRMlL7RLLDDXL3LvRgVcJtpJBLE9lDvVVDA==",
+    "BeetleX.Bumblebee.ConcurrentLimits/1.1.0": {
+      "sha512": "1JCYlrw1AMrOPruuZ3Pnb2AbtJkMTAkNpqL+Vu0XiOLKspn/eeEX+ieOfRXctxXX3w0nvYZ8T4h9NqiKBeAbqw==",
       "type": "package",
-      "path": "beetlex.bumblebee.concurrentlimits/1.0.6",
+      "path": "beetlex.bumblebee.concurrentlimits/1.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.bumblebee.concurrentlimits.1.0.6.nupkg.sha512",
+        "beetlex.bumblebee.concurrentlimits.1.1.0.nupkg.sha512",
         "beetlex.bumblebee.concurrentlimits.nuspec",
         "lib/netcoreapp2.1/Bumblebee.ConcurrentLimits.dll"
       ]
     },
-    "BeetleX.Bumblebee.Configuration/1.1.8.2": {
-      "sha512": "+iNS09oCBFNy+9zsLd9j0SzhjHcv+/Vki2W1UYANsUX+Cl5KxZUcwSL7e/lDBy7lOfCDTkxfGknjoaf/F4dXdQ==",
+    "BeetleX.Bumblebee.Configuration/1.2.5.2": {
+      "sha512": "3pMBBCPaH6l91AUiOGa4dxJVL8wkY+edABS+AojyVYVje401xEdO/tpRfHm5S2HKxCPMKAK5myKk/mTxUoHUrQ==",
       "type": "package",
-      "path": "beetlex.bumblebee.configuration/1.1.8.2",
+      "path": "beetlex.bumblebee.configuration/1.2.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.bumblebee.configuration.1.1.8.2.nupkg.sha512",
+        "beetlex.bumblebee.configuration.1.2.5.2.nupkg.sha512",
         "beetlex.bumblebee.configuration.nuspec",
         "lib/netcoreapp2.1/Bumblebee.Configuration.dll"
       ]
     },
-    "BeetleX.Bumblebee.Jwt/1.0.9.2": {
-      "sha512": "L+mE5oSkkyyQHhgaJLD3XYu5MdXK2u21JT62oBmiFR/waOmG8ROvFLkMkh/3z0ZXpFdo/ETiIlnQHDthb6iGsw==",
+    "BeetleX.Bumblebee.Jwt/1.1.3": {
+      "sha512": "QUUFkwoZtfT3FyEqnqg+sLHr8aXh6NVRQf0k6VBwk7gaPKMUmCUkWHcelUbUkP8/GpSSqfZpfT5fuupmhOKwBw==",
       "type": "package",
-      "path": "beetlex.bumblebee.jwt/1.0.9.2",
+      "path": "beetlex.bumblebee.jwt/1.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.bumblebee.jwt.1.0.9.2.nupkg.sha512",
+        "beetlex.bumblebee.jwt.1.1.3.nupkg.sha512",
         "beetlex.bumblebee.jwt.nuspec",
         "lib/netcoreapp2.1/Bumblebee.Jwt.dll"
       ]
     },
-    "BeetleX.Bumblebee.Logs/1.0.7.6": {
-      "sha512": "2tsveZy42ciAtppRdI2aD2V0/IQRLHJorGO16tOqwB8bMOKSC/y3YbQpBZkJoGROzZrDHREM1CEwhW62csIl1g==",
+    "BeetleX.Bumblebee.Logs/1.1.2": {
+      "sha512": "rxQimAmgvw4+f6V61n5uGBsGhnpls4If9Q5dArQMD8ga5lgSBe+JTTwrMMhxPy5K4+QvAJB2BUMRfzcBOtl28g==",
       "type": "package",
-      "path": "beetlex.bumblebee.logs/1.0.7.6",
+      "path": "beetlex.bumblebee.logs/1.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.bumblebee.logs.1.0.7.6.nupkg.sha512",
+        "beetlex.bumblebee.logs.1.1.2.nupkg.sha512",
         "beetlex.bumblebee.logs.nuspec",
         "lib/netcoreapp2.1/Bumblebee.Logs.dll"
       ]
     },
-    "BeetleX.FastHttpApi/1.6.2": {
-      "sha512": "/v3UjxuTvkFVCv24X0eOq+Tzxc9HXVVBbqb+VpSDTKA1dLjNqaBSosQK2KX1nBNnvzQjPW3xswVtuJfev3Gs9g==",
+    "BeetleX.FastHttpApi/1.7.2.2": {
+      "sha512": "FZlWryVlddAuvOI8V+wMDdmpMtEggi0mHznMG9IyQOM+Y/NWtQk2IPQeVy3IQIEe9+aYUCVTbaR2ZunU4C3fZA==",
       "type": "package",
-      "path": "beetlex.fasthttpapi/1.6.2",
+      "path": "beetlex.fasthttpapi/1.7.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.fasthttpapi.1.6.2.nupkg.sha512",
+        "beetlex.fasthttpapi.1.7.2.2.nupkg.sha512",
         "beetlex.fasthttpapi.nuspec",
-        "lib/netcoreapp2.1/BeetleX.FastHttpApi.dll",
-        "lib/netstandard2.0/BeetleX.FastHttpApi.dll"
+        "lib/netcoreapp2.1/BeetleX.FastHttpApi.dll"
       ]
     },
     "BouncyCastle.NetCore/1.8.3": {
-      "sha512": "An0cxp/uGPkMWfjAVyHJWBQ9igea74Ma8rtMnpkEwjemx8EoVo7IUIFpFfxpBgVuSbpQueKo2m/CoSxxfLHTtw==",
+      "sha512": "jAy3uHN1U9DpoT/TgLqDTEhlccn/4doOVxhSmmNsnoSsGfHT9Lwr634ac9D0YFujAhNw61nWF4UIpHyzv0aQww==",
       "type": "package",
       "path": "bouncycastle.netcore/1.8.3",
       "files": [
@@ -2188,7 +2187,7 @@
       ]
     },
     "Google.Protobuf/3.6.1": {
-      "sha512": "D/h9IZl76jjfM5VlPzG235Zdys9RKXNLYbRGm2fa6Y2UshTqAvYBPIydNOvNTEa24DER/m/zvelHlLO9n1GtNQ==",
+      "sha512": "741fGeDQjixBJaU2j+0CbrmZXsNJkTn/hWbOh4fLVXndHsCclJmWznCPWrJmPoZKvajBvAz3e8ECJOUvRtwjNQ==",
       "type": "package",
       "path": "google.protobuf/3.6.1",
       "files": [
@@ -2484,7 +2483,7 @@
       ]
     },
     "MySql.Data/8.0.17": {
-      "sha512": "sOZDjxPC7zcgt4IvR14cMdSqwF3Dp6ER2jNkbGpP4bf/n+v55vzLC2TO4qskB+qBhjt0Q2B+w38V31ogo3cQaw==",
+      "sha512": "yfwJ+4L6RqRW3N2qUSOzHGehJNTMes8GB4XnOTO4m3s7P/lVgoL/nLL91XU+7XEC3j2QHHTJZX2Mia1nY/Gtlg==",
       "type": "package",
       "path": "mysql.data/8.0.17",
       "files": [
@@ -2635,12 +2634,11 @@
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "INBPonS5QPEgn7naufQFXJEp3zX6L4bwHgJ/ZH78aBTpeNfQMtf7C6VrAFhlq2xxWBveIOWyFzQjJ8XzHMhdOQ==",
+      "sha512": "b+V9JC/Ii3sR659flBeaBJww111425tgjcDS1k+hqV4sGh9FALRDBvJnDtQ895gAzpPTUOFDHdqaZ2Et7BpZMg==",
       "type": "package",
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -2690,7 +2688,7 @@
       ]
     },
     "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "zWLOQ77Y4FV/6Vw2g+FYzprbQX5/xKvjoCLe4L9159Aw1bSboQoJ1KRZFNdexDooWRAIsLSdE0ZokkrVkwN8Yw==",
+      "sha512": "b3pthNgxxFcD+Pc0WSEoC0+md3MyhRS6aCEeenvNE3Fdw1HyJ18ZhRFVJJzIeR/O/jpxPboB805Ho0T3Ul7w8A==",
       "type": "package",
       "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -2729,7 +2727,7 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "/p8IQT2brFMDa7BHMH71LV+w5Tb3OxoLHxhn6+MGqN5xeqhM2HRHmj+7xQGJnaRn73d7ZTvp6yRCFMvolws4wA==",
+      "sha512": "X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -2755,7 +2753,7 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
+      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -2768,7 +2766,7 @@
       ]
     },
     "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "YWzJvhiC+iLWI/IfpPQUIBhYnAHUFQFRDqR7VDNmPj0b3rjW7dArFqKysZ9v0iSBs9Ih4v9GasLpYCSUwADMQQ==",
+      "sha512": "I8bKw2I8k58Wx7fMKQJn2R8lamboCAiHfHeV/pS65ScKWMMI0+wJkLYlEKvgW1D/XvSl/221clBoR2q9QNNM7A==",
       "type": "package",
       "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -2781,7 +2779,7 @@
       ]
     },
     "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "1uVTITQP8/cI6YoO6FqfW1pzP0k2TnDZ3TFD88Bu/9H7ZuTsMY9xmadbGpwPu8w8swcd1ifZJsjD9hF9O6C/tg==",
+      "sha512": "VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "type": "package",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -2839,7 +2837,7 @@
       ]
     },
     "SSH.NET/2016.1.0": {
-      "sha512": "Ky0PcLxFj7UyK7zAfNDtdnQEEFKdIc8COiSqe69k13ACuSJNiHmvOwHkARAVFQ4VgsbVFLupgYiXes0O00wEWA==",
+      "sha512": "b0fcFFOE044KNRhq1uGujmK04ab+OzA9xARdeVCoZrY6I4D1IIaR6dn6qBIa+er4bJapGBhznDitwcRQpSRC0w==",
       "type": "package",
       "path": "ssh.net/2016.1.0",
       "files": [
@@ -2866,7 +2864,7 @@
       ]
     },
     "SshNet.Security.Cryptography/1.2.0": {
-      "sha512": "Gd87t3O1luT7tpoyx3NgH+ee2Xn7K1qh9VpDdayYf2HhddeempTX82ezGL7uIjxo48i/oIl7WNZZd6sTjjfVdQ==",
+      "sha512": "EeFsirrrkIK+cdlYsxukNjBN98cbU7eHfTYZEwxsbOa3dvgR/OhOD06C0sTxvNPhe4UQ6yM0p1sKcT69jqgjTw==",
       "type": "package",
       "path": "sshnet.security.cryptography/1.2.0",
       "files": [
@@ -5786,12 +5784,11 @@
       ]
     },
     "System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "vOYy7Jv9KsG3ld2hLt0GoERd82SZi4BelrbXLwI9yFBYX7kpbvUCWYo4eyevk47cuJXZ9ZLVAryANcc7iY71aA==",
+      "sha512": "h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
       "type": "package",
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
@@ -6823,12 +6820,11 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6972,16 +6968,16 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "BeetleX.Bumblebee >= 1.1.6.2",
-      "BeetleX.Bumblebee.Caching >= 1.0.4.5",
-      "BeetleX.Bumblebee.ConcurrentLimits >= 1.0.6",
-      "BeetleX.Bumblebee.Configuration >= 1.1.8.2",
-      "BeetleX.Bumblebee.Jwt >= 1.0.9.2",
-      "BeetleX.Bumblebee.Logs >= 1.0.7.6"
+      "BeetleX.Bumblebee >= 1.2.0.3",
+      "BeetleX.Bumblebee.Caching >= 1.0.9",
+      "BeetleX.Bumblebee.ConcurrentLimits >= 1.1.0",
+      "BeetleX.Bumblebee.Configuration >= 1.2.5.2",
+      "BeetleX.Bumblebee.Jwt >= 1.1.3",
+      "BeetleX.Bumblebee.Logs >= 1.1.2"
     ]
   },
   "packageFolders": {
-    "D:\\nuget\\.nuget\\packages": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -6990,22 +6986,22 @@
       "projectUniqueName": "F:\\git\\proj\\src\\Gateway\\Lmf.GW\\Lmf.GW.csproj",
       "projectName": "Lmf.GW",
       "projectPath": "F:\\git\\proj\\src\\Gateway\\Lmf.GW\\Lmf.GW.csproj",
-      "packagesPath": "D:\\nuget\\.nuget\\packages",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "F:\\git\\proj\\src\\Gateway\\Lmf.GW\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mengfengli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.myget.org/F/zeekoget/api/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
@@ -7023,27 +7019,27 @@
         "dependencies": {
           "BeetleX.Bumblebee": {
             "target": "Package",
-            "version": "[1.1.6.2, )"
+            "version": "[1.2.0.3, )"
           },
           "BeetleX.Bumblebee.Caching": {
             "target": "Package",
-            "version": "[1.0.4.5, )"
+            "version": "[1.0.9, )"
           },
           "BeetleX.Bumblebee.ConcurrentLimits": {
             "target": "Package",
-            "version": "[1.0.6, )"
+            "version": "[1.1.0, )"
           },
           "BeetleX.Bumblebee.Configuration": {
             "target": "Package",
-            "version": "[1.1.8.2, )"
+            "version": "[1.2.5.2, )"
           },
           "BeetleX.Bumblebee.Jwt": {
             "target": "Package",
-            "version": "[1.0.9.2, )"
+            "version": "[1.1.3, )"
           },
           "BeetleX.Bumblebee.Logs": {
             "target": "Package",
-            "version": "[1.0.7.6, )"
+            "version": "[1.1.2, )"
           }
         },
         "imports": [

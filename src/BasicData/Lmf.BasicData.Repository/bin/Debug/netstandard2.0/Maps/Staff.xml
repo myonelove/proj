@@ -19,7 +19,7 @@
       <Result Column="mobile" Property="Mobile" />
       <Result Column="name" Property="Name" />
       <Result Column="no" Property="No" />
-    </ResultMap> 
+    </ResultMap>
   </ResultMaps>
   <Statements>
 
@@ -30,7 +30,7 @@
       <Where>
         <IsNotEmpty Prepend="And" Property="DepartureTime">
           T.departure_time = ?DepartureTime
-        </IsNotEmpty> 
+        </IsNotEmpty>
         <IsNotEmpty Prepend="And" Property="Email">
           T.email = ?Email
         </IsNotEmpty>
@@ -63,25 +63,25 @@
     <Statement Id="Insert">
       INSERT INTO staff
       (
-          departure_time,
-          email,
-          hiredate,
-          is_dimission,
-          lead_no,
-          mobile,
-          name,
-          no
+      departure_time,
+      email,
+      hiredate,
+      is_dimission,
+      lead_no,
+      mobile,
+      name,
+      no
       )
       VALUES
       (
-        ?DepartureTime,
-        ?Email,
-        ?Hiredate,
-        ?IsDimission,
-        ?LeadNo,
-        ?Mobile,
-        ?Name,
-        ?No
+      ?DepartureTime,
+      ?Email,
+      ?Hiredate,
+      ?IsDimission,
+      ?LeadNo,
+      ?Mobile,
+      ?Name,
+      ?No
       )
       ;Select Last_Insert_Id();
     </Statement>
@@ -101,7 +101,7 @@
         </IsProperty>
         <IsProperty Prepend="," Property="Email">
           email = ?Email
-        </IsProperty> 
+        </IsProperty>
         <IsProperty Prepend="," Property="IsDimission">
           is_dimission = ?IsDimission
         </IsProperty>
