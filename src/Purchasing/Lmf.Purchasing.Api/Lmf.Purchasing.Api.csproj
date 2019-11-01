@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Lmf.Service\Lmf.Service.csproj" />
     <ProjectReference Include="..\..\Common\Lmf.Util\Lmf.Util.csproj" />
     <ProjectReference Include="..\Lmf.Purchasing.Model\Lmf.Purchasing.Model.csproj" />
     <ProjectReference Include="D:\SmartSql\src\purchasing\src\Lmf.Purchasing.Entity\Lmf.Purchasing.Entity.csproj" />

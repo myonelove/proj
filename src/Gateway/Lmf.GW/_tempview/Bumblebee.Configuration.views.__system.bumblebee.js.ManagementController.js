@@ -131,8 +131,8 @@ Management.prototype.CreateTokenKey = function (useHttp) {
 * 'FastHttpApi javascript api Generator Copyright © henryfan 2018 email:henryfan@msn.com
 * 'https://github.com/IKende/FastHttpApi
 **/
-Management.prototype.ChangeLogLevel = function (type, logCacheSize, useHttp) {
-    return api(this.url_ChangeLogLevel, { type: type, logCacheSize: logCacheSize }, useHttp);
+Management.prototype.ChangeLogLevel = function (type, logCacheSize, logToConsole, outputServerAddress, useHttp) {
+    return api(this.url_ChangeLogLevel, { type: type, logCacheSize: logCacheSize, logToConsole: logToConsole, outputServerAddress: outputServerAddress }, useHttp);
 }
 /**
 * 'ChangePassword(params).execute(function(result){});'

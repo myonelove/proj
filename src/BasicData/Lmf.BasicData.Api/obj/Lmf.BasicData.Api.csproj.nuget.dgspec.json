@@ -42,9 +42,6 @@
               "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Service\\Lmf.BasicData.Service.csproj": {
                 "projectPath": "F:\\git\\proj\\src\\BasicData\\Lmf.BasicData.Service\\Lmf.BasicData.Service.csproj"
               },
-              "F:\\git\\proj\\src\\Common\\Lmf.Service\\Lmf.Service.csproj": {
-                "projectPath": "F:\\git\\proj\\src\\Common\\Lmf.Service\\Lmf.Service.csproj"
-              },
               "F:\\git\\proj\\src\\Common\\Lmf.Util\\Lmf.Util.csproj": {
                 "projectPath": "F:\\git\\proj\\src\\Common\\Lmf.Util\\Lmf.Util.csproj"
               }
@@ -429,6 +426,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "BeetleX.Http.Clients": {
+              "target": "Package",
+              "version": "[0.8.8, )"
+            },
             "MessagePack": {
               "target": "Package",
               "version": "[1.8.74, )"

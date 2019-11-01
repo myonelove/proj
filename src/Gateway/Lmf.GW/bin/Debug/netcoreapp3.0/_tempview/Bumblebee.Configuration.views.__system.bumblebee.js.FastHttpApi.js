@@ -209,3 +209,7 @@ function UrlHelper() {
 }
 var _url = new UrlHelper();
 
+var __formatNumber = function (n) {
+    return new Intl.NumberFormat().format(n)
+}
+

@@ -1,0 +1,805 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/ModuleLoader.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/FastHttpApi.js"></script>
+    <script src="js/ManagementController.js"></script>
+    <script src="js/echarts.js"></script>
+    <title>Beetlex webapi gateway management</title>
+</head>
+<body>
+
+    <div class="page-title">
+        <img src="images/title.png" /> <h3>Home</h3>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-left" slot="header">
+
+    </div>
+
+
+    <div class="container bs-docs-container" id="page">
+        <div class="status-bar" style="text-align:center;">
+            <button class="btn  btn-sm" type="button">
+                Time<span class="badge">{{Status.RunTime}}</span>
+            </button>
+            <button class="btn  btn-sm" type="button">
+                Cpu<span class="badge">{{Status.Cpu}}</span>%
+            </button>
+
+            <button class="btn  btn-sm" type="button">
+                Memory<span class="badge">{{new Intl.NumberFormat().format(Status.Memory)}}</span>KB
+            </button>
+
+            <button class="btn  btn-sm" type="button">
+                Connections<span class="badge">{{new Intl.NumberFormat().format(Status.CurrentConnectinos)}}</span>
+            </button>
+
+            <button class="btn btn-sm" type="button">
+                Queue
+                <span class="badge" title="queue">{{new Intl.NumberFormat().format(Queue)}}</span>|
+                Request
+                <span class="badge" title="rps">
+
+                    {{new Intl.NumberFormat().format(Status.RequestPer)}}
+
+                </span>/s
+                <span class="badge" title="total">
+                    {{new Intl.NumberFormat().format(Status.TotalRequest)}}
+
+                </span>
+            </button>
+
+            <button class="btn btn-sm" type="button">
+                Network W<span class="badge">
+                    {{new Intl.NumberFormat().format(Status.SendBytesPer)}}MB
+                </span>R<span class="badge">
+                    {{new Intl.NumberFormat().format(Status.ReceiveBytesPer)}}MB
+                </span>
+            </button>
+
+        </div>
+        <div class="row" style="padding-top:10px;">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-2">
+                <div id="cpu_gauge" style="height: 150px">
+
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div id="memory_gauge" style="height: 150px">
+
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div id="rps_gauge" style="height: 150px">
+
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div id="error_gauge" style="height: 150px">
+
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div id="cache_gauge" style="height: 150px">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="container" style="height: 150px"></div>
+            </div>
+        </div>
+        <h3 v-if="Server.length>0" style="font-size:10pt;">Server summary</h3>
+        <div v-if="Server.length>0" class="row">
+            <div class="col-lg-12">
+
+                <div v-for="item in Server" class="col-lg-6 lst-servers-summary" v-if="item.Rps>0">
+                    <div class="lst-servers-summary-table">
+                        <a v-if="item.Available==false"><img style="width:16px;" src="images/server_error.png" />{{item.Host}}</a>
+                        <a v-else><img style="width:16px;" src="images/server_ok.png" />{{item.Host}}</a>
+
+                        <span class="success-text">
+                            {{new Intl.NumberFormat().format(item.Rps)}}/s | {{new Intl.NumberFormat().format(item.Count)}}
+                        </span>
+
+                        <span class="queue-text">
+                            Queue:{{new Intl.NumberFormat().format(item.WaitQueue)}}/s
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <h3 style="font-size:10pt;">Webapi summary</h3>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default" v-if="UrlSummary.Error.length>0">
+                    <div class="panel-heading" style="color:#ff6a00">Errors/s</div>
+                    <div class="panel-body">
+                        <table class="table summary-item" v-for="item in UrlSummary.Error">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2"> {{item.Url}}</td>
+                                    <td style="width:300px;text-align:right;">
+
+
+                                        <a v-for="code in item.Codes" v-if="code.Rps>0" class="error-text">
+                                            {{code.Name}} : <span class="badge">{{__formatNumber(code.Rps)}}/s</span>
+                                        </a>
+                                        <span class="error-text">Total: {{__formatNumber(item.Value)}}/s</span>
+                                    </td>
+                                    <td style="width:100px;">
+                                        <div class="bar-error" :style="{width:item.Percent+'%'}">
+                                            <span style="margin-left:10px; margin-top:-2px;">
+                                                {{item.Percent}}%
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+
+
+
+                <div class="panel panel-default" style="min-height:320px;">
+                    <div class="panel-heading">Requests/s<small>(Top 10)</small></div>
+                    <div class="panel-body">
+                        <table class="table summary-item" v-for="item in UrlSummary.Rps">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">{{item.Url}}</td>
+                                    <td style="width:100px;text-align:right;">{{new Intl.NumberFormat().format(item.Value)}}/s|</td>
+                                    <td style="width:100px;">
+                                        <div class="bar-rps" :style="{width:item.Percent+'%'}">
+                                            <span style="margin-left:10px; margin-top:-2px;">
+                                                {{item.Percent}}%
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="panel panel-default" style="min-height:320px;">
+                    <div class="panel-heading">Total <small>(Top 10)</small></div>
+                    <div class="panel-body">
+                        <table class="table summary-item" v-for="item in UrlSummary.Total">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2"> {{item.Url}}</td>
+                                    <td style="width:100px;text-align:right;">{{new Intl.NumberFormat().format(item.Value)}}|</td>
+                                    <td style="width:100px;">
+                                        <div class="bar-total" :style="{width:item.Percent+'%'}">
+                                            <span style="margin-left:10px; margin-top:-2px;">
+                                                {{item.Percent}}%
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container" style="text-align:center;" slot="footer">
+
+    </div>
+    <script>
+        var webapi = new Management();
+        var page = new Vue({
+            el: '#page',
+            data: {
+                Count: 0,
+                Status: {},
+                RequestChart: null,
+                XData: [],
+                AllData: [],
+                SuccessData: [],
+                ErrorData: [],
+                HitData: [],
+                MaxValues: {},
+                Queue: 0,
+                CpuOption: {},
+                CpuChart: null,
+                MemoryOption: {},
+                MemoryChart: null,
+                RpsOption: {},
+                RpsChart: null,
+                ErrorOption: {},
+                ErrorChart: null,
+                CacheHitOption: {},
+                CacheHitChart: null,
+                UrlSummary: { Total: [], Rps: [], Error: [] },
+                Server: []
+            },
+            methods: {
+                numberFormater: function (number) {
+                    return new Intl.NumberFormat().format(number)
+                },
+
+                GetMaxValues: function () {
+                    var _this = this;
+                    webapi.GetMaxValues().$(function (r) {
+                        _this.MaxValues = r.Data;
+                        _this.initCpuCauge();
+                        _this.initMemoryCauge();
+                        _this.initRpsCauge();
+                        _this.initErrorCauge();
+                        _this.initCacheCauge();
+                    });
+                },
+
+                initCpuCauge: function () {
+                    this.CpuOption = {
+                        tooltip: {
+                            formatter: "{a} <br/>{c} {b}"
+                        },
+                        grid: {
+                            top: 40,
+                            bottom: 20,
+                            right: 10,
+                            left: 10
+                        },
+                        series: [
+                            {
+                                name: 'Cpu',
+                                type: 'gauge',
+                                z: 3,
+                                min: 0,
+                                max: 100,
+                                splitNumber: 10,
+                                radius: '100%',
+                                axisLine: {            // 坐标轴线
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        width: 1
+                                    }
+                                },
+                                axisTick: {            // 坐标轴小标记
+                                    length: 4,        // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+                                splitLine: {           // 分隔线
+                                    length: 2,         // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+
+                                title: {
+                                    // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder',
+                                    fontSize: 9,
+                                    fontStyle: 'italic'
+                                },
+                                detail: {
+
+                                    shadowBlur: 1,
+                                    shadowColor: '#333',
+                                    fontFamily: 'Arial',
+                                    fontSize: 10,
+                                    width: 30,
+                                    color: '#000',
+                                    rich: {}
+                                },
+                                data: [{ value: 0, name: 'CPU/%' }]
+                            }
+
+                        ]
+                    };
+                    var dom = document.getElementById("cpu_gauge");
+                    this.CpuChart = echarts.init(dom);
+                    this.CpuChart.setOption(this.CpuOption, true);
+
+                },
+
+                initMemoryCauge: function () {
+
+                    this.MemoryOption = {
+                        tooltip: {
+                            formatter: "{a} <br/>{c} {b}"
+                        },
+                        grid: {
+                            top: 40,
+                            bottom: 20,
+                            right: 10,
+                            left: 10
+                        },
+                        series: [
+                            {
+                                name: 'Memory',
+                                type: 'gauge',
+                                z: 3,
+                                min: 0,
+                                max: this.MaxValues.Memory / 1000,
+                                splitNumber: 10,
+                                radius: '100%',
+                                axisLine: {            // 坐标轴线
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        width: 1
+                                    }
+                                },
+                                axisTick: {            // 坐标轴小标记
+                                    length: 4,        // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+                                splitLine: {           // 分隔线
+                                    length: 2,         // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+
+                                title: {
+                                    // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder',
+                                    fontSize: 9,
+                                    fontStyle: 'italic'
+                                },
+                                detail: {
+
+
+                                    shadowBlur: 1,
+                                    shadowColor: '#333',
+                                    fontFamily: 'Arial',
+                                    fontSize: 10,
+                                    width: 30,
+                                    color: '#000',
+                                    rich: {}
+                                },
+                                data: [{ value: 0, name: 'Memory/GB' }]
+                            }
+
+                        ]
+                    };
+                    var dom = document.getElementById("memory_gauge");
+                    this.MemoryChart = echarts.init(dom);
+                    this.MemoryChart.setOption(this.MemoryOption, true);
+                },
+
+                initRpsCauge: function () {
+
+                    this.RpsOption = {
+                        tooltip: {
+                            formatter: "{a} <br/>{c} {b}"
+                        },
+                        grid: {
+                            top: 40,
+                            bottom: 20,
+                            right: 10,
+                            left: 10
+                        },
+                        series: [
+                            {
+                                name: 'Requests',
+                                type: 'gauge',
+                                z: 3,
+                                min: 0,
+                                max: this.MaxValues.Rps / 1000,
+                                splitNumber: 10,
+                                radius: '100%',
+                                axisLine: {            // 坐标轴线
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        width: 1
+                                    }
+                                },
+                                axisTick: {            // 坐标轴小标记
+                                    length: 4,        // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+                                splitLine: {           // 分隔线
+                                    length: 2,         // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+
+                                title: {
+                                    // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder',
+                                    fontSize: 9,
+                                    fontStyle: 'italic'
+                                },
+                                detail: {
+
+
+                                    shadowBlur: 1,
+                                    shadowColor: '#333',
+                                    fontFamily: 'Arial',
+                                    fontSize: 10,
+                                    width: 30,
+                                    color: '#000',
+                                    rich: {}
+                                },
+                                data: [{ value: 0, name: 'Requests/s(k)' }]
+                            }
+
+                        ]
+                    };
+                    var dom = document.getElementById("rps_gauge");
+                    this.RpsChart = echarts.init(dom);
+                    this.RpsChart.setOption(this.RpsOption, true);
+                },
+
+
+                initErrorCauge: function () {
+
+                    this.ErrorOption = {
+                        tooltip: {
+                            formatter: "{a} <br/>{c} {b}"
+                        },
+                        grid: {
+                            top: 40,
+                            bottom: 20,
+                            right: 10,
+                            left: 10
+                        },
+                        series: [
+                            {
+                                name: 'Errors',
+                                type: 'gauge',
+                                z: 3,
+                                min: 0,
+                                max: this.MaxValues.Rps / 1000,
+                                splitNumber: 10,
+                                radius: '100%',
+                                axisLine: {            // 坐标轴线
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        width: 1
+                                    }
+                                },
+                                axisTick: {            // 坐标轴小标记
+                                    length: 4,        // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+                                splitLine: {           // 分隔线
+                                    length: 2,         // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+
+                                title: {
+                                    // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder',
+                                    fontSize: 9,
+                                    fontStyle: 'italic'
+                                },
+                                detail: {
+
+
+                                    shadowBlur: 1,
+                                    shadowColor: '#333',
+                                    fontFamily: 'Arial',
+                                    fontSize: 10,
+                                    width: 30,
+                                    color: '#000',
+                                    rich: {}
+                                },
+                                data: [{ value: 0, name: 'Errors/s(k)' }]
+                            }
+
+                        ]
+                    };
+                    var dom = document.getElementById("error_gauge");
+                    this.ErrorChart = echarts.init(dom);
+                    this.ErrorChart.setOption(this.ErrorOption, true);
+                },
+
+                initCacheCauge: function () {
+
+                    this.CacheHitOption = {
+                        tooltip: {
+                            formatter: "{a} <br/>{c} {b}"
+                        },
+                        grid: {
+                            top: 40,
+                            bottom: 20,
+                            right: 10,
+                            left: 10
+                        },
+                        series: [
+                            {
+                                name: 'Cache',
+                                type: 'gauge',
+                                z: 3,
+                                min: 0,
+                                max: this.MaxValues.Rps / 1000,
+                                splitNumber: 10,
+                                radius: '100%',
+                                axisLine: {            // 坐标轴线
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        width: 1
+                                    }
+                                },
+                                axisTick: {            // 坐标轴小标记
+                                    length: 4,        // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+                                splitLine: {           // 分隔线
+                                    length: 2,         // 属性length控制线长
+                                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                        color: 'auto'
+                                    }
+                                },
+
+                                title: {
+                                    // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontWeight: 'bolder',
+                                    fontSize: 9,
+                                    fontStyle: 'italic'
+                                },
+                                detail: {
+
+
+                                    shadowBlur: 1,
+                                    shadowColor: '#333',
+                                    fontFamily: 'Arial',
+                                    fontSize: 10,
+                                    width: 30,
+                                    color: '#000',
+                                    rich: {}
+                                },
+                                data: [{ value: 0, name: 'Cache hit/s(k)' }]
+                            }
+
+                        ]
+                    };
+                    var dom = document.getElementById("cache_gauge");
+                    this.CacheHitChart = echarts.init(dom);
+                    this.CacheHitChart.setOption(this.CacheHitOption, true);
+                },
+
+
+                GetStatus: function () {
+                    var _this = this;
+                    if (_this.Count % 2 == 0) {
+                        webapi.GetUrlSummary().$(function (r) {
+                            _this.UrlSummary = r.Data;
+                        });
+                    }
+                    webapi.ServiceStatus().$(
+                        function (r) {
+                            _this.Server = r.Data;
+                        }
+                    );
+                    if (_this.Count % 10 == 0) {
+                        webapi.GetDayStatic().$(function (r) {
+                            _this.XData = [];
+                            _this.SuccessData = [];
+                            _this.ErrorData = [];
+                            _this.HitData = [];
+                            _this.AllData = [];
+                            r.Data.forEach(function (v) {
+                                _this.AllData.push(v.All);
+                                _this.XData.push(v.Time);
+                                _this.SuccessData.push(v.Success);
+
+                                _this.ErrorData.push(v.Error);
+
+                                _this.HitData.push(v.Hit);
+                            });
+                            _this.RequestChart.setOption({
+                                grid: {
+                                    top: 20,
+                                    bottom: 20,
+                                    right: 20,
+                                    left: 20
+                                },
+                                xAxis: {
+                                    data: _this.XData
+                                },
+                                series: [
+                                    {
+                                        data: _this.AllData
+                                    },
+
+                                    {
+                                        data: _this.ErrorData
+                                    },
+                                    ,
+                                    {
+                                        data: _this.HitData
+                                    }]
+                            });
+                        });
+                    }
+
+                    webapi.Status().$(function (r) {
+                        _this.Status = r.Data.Status;
+                        if (_this.CpuChart) {
+                            _this.CpuOption.series[0].data[0].value = _this.Status.Cpu;
+                            _this.CpuChart.setOption(_this.CpuOption, true);
+                        }
+                        if (_this.MemoryChart) {
+                            _this.MemoryOption.series[0].data[0].value = r.Data.Memory / 1000;
+                            _this.MemoryChart.setOption(_this.MemoryOption, true);
+                        }
+                        //SuccessRps
+
+                        if (_this.RpsChart) {
+                            _this.RpsOption.series[0].data[0].value = _this.Status.RequestPer / 1000;
+                            _this.RpsChart.setOption(_this.RpsOption, true);
+                        }
+
+                        if (_this.ErrorChart) {
+                            _this.ErrorOption.series[0].data[0].value = r.Data.ErrorRps / 1000;
+                            _this.ErrorChart.setOption(_this.ErrorOption, true);
+                        }
+
+                        if (_this.CacheHitChart) {
+                            _this.CacheHitOption.series[0].data[0].value = r.Data.Hit / 1000;
+                            _this.CacheHitChart.setOption(_this.CacheHitOption, true);
+                        }
+                    });
+                    _this.Count++;
+                },
+
+                initChart: function () {
+                    var dom = document.getElementById("container");
+                    this.RequestChart = echarts.init(dom);
+                    var option = null;
+                    option = {
+                        grid: {
+                            top: 20,
+                            bottom: 20,
+                            right: 20,
+                            left: 20
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+
+                            axisPointer: {
+                                animation: false
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            splitLine: {
+                                show: false
+                            },
+                            data: this.XData,
+                            show: true,
+                            axisLine: {
+                                show: true,
+                            }
+                        },
+                        yAxis: {
+                            type: 'value',
+
+                            boundaryGap: [0, '100%'],
+                            splitLine: {
+                                show: true,
+                                lineStyle: {
+                                    type: 'dashed'
+                                }
+                            },
+                            axisLine: {
+                                show: false,
+                            },
+                            axisLabel: {
+                                inside: true,
+                            }
+                        },
+                        series: [
+                            {
+                                name: 'All',
+                                type: 'line',
+                                showSymbol: false,
+                                hoverAnimation: false,
+                                data: this.AllData,
+                                itemStyle: {
+                                    color: '#2BD54D',
+                                },
+                                lineStyle: {
+                                    color: '#2BD54D',
+                                    width: 1,
+                                },
+                                tooltip: {
+                                    textStyle: {
+                                        color: '#2BD54D'
+                                    }
+                                }, areaStyle: {
+                                    color: '#2BD54D'
+                                }
+                            },
+                            {
+                                name: 'Error',
+                                type: 'line',
+                                showSymbol: false,
+                                hoverAnimation: false,
+                                data: this.ErrorData,
+                                itemStyle: {
+                                    color: '#FF6944',
+                                },
+                                lineStyle: {
+                                    color: '#FF6944',
+                                    width: 1,
+                                }, areaStyle: {
+                                    color: '#FF6944',
+                                }
+                            },
+                            {
+                                name: 'Hit',
+                                type: 'line',
+                                showSymbol: false,
+                                hoverAnimation: false,
+                                data: this.HitData,
+                                itemStyle: {
+                                    color: '#44B4FF',
+                                },
+                                lineStyle: {
+                                    color: '#44B4FF',
+                                    width: 1,
+                                },
+                                tooltip: {
+                                    textStyle: {
+                                        color: '#44B4FF'
+                                    }
+                                }, areaStyle: {
+                                    color: '#44B4FF'
+                                }
+                            }
+                        ]
+                    };
+
+                    if (option && typeof option === "object") {
+                        this.RequestChart.setOption(option, true);
+                    }
+                }
+            }
+        });
+        page.initChart();
+        page.GetMaxValues();
+        setInterval(page.GetStatus, 1000);
+
+    </script>
+
+
+</body>
+
+</html>

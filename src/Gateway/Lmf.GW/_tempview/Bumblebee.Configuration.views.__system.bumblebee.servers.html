@@ -73,16 +73,16 @@
                             <input class="form-control input-sm" title="max connections" style="width:100%;text-align:right;" type="number" v-model="item.MaxConnections" />
                         </td>
                         <td style="text-align:right;vertical-align:middle">
-                            <span class="label label-default">
-                                Queue:{{new Intl.NumberFormat().format(item.Status.WaitQueue)}}
+                            <span class="queue-text" title="agent request queue">
+                                {{new Intl.NumberFormat().format(item.Status.WaitQueue)}}
                             </span>
-                            <span style="color:#808080">|</span>
-                            <span class="label label-success" title="2xx status">
-                                Success:{{new Intl.NumberFormat().format(item.Status._2xRps)}}/{{new Intl.NumberFormat().format(item.Status._2xCount)}}
+                           
+                            <span class="success-text" title="2xx status">
+                                {{new Intl.NumberFormat().format(item.Status._2xRps)}}/s | {{new Intl.NumberFormat().format(item.Status._2xCount)}}
                             </span>
-                            <span style="color:#808080">|</span>
-                            <span class="label label-danger" title="5xx status">
-                                Error:{{new Intl.NumberFormat().format(item.Status._5xRps)}}/{{new Intl.NumberFormat().format(item.Status._5xCount)}}
+                          
+                            <span class="error-text" title="5xx status">
+                                {{new Intl.NumberFormat().format(item.Status._5xRps)}}/s | {{new Intl.NumberFormat().format(item.Status._5xCount)}}
                             </span>
 
                         </td>

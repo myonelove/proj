@@ -1,1 +1,1 @@
-﻿{"QueueSize":500000,"DBType":"MSSQL","ConnectionString":null,"Table":"_gateway_log"}
+﻿{"QueueSize":500000,"DBType":"MYSQL","ConnectionString":"Server=127.0.0.1;Database=bumblebee;Uid=root;Pwd=123456;","Table":"_gateway_log"}

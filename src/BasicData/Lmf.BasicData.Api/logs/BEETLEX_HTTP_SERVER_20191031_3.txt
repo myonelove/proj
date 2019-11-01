@@ -1,0 +1,223 @@
+﻿[2019/10/31 13:06:34] [Info] HTTP set rewrite url [/api/basicdata/healthcheck] to [/api/basicdata/healthcheck]
+[2019/10/31 13:06:34] [Info] register HomeController.HealthCheck to [GET:/api/basicdata/healthcheck]
+[2019/10/31 13:06:35] [Info] HTTP set rewrite url [/api/basicdata/staff/add] to [/api/basicdata/staff/addstaff]
+[2019/10/31 13:06:35] [Info] register StaffController.AddStaff to [POST:/api/basicdata/staff/addstaff]
+[2019/10/31 13:06:35] [Info] HTTP set rewrite url [/api/basicdata/staff/modify] to [/api/basicdata/staff/modifystaff]
+[2019/10/31 13:06:35] [Info] register StaffController.ModifyStaff to [PUT:/api/basicdata/staff/modifystaff]
+[2019/10/31 13:06:35] [Info] init BeetleX.FastHttpApi.Admin._Admin controller path F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\
+[2019/10/31 13:06:35] [Info] register _Admin.CloseClients to [POST:/__system/admin/closeclients]
+[2019/10/31 13:06:35] [Info] register _Admin.ListClients to [GET/POST:/__system/admin/listclients]
+[2019/10/31 13:06:35] [Info] register _Admin.ListRewrite to [GET/POST:/__system/admin/listrewrite]
+[2019/10/31 13:06:35] [Info] register _Admin.SaveRewrite to [POST:/__system/admin/saverewrite]
+[2019/10/31 13:06:35] [Info] register _Admin.RemoveRewrite to [GET/POST:/__system/admin/removerewrite]
+[2019/10/31 13:06:35] [Info] register _Admin.GetStatus to [GET/POST:/__system/admin/getstatus]
+[2019/10/31 13:06:35] [Info] register _Admin.GetIPTables to [GET/POST:/__system/admin/getiptables]
+[2019/10/31 13:06:35] [Info] register _Admin.SaveIPTables to [POST:/__system/admin/saveiptables]
+[2019/10/31 13:06:35] [Info] register _Admin.SetActionInfo to [POST:/__system/admin/setactioninfo]
+[2019/10/31 13:06:35] [Info] register _Admin.ListActions to [GET/POST:/__system/admin/listactions]
+[2019/10/31 13:06:35] [Info] register _Admin.GetDayStats to [GET/POST:/__system/admin/getdaystats]
+[2019/10/31 13:06:35] [Info] register _Admin.SummaryUrl to [GET/POST:/__system/admin/summaryurl]
+[2019/10/31 13:06:35] [Info] register _Admin.ListLog to [GET/POST:/__system/admin/listlog]
+[2019/10/31 13:06:35] [Info] register _Admin.GetVersions to [GET/POST:/__system/admin/getversions]
+[2019/10/31 13:06:35] [Info] register _Admin.CreateTokenKey to [GET/POST:/__system/admin/createtokenkey]
+[2019/10/31 13:06:35] [Info] register _Admin.ChangeLogLevel to [GET/POST:/__system/admin/changeloglevel]
+[2019/10/31 13:06:35] [Info] register _Admin.ChangePassword to [GET/POST:/__system/admin/changepassword]
+[2019/10/31 13:06:35] [Info] register _Admin.GetSetting to [GET/POST:/__system/admin/getsetting]
+[2019/10/31 13:06:35] [Info] register _Admin.Login to [GET/POST:/__system/admin/login]
+[2019/10/31 13:06:35] [Info] register _Admin.Signout to [GET/POST:/__system/admin/signout]
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/actionconfig.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/actions.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/donation.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/eindex.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/index.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/log.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/login.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/options.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/plugins.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/publicmodule.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/routes.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/setting.html
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/code/codemirror.css
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/code/docs.css
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/code/eclipse.css
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/css/bootstrap-switch-button.css
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/css/bootstrap-theme.css
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/css/bootstrap.css
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/css/site.css
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/code/codemirror.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/code/comment.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/code/continuecomment.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/code/javascript.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/code/matchbrackets.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/js/admincontroller.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/js/bootstrap-switch-button.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/js/bootstrap.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/js/echarts.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/js/fasthttpapi.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/js/jquery.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/js/moduleloader.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/js/vue.js
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/about.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/add.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/admin.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/alipay.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/apitest.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/blog.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/cate.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/clear.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/cluster.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/connect.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/connections.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/count.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/cpu.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/cpuwarning.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/del.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/delete.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/del_w.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/detail.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/detail_w.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/dll.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/down.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/edit.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/error.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/exit.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/export.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/file.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/folder_close.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/folder_open.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/gateway.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/hidetab.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/home.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/home_page.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/icon_node-small.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/import.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/ip.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/issues.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/key.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/log.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/memory.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/module.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/money.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/nav.png
+[2019/10/31 13:06:35] [Info] load static resource /__system/admin/images/new.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/onlines.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/password.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/photo.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/plugin.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/publish.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/publish_error.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/publish_none.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/publish_success.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/refresh.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/remove.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/resize.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/rewrite.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/route.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/save.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/server-config.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/server.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/server_error.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/server_ok.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/setting.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/setting_w.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/state_error.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/state_success.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/statu_error.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/statu_ok.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/system.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/tag.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/talk.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/test.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/teststatus_default.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/teststatus_error.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/teststatus_ok.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/time.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/title.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/tree_down.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/tree_left.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/unittest.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/up.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/update.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/upload.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/webapi.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/wechatpay.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/weight.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/windows.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/windows_w.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/wx_pay.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/zip.png
+[2019/10/31 13:06:36] [Info] load static resource /__system/admin/images/back.jpg
+[2019/10/31 13:06:36] [Info] init BeetleX.FastHttpApi.ServerController controller path F:\git\proj\src\BasicData\Lmf.BasicData.Api\bin\Debug\netcoreapp3.0\
+[2019/10/31 13:06:36] [Info] register ServerController.__ServerStatus to [GET/POST:/__system/__serverstatus]
+[2019/10/31 13:06:36] [Info] register ServerController.__SetSettings to [POST:/__system/__setsettings]
+[2019/10/31 13:06:36] [Info] register ServerController.__ChangeAccessKey to [GET/POST:/__system/__changeaccesskey]
+[2019/10/31 13:06:36] [Info] register ServerController.__GetSettings to [GET/POST:/__system/__getsettings]
+[2019/10/31 13:06:36] [Info] register ServerController.__LogConnect to [GET/POST:/__system/__logconnect]
+[2019/10/31 13:06:36] [Info] register ServerController.__ListLog to [GET/POST:/__system/__listlog]
+[2019/10/31 13:06:36] [Info] register ServerController.__GetOptions to [GET/POST:/__system/__getoptions]
+[2019/10/31 13:06:36] [Info] register ServerController.__UploadModule to [POST:/__system/__uploadmodule]
+[2019/10/31 13:06:36] [Info] register ServerController.__SetActionMaxrps to [POST:/__system/__setactionmaxrps]
+[2019/10/31 13:06:36] [Info] register ServerController.__SetOptions to [POST:/__system/__setoptions]
+[2019/10/31 13:06:36] [Info] detection sessions timeout with 3600s
+[2019/10/31 13:06:36] [Info] listen 127.0.0.1@8100 success ssl:False
+[2019/10/31 13:06:36] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/31 13:06:36] [Info] BeetleX [V:1.4.6.2]
+[2019/10/31 13:06:36] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|2048KB]
+[2019/10/31 13:06:36] [Info] BeetleX FastHttpApi [IOQueue:False|Threads:4] [V:1.7.1.0]
+[2019/10/31 13:08:46] [Warring] HTTP 26382629590794293 127.0.0.1 get /__system/admin/js/ManagementController.js file not found
+[2019/10/31 13:08:46] [Warring] HTTP 26382629590794302 127.0.0.1 get /__system/admin/js/ManagementController.js file not found
+[2019/10/31 13:09:03] [Warring] 127.0.0.1 get token error IDX10503: Signature validation failed. Keys tried: '[PII is hidden]'.
+Exceptions caught:
+ '[PII is hidden]'.
+token: '[PII is hidden]'.
+[2019/10/31 13:09:03] [Warring] 127.0.0.1 get token error IDX10503: Signature validation failed. Keys tried: '[PII is hidden]'.
+Exceptions caught:
+ '[PII is hidden]'.
+token: '[PII is hidden]'.
+[2019/10/31 13:10:26] [Warring] 127.0.0.1 get token error IDX10503: Signature validation failed. Keys tried: '[PII is hidden]'.
+Exceptions caught:
+ '[PII is hidden]'.
+token: '[PII is hidden]'.
+[2019/10/31 13:10:26] [Warring] 127.0.0.1 get token error IDX10503: Signature validation failed. Keys tried: '[PII is hidden]'.
+Exceptions caught:
+ '[PII is hidden]'.
+token: '[PII is hidden]'.
+[2019/10/31 20:03:32] [Info] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a
+[2019/10/31 20:03:32] [Error] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh-CN, PublicKeyToken=b03f5f7f11d50a3a error Could not load file or assembly 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.0.0\System.Net.Sockets.resources.dll'. 系统找不到指定的文件。
+[2019/10/31 20:03:32] [Info] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh-Hans, PublicKeyToken=b03f5f7f11d50a3a
+[2019/10/31 20:03:32] [Error] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh-Hans, PublicKeyToken=b03f5f7f11d50a3a error Could not load file or assembly 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.0.0\System.Net.Sockets.resources.dll'. 系统找不到指定的文件。
+[2019/10/31 20:03:32] [Info] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh, PublicKeyToken=b03f5f7f11d50a3a
+[2019/10/31 20:03:32] [Error] System.Net.Sockets, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a load assembly System.Net.Sockets.resources, Version=4.2.1.0, Culture=zh, PublicKeyToken=b03f5f7f11d50a3a error Could not load file or assembly 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.0.0\System.Net.Sockets.resources.dll'. 系统找不到指定的文件。
+[2019/11/1 2:16:18] [Warring] HTTP 26382629590802071 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:21] [Warring] HTTP 26382629590802072 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:24] [Warring] HTTP 26382629590802073 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:27] [Warring] HTTP 26382629590802074 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:30] [Warring] HTTP 26382629590802075 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:33] [Warring] HTTP 26382629590802076 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:35] [Warring] HTTP 26382629590802077 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:37] [Warring] HTTP 26382629590802078 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:40] [Warring] HTTP 26382629590802079 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:43] [Warring] HTTP 26382629590802080 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:46] [Warring] HTTP 26382629590802081 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:48] [Warring] HTTP 26382629590802082 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:51] [Warring] HTTP 26382629590802083 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:54] [Warring] HTTP 26382629590802084 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:16:57] [Warring] HTTP 26382629590802085 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:00] [Warring] HTTP 26382629590802086 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:03] [Warring] HTTP 26382629590802087 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:06] [Warring] HTTP 26382629590802088 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:09] [Warring] HTTP 26382629590802089 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:12] [Warring] HTTP 26382629590802090 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:16] [Warring] HTTP 26382629590802091 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:18] [Warring] HTTP 26382629590802092 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:21] [Warring] HTTP 26382629590802093 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:24] [Warring] HTTP 26382629590802094 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:27] [Warring] HTTP 26382629590802095 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:30] [Warring] HTTP 26382629590802096 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:33] [Warring] HTTP 26382629590802097 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:35] [Warring] HTTP 26382629590802098 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:38] [Warring] HTTP 26382629590802099 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:40] [Warring] HTTP 26382629590802100 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:43] [Warring] HTTP 26382629590802101 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:46] [Warring] HTTP 26382629590802102 127.0.0.1 GET /basicdata/healthcheck  not found
+[2019/11/1 2:17:49] [Warring] HTTP 26382629590802103 127.0.0.1 GET /basicdata/healthcheck  not found

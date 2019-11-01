@@ -1,0 +1,76 @@
+﻿<templates>
+
+    <template id="header">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://ikende.com" target="_blank" style="padding-left:30px; color:white;width:220px;font-size:16pt;">
+                <span>BeetleX</span>
+
+            </a>
+            <small style="float:right;color:#fff;margin-top:-16px;">web api management</small>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse ">
+
+            <ul class="nav navbar-nav main_menu" style="padding-top:10px;" id="mainMenu">
+                <li :class="[(!page.fileNameWithOutExt || page.fileNameWithOutExt=='index')?'selectMenu':'']">
+                    <a href="/__system/admin/index.html"><img src="/__system/admin/images/home.png" />Home</a>
+
+                </li>
+
+
+                <li :class="[page.fileNameWithOutExt=='actions' || page.folder.indexOf('actions')>=0 ?'selectMenu':'']">
+                    <a href="/__system/admin/actions.html"><img src="/__system/admin/images/route.png" />Actions</a>
+
+                </li>
+
+
+                <!--<li :class="[page.fileNameWithOutExt=='rewrite' || page.folder.indexOf('rewrite')>=0 ?'selectMenu':'']">
+                    <a href="/__system/admin/rewrite.html"><img src="/__system/admin/images/rewrite.png" />Rewrite</a>
+
+                </li>
+
+                <li :class="[page.fileNameWithOutExt=='iptable' ?'selectMenu':'']">
+                    <a href="/__system/admin/iptable.html"><img src="/__system/admin/images/ip.png" />IP Tables</a>
+                </li>
+
+                <li :class="[page.fileNameWithOutExt=='onlines' ?'selectMenu':'']">
+                    <a href="/__system/admin/onlines.html"><img src="/__system/admin/images/onlines.png" />Onlines</a>
+                </li>-->
+
+                <li :class="[page.fileNameWithOutExt=='log' ?'selectMenu':'']">
+                    <a href="/__system/admin/log.html"><img src="/__system/admin/images/log.png" />Log</a>
+                </li>
+
+                <li :class="[page.fileNameWithOutExt=='options' ?'selectMenu':'']">
+                    <a href="/__system/admin/options.html"><img src="/__system/admin/images/setting_w.png" />Options</a>
+                </li>
+
+                <li><a href="https://github.com/IKende/FastHttpApi/issues" target="_blank"><img src="/__system/admin/images/issues.png" />Issues</a></li>
+
+                <li :class="[page.fileNameWithOutExt=='donation' ?'selectMenu':'']">
+
+                    <a href="/__system/admin/donation.html"><img src="/__system/admin/images/money.png" />Donation</a>
+
+                </li>
+                <li><a href="/__system/admin/signout"><img src="/__system/admin/images/exit.png" />Sign out</a></li>
+            </ul>
+
+            <script>
+                var mainMenu = new Vue({
+                    el: '#mainMenu', data: { page: _url, Donation: false }, methods: {
+                        test: function () {
+                            this.page == _url;
+                        }
+                    }
+                });
+                setTimeout(function () { mainMenu.page = _url }, 1000);
+            </script>
+        </div>
+    </template>
+
+
+    <template id="footer">
+        <div class="web-footer">
+            <p>BeetleX webapi management copyright © 2019 <a href="http://www.ikende.com" target="_blank">ikende.com</a>  QQ:28304340 | wechat:henryfan128</p>
+        </div>
+    </template>
+</templates>

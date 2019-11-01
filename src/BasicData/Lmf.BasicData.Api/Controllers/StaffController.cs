@@ -35,7 +35,7 @@ namespace Lmf.BasicData.Api.Controllers
         /// <returns></returns>
         [Post(Route = "add")]
         [JsonDataConvert]
-        public int AddStaff(AddStaffModel body, IHttpContext context)
+        public int AddStaff(AddStaffModel body)
         {
             var model = _mapper.Map<AddStaffModel, Staff>(body);
             return _staffService.Insert(model);

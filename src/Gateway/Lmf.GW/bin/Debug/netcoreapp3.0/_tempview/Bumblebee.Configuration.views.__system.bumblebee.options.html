@@ -62,7 +62,7 @@
 
 
             <div class="panel panel-default">
-                <div class="panel-heading">Log</div>
+                <div class="panel-heading">Debug</div>
                 <div class="panel-body">
                     <form class="form-horizontal">
                         <div class="form-group">
@@ -82,7 +82,18 @@
                                 <input type="number" v-model="setting.LogCacheSize" class="form-control input-sm">
                             </div>
                         </div>
-
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Console output</label>
+                            <div class="col-sm-10">
+                                <input type="checkbox" v-model="setting.OutputConsole" style="margin-top:10px;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Output Server</label>
+                            <div class="col-sm-10">
+                                <input type="checkbox" v-model="setting.OutputServerAddress" style="margin-top:10px;">
+                            </div>
+                        </div>
                         <div class="col-sm-12">
                             <button @click="changeLog" type="button" style="float:right;" class="btn btn-default btn-sm">Change</button>
                         </div>
@@ -145,7 +156,7 @@
             data: {
                 newpwd: '',
                 confirmpwd: '',
-                setting: { LogType: '', LogTypes: [], TokenKey: '', LogCacheSize: 1000 },
+                setting: { LogType: '', LogTypes: [], TokenKey: '', LogCacheSize: 1000, OutputConsole: true },
                 versions: { BeetleX: 0, FastHttpApi: 0, Bumblebee: 0, Configuration: 0 }
             },
             methods: {
@@ -163,7 +174,7 @@
                     });
                 },
                 changeLog: function () {
-                    webapi.ChangeLogLevel(this.setting.LogType, this.setting.LogCacheSize, true).$(function (r) {
+                    webapi.ChangeLogLevel(this.setting.LogType, this.setting.LogCacheSize, this.setting.OutputConsole, this.setting.OutputServerAddress, true).$(function (r) {
                         alert('Data saved successfully!');
                     });
                 },

@@ -1,0 +1,240 @@
+﻿[2019/11/1 8:25:50] [Info] Register IStaffService->StaffRPCService@GetStaff to /IStaffService/GetStaff[ThreadType:None|UniqueID:]
+[2019/11/1 8:25:50] [Info] Register IStaffService->StaffRPCService@GetStaffs to /IStaffService/GetStaffs[ThreadType:None|UniqueID:]
+[2019/11/1 8:25:50] [Info] Register IStaffService->StaffRPCService@AddStaff to /IStaffService/AddStaff[ThreadType:None|UniqueID:]
+[2019/11/1 8:25:50] [Info] Register IStaffService->StaffRPCService@ModifyStaff to /IStaffService/ModifyStaff[ThreadType:None|UniqueID:]
+[2019/11/1 8:25:50] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/11/1 8:25:50] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/11/1 8:25:50] [Info] BeetleX [V:1.4.6.2]
+[2019/11/1 8:25:50] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/11/1 8:25:50] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/11/1 8:26:01] [Info] session connected from 127.0.0.1:54688@1
+[2019/11/1 8:26:01] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:01] [Debug]  127.0.0.1:54688 connected
+[2019/11/1 8:26:01] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:01] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:01] [Debug] [2]127.0.0.1:54688 receive message /IStaffService/GetStaff@2
+[2019/11/1 8:26:01] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:02] [Debug] [2]127.0.0.1:54688 receive event data:{"ID":2,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:02] [Debug] [2]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:02] [Debug] [2]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:08] [Debug] [2]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:08] [Debug] [2]127.0.0.1:54688 send event data:{"ID":2,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:11] [Info] session connected from 127.0.0.1:54691@2
+[2019/11/1 8:26:11] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:11] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:11] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:11] [Debug] [3]127.0.0.1:54691 receive message /IStaffService/GetStaff@3
+[2019/11/1 8:26:11] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:11] [Debug] [3]127.0.0.1:54691 receive event data:{"ID":3,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:11] [Debug]  127.0.0.1:54691 connected
+[2019/11/1 8:26:11] [Debug] [3]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:11] [Debug] [3]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:11] [Debug] [3]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:11] [Debug] [3]127.0.0.1:54691 send event data:{"ID":3,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:12] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:12] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:12] [Debug] [4]127.0.0.1:54688 receive message /IStaffService/GetStaff@4
+[2019/11/1 8:26:12] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:12] [Debug] [4]127.0.0.1:54688 receive event data:{"ID":4,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:12] [Debug] [4]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:12] [Debug] [4]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:12] [Debug] [4]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:12] [Debug] [4]127.0.0.1:54688 send event data:{"ID":4,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:12] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:12] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:12] [Debug] [5]127.0.0.1:54691 receive message /IStaffService/GetStaff@5
+[2019/11/1 8:26:12] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:12] [Debug] [5]127.0.0.1:54691 receive event data:{"ID":5,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:12] [Debug] [5]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:12] [Debug] [5]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:12] [Debug] [5]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:12] [Debug] [5]127.0.0.1:54691 send event data:{"ID":5,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:12] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:12] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:12] [Debug] [6]127.0.0.1:54688 receive message /IStaffService/GetStaff@6
+[2019/11/1 8:26:12] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:12] [Debug] [6]127.0.0.1:54688 receive event data:{"ID":6,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:12] [Debug] [6]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:12] [Debug] [6]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:12] [Debug] [6]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:12] [Debug] [6]127.0.0.1:54688 send event data:{"ID":6,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:13] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:13] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:13] [Debug] [7]127.0.0.1:54691 receive message /IStaffService/GetStaff@7
+[2019/11/1 8:26:13] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:13] [Debug] [7]127.0.0.1:54691 receive event data:{"ID":7,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:13] [Debug] [7]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:13] [Debug] [7]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:13] [Debug] [7]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:13] [Debug] [7]127.0.0.1:54691 send event data:{"ID":7,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:13] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:13] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:13] [Debug] [8]127.0.0.1:54688 receive message /IStaffService/GetStaff@8
+[2019/11/1 8:26:13] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:13] [Debug] [8]127.0.0.1:54688 receive event data:{"ID":8,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:13] [Debug] [8]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:13] [Debug] [8]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:13] [Debug] [8]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:13] [Debug] [8]127.0.0.1:54688 send event data:{"ID":8,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:13] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:13] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:13] [Debug] [9]127.0.0.1:54691 receive message /IStaffService/GetStaff@9
+[2019/11/1 8:26:13] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:13] [Debug] [9]127.0.0.1:54691 receive event data:{"ID":9,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:13] [Debug] [9]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:13] [Debug] [9]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:13] [Debug] [9]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:13] [Debug] [9]127.0.0.1:54691 send event data:{"ID":9,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:14] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:14] [Debug] [10]127.0.0.1:54688 receive message /IStaffService/GetStaff@10
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:14] [Debug] [10]127.0.0.1:54688 receive event data:{"ID":10,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:14] [Debug] [10]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:14] [Debug] [10]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:14] [Debug] [10]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:14] [Debug] [10]127.0.0.1:54688 send event data:{"ID":10,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:14] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:14] [Debug] [11]127.0.0.1:54691 receive message /IStaffService/GetStaff@11
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:14] [Debug] [11]127.0.0.1:54691 receive event data:{"ID":11,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:14] [Debug] [11]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:14] [Debug] [11]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:14] [Debug] [11]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:14] [Debug] [11]127.0.0.1:54691 send event data:{"ID":11,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:14] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:14] [Debug] [12]127.0.0.1:54688 receive message /IStaffService/GetStaff@12
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:14] [Debug] [12]127.0.0.1:54688 receive event data:{"ID":12,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:14] [Debug] [12]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:14] [Debug] [12]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:14] [Debug] [12]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:14] [Debug] [12]127.0.0.1:54688 send event data:{"ID":12,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:14] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:14] [Debug] [13]127.0.0.1:54691 receive message /IStaffService/GetStaff@13
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:14] [Debug] [13]127.0.0.1:54691 receive event data:{"ID":13,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:14] [Debug] [13]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:14] [Debug] [13]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:14] [Debug] [13]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:14] [Debug] [13]127.0.0.1:54691 send event data:{"ID":13,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:14] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:14] [Debug] [14]127.0.0.1:54688 receive message /IStaffService/GetStaff@14
+[2019/11/1 8:26:14] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:14] [Debug] [14]127.0.0.1:54688 receive event data:{"ID":14,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:14] [Debug] [14]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:14] [Debug] [14]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:14] [Debug] [14]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:14] [Debug] [14]127.0.0.1:54688 send event data:{"ID":14,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:15] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:15] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:15] [Debug] [15]127.0.0.1:54691 receive message /IStaffService/GetStaff@15
+[2019/11/1 8:26:15] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:15] [Debug] [15]127.0.0.1:54691 receive event data:{"ID":15,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:15] [Debug] [15]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:15] [Debug] [15]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:15] [Debug] [15]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:15] [Debug] [15]127.0.0.1:54691 send event data:{"ID":15,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:15] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:15] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:15] [Debug] [16]127.0.0.1:54688 receive message /IStaffService/GetStaff@16
+[2019/11/1 8:26:15] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:15] [Debug] [16]127.0.0.1:54688 receive event data:{"ID":16,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:15] [Debug] [16]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:15] [Debug] [16]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:15] [Debug] [16]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:15] [Debug] [16]127.0.0.1:54688 send event data:{"ID":16,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:15] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:15] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:15] [Debug] [17]127.0.0.1:54691 receive message /IStaffService/GetStaff@17
+[2019/11/1 8:26:15] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:15] [Debug] [17]127.0.0.1:54691 receive event data:{"ID":17,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:15] [Debug] [17]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:15] [Debug] [17]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:15] [Debug] [17]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:15] [Debug] [17]127.0.0.1:54691 send event data:{"ID":17,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:15] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:15] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:15] [Debug] [18]127.0.0.1:54688 receive message /IStaffService/GetStaff@18
+[2019/11/1 8:26:15] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:15] [Debug] [18]127.0.0.1:54688 receive event data:{"ID":18,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:15] [Debug] [18]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:15] [Debug] [18]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:15] [Debug] [18]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:15] [Debug] [18]127.0.0.1:54688 send event data:{"ID":18,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:16] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:16] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:16] [Debug] [19]127.0.0.1:54691 receive message /IStaffService/GetStaff@19
+[2019/11/1 8:26:16] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:16] [Debug] [19]127.0.0.1:54691 receive event data:{"ID":19,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:16] [Debug] [19]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:16] [Debug] [19]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:16] [Debug] [19]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:16] [Debug] [19]127.0.0.1:54691 send event data:{"ID":19,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:16] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:16] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:16] [Debug] [20]127.0.0.1:54688 receive message /IStaffService/GetStaff@20
+[2019/11/1 8:26:16] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:16] [Debug] [20]127.0.0.1:54688 receive event data:{"ID":20,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:16] [Debug] [20]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:16] [Debug] [20]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:16] [Debug] [20]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:16] [Debug] [20]127.0.0.1:54688 send event data:{"ID":20,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:16] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:16] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:16] [Debug] [21]127.0.0.1:54691 receive message /IStaffService/GetStaff@21
+[2019/11/1 8:26:16] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:16] [Debug] [21]127.0.0.1:54691 receive event data:{"ID":21,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:16] [Debug] [21]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:16] [Debug] [21]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:16] [Debug] [21]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:16] [Debug] [21]127.0.0.1:54691 send event data:{"ID":21,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:21] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:21] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:21] [Debug] [22]127.0.0.1:54688 receive message /IStaffService/GetStaff@22
+[2019/11/1 8:26:21] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:21] [Debug] [22]127.0.0.1:54688 receive event data:{"ID":22,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:21] [Debug] [22]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:21] [Debug] [22]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:21] [Debug] [22]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:21] [Debug] [22]127.0.0.1:54688 send event data:{"ID":22,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:21] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:21] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:21] [Debug] [23]127.0.0.1:54691 receive message /IStaffService/GetStaff@23
+[2019/11/1 8:26:21] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:21] [Debug] [23]127.0.0.1:54691 receive event data:{"ID":23,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:21] [Debug] [23]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:21] [Debug] [23]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:21] [Debug] [23]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:21] [Debug] [23]127.0.0.1:54691 send event data:{"ID":23,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:21] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:21] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:21] [Debug] [24]127.0.0.1:54688 receive message /IStaffService/GetStaff@24
+[2019/11/1 8:26:21] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:21] [Debug] [24]127.0.0.1:54688 receive event data:{"ID":24,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:21] [Debug] [24]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:21] [Debug] [24]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:21] [Debug] [24]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:21] [Debug] [24]127.0.0.1:54688 send event data:{"ID":24,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:21] [Info] 127.0.0.1:54691 receive 40 length completed
+[2019/11/1 8:26:21] [Debug] 127.0.0.1:54691 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:21] [Debug] [25]127.0.0.1:54691 receive message /IStaffService/GetStaff@25
+[2019/11/1 8:26:21] [Info] 127.0.0.1:54691 begin receive
+[2019/11/1 8:26:21] [Debug] [25]127.0.0.1:54691 receive event data:{"ID":25,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:21] [Debug] [25]127.0.0.1:54691 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:21] [Debug] [25]127.0.0.1:54691 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:21] [Debug] [25]127.0.0.1:54691 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:21] [Debug] [25]127.0.0.1:54691 send event data:{"ID":25,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:26:22] [Info] 127.0.0.1:54688 receive 40 length completed
+[2019/11/1 8:26:22] [Debug] 127.0.0.1:54688 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 8:26:22] [Debug] [26]127.0.0.1:54688 receive message /IStaffService/GetStaff@26
+[2019/11/1 8:26:22] [Info] 127.0.0.1:54688 begin receive
+[2019/11/1 8:26:22] [Debug] [26]127.0.0.1:54688 receive event data:{"ID":26,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 8:26:22] [Debug] [26]127.0.0.1:54688 Process event /IStaffService/GetStaff
+[2019/11/1 8:26:22] [Debug] [26]127.0.0.1:54688 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 8:26:22] [Debug] [26]127.0.0.1:54688 process event /IStaffService/GetStaff invoke method completed
+[2019/11/1 8:26:22] [Debug] [26]127.0.0.1:54688 send event data:{"ID":26,"EventPath":null,"Properties":{},"Data":[{"Id":3,"Name":"林三","No":"3a424576f42611e9b40c005056c00001","Email":"2874923700@qq.com","LeadNo":"","Mobile":"18681081033"}],"EventError":200,"ResponseTime":0.0,"Token":null}

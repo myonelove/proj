@@ -40,18 +40,19 @@
 
                         <th>Version</th>
                         <th>Assembly</th>
+                        <th>Copyright</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="(item,i) in Items" :title="item.Description">
-                        <td style="width:32px;"><img :src="[item.IconUrl?item.IconUrl:'images/plugin.png']" /></td>
+                        <td style="width:32px;"><img style="width:24px;" :src="[item.IconUrl?item.IconUrl:'images/plugin.png']" /></td>
                         <td style="width:40px;">
                             <div v-if="item.Status" class="material-switch pull-right">
                                 <input v-model="item.Enabled" @change="PluginEnabled(item)" :id="['enabled'+i]" type="checkbox" />
                                 <label :for="['enabled'+i]" class="label-success"></label>
                             </div>
-                            <button v-else type="button" class="btn btn-success btn-sm" style="width:40px;border-radius:20px;">On</button>
+                            <button v-else type="button" class="btn btn-success btn-sm" style="width:40px;border-radius:30px;">On</button>
                         </td>
 
                         <td><a :href="['config/'+item.Name+'.html']"> {{item.Name}}</a></td>
@@ -60,7 +61,18 @@
 
                         <td>{{item.Version}}</td>
                         <td>{{item.Assembly}}</td>
-                        <td></td>
+                        <td>
+                        
+                            <a v-if="item.Copyright && item.Copyright.indexOf('ikende.com')>=0" href="http://ikende.com/" target="_blank">
+                                {{item.Copyright}}
+                            </a>
+                            <span v-else>
+                                {{item.Copyright}}
+                            </span>
+                        </td>
+                        <td>
+                            <a v-if="item.InfoUrl" :href="item.InfoUrl" target="_blank">View</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>

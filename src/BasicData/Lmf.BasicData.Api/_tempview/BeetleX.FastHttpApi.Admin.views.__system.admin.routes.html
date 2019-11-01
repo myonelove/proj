@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/ModuleLoader.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/FastHttpApi.js"></script>
+    <script src="js/ManagementController.js"></script>
+    <title>Beetlex webapi gateway management</title>
+</head>
+<body>
+
+    <div class="page-title">
+        <img src="images/title.png" /> <h3>Routes</h3>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-left" slot="header">
+
+    </div>
+
+
+    <div class="container bs-docs-container" id="page">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="tool-bar-l">
+                    <input type="text" class="form-control input-sm" style="width:300px;" v-model="RouteName" placeholder="route url (/.*) or (/users/.*)">
+                    <a href="javascript:void(0)" @click="Add"><img src="images/new.png" /></a>
+                    <a href="javascript:void(0)" @click="PageLoad"><img src="images/refresh.png" /></a>
+                </div>
+                <table class="table route-item" v-for="item in Routes">
+                    <tbody>
+                        <tr style="padding-top:20px;">
+
+                            <td style="width:200px;vertical-align:middle;font-weight:bold;padding-left:10px;">
+                                <img v-if="item.Editor" src="images/edit.png" /> <a href="javascript:void(0)" @click="item.Show=!item.Show"> {{item.Url}}</a>
+
+                            </td>
+                            <td style="width:250px;">
+                                <input @change="item.Editor=true" type="text" class="form-control input-sm" v-model="item.HashPattern"
+                                       title="Hash pattern[host|url|baseurl|(h:name)|(q:name)]"
+                                       placeholder="Hash pattern">
+                            </td>
+                            <td><input type="text" @change="item.Editor=true" class="form-control input-sm" v-model="item.Remark" placeholder="Remark"></td>
+                            <td style="width:80px;text-align:right;">
+
+                                <div class="tool-bar" style="text-align:right;">
+                                    <a v-if="item.Editor" href="javascript:void(0)" style="float:right;" @click="Save(item)"><img src="images/save.png" /></a>
+                                    <a v-if="item.Url !='*'" style="float:right;" href="javascript:void(0)" @click="Delete(item)"><img src="images/delete.png" /></a>
+
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr v-if="item.Show">
+                            <td colspan="3" class="route-servers">
+                                <table class="table route-servers" style="background-color:rgba(0, 0, 0, 0.00)">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Host</th>
+                                            <th style="vertical-align:middle;text-align:right">Weight</th>
+                                            <th style="vertical-align:middle;text-align:right">MaxRps</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:20px"></td>
+                                            <td colspan="4">
+                                                <select class="form-control input-sm" v-model="item.AddHost" @change="SelectServer(item)">
+                                                    <option v-for="s in GetSelectServer(item)" :value="s.Host">
+                                                        [{{s.Category}}] {{s.Host}}
+                                                    </option>
+                                                </select>
+                                            </td>
+
+
+                                        </tr>
+                                        <tr v-for="(host,i) in item.Servers">
+                                            <td style="width:20px;vertical-align:middle;">
+
+                                               
+                                            </td>
+                                            <td style="vertical-align:middle">
+
+                                                <a v-if="!host.Available"><img style="width:16px;" src="images/server_error.png" /></a>
+                                                <a v-if="host.Available"><img style="width:16px;" src="images/server_ok.png" /></a>
+
+                                                <a href="javascript:void(0)">{{host.Host}}</a>
+                                            </td>
+                                            <td style="vertical-align:middle;text-align:right;width:80px;">
+                                                <input @change="host.Edit=true;item.Editor=true" type="number" style="text-align:right;" min="0" max="10" class="form-control input-sm" v-model="host.Weight" placeholder="weight">
+                                            </td>
+                                            <td style="vertical-align:middle;text-align:right;width:120px;">
+                                                <input @change="host.Edit=true;item.Editor=true" type="number" style="text-align:right;" min="0" max="100000" class="form-control input-sm" v-model="host.MaxRps" placeholder="maxRps">
+                                            </td>
+                                            <td style="width:20px;">
+                                                <div class="tool-bar" style="text-align:right;">
+
+                                                    <a href="javascript:void(0)" @click="RemoveRouteHost(item,i,host)"><img src="images/delete.png" /></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </td>
+
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container" style="text-align:center;" slot="footer">
+
+    </div>
+    <script>
+        var webapi = new Management();
+        var page = new Vue({
+            el: '#page',
+            data: {
+                Routes: [],
+                RouteName: '',
+                Servers: [],
+                SelectItem: null,
+            },
+            methods: {
+                ListRoutes: function () {
+                    var _this = this;
+                    webapi.ListRoute().$(function (r) {
+                        _this.Routes = r.Data;
+                    });
+                },
+                RemoveRouteHost: function (item, i, host) {
+                    if (confirm('Do you want to delete [' + host.Host + '@' + item.Url + ']?')) {
+                        item.Servers.splice(i, 1);
+                        item.Editor = true;
+                    }
+                },
+                SelectServer: function (item) {
+                    if (item.AddHost) {
+                        item.Servers.push({ Host: item.AddHost, Weight: 0, MaxRps: 0, Available: true, Edit: true });
+                        item.AddHost = null;
+                        item.Editor = true;
+                    }
+                },
+                Delete: function (item) {
+                    var _this = this;
+                    if (confirm('Do you want to delete [' + item.Url + '] route?')) {
+                        webapi.RemoveRoute(item.Url).$(function (r) {
+                            _this.PageLoad();
+                        });
+                    }
+                },
+                GetSelectServer: function (item) {
+                    var items = new Array();
+                    for (i = 0; i < this.Servers.length; i++) {
+                        var has = false;
+                        for (k = 0; k < item.Servers.length; k++) {
+                            if (item.Servers[k].Host == this.Servers[i].Host) {
+                                has = true;
+                                break;
+                            }
+                        }
+                        if (!has)
+                            items.push(this.Servers[i]);
+
+                    }
+                    return items;
+                },
+                Save: function (item) {
+                    if (confirm('Save ' + item.Url + ' route setting?')) {
+                        webapi.RouteSetting(item).$(function (r) {
+                            alert('Data saved successfully!');
+                            item.Servers.forEach(function (v) { v.Edit = null; });
+                            item.Editor = false;
+                        });
+                    }
+                }
+                ,
+                Add: function () {
+                    if (!this.RouteName) {
+                        alert('Enter route url!')
+                        return;
+                    }
+                    var _this = this;
+                    webapi.SetRoute(this.RouteName, '', '').$(function (r) {
+                        _this.PageLoad();
+                        _this.RouteName = '';
+                    });
+                },
+                ListServer: function () {
+                    var _this = this;
+                    webapi.ListServer().$(function (r) {
+                        _this.Servers = r.Data;
+                    });
+                },
+                AddRoute: function () {
+                    this.Routes.push({ Url: '', HashPattern: '', Remark: '' });
+                },
+                PageLoad: function () {
+                    this.ListRoutes();
+                    this.ListServer();
+                }
+            }
+        });
+        page.PageLoad();
+    </script>
+</body>
+
+</html>

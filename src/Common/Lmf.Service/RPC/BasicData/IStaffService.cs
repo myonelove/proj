@@ -21,7 +21,7 @@ namespace Lmf.Service.PRC.BasicData
         /// </summary>
         /// <param name="staffnos"></param>
         /// <returns></returns>
-        Task<List<StaffModel>> GetStaffs(IList<string> staffnos);
+        Task<IList<StaffModel>> GetStaffs(IList<string> staffnos);
 
         /// <summary>
         /// 入职员工录入

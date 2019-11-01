@@ -1,0 +1,8 @@
+F:\git\proj\src\Common\Lmf.Service\bin\Release\netstandard2.0\Lmf.Service.deps.json
+F:\git\proj\src\Common\Lmf.Service\bin\Release\netstandard2.0\Lmf.Service.dll
+F:\git\proj\src\Common\Lmf.Service\bin\Release\netstandard2.0\Lmf.Service.pdb
+F:\git\proj\src\Common\Lmf.Service\obj\Release\netstandard2.0\Lmf.Service.csprojAssemblyReference.cache
+F:\git\proj\src\Common\Lmf.Service\obj\Release\netstandard2.0\Lmf.Service.AssemblyInfoInputs.cache
+F:\git\proj\src\Common\Lmf.Service\obj\Release\netstandard2.0\Lmf.Service.AssemblyInfo.cs
+F:\git\proj\src\Common\Lmf.Service\obj\Release\netstandard2.0\Lmf.Service.dll
+F:\git\proj\src\Common\Lmf.Service\obj\Release\netstandard2.0\Lmf.Service.pdb

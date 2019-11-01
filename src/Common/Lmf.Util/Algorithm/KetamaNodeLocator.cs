@@ -8,7 +8,6 @@ namespace Lmf.Util.Algorithm
     public class KetamaNodeLocator
     { 
         private SortedList<long, string> ketamaNodes = new SortedList<long, string>();
-        private HashAlgorithm hashAlg;
         private int numReps = 160;
 
         public KetamaNodeLocator(List<string> nodes/*，int nodeCopies*/)

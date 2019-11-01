@@ -317,6 +317,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "BeetleX.Http.Clients": {
+              "target": "Package",
+              "version": "[0.8.8, )"
+            },
             "MessagePack": {
               "target": "Package",
               "version": "[1.8.74, )"

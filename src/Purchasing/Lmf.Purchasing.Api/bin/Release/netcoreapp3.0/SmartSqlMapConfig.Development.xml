@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+//*******************************
+// Create By mengfengli
+// Date 2019-10-22 02:05
+// Code Generate By SmartCode
+// Code Generate Github : https://github.com/Ahoo-Wang/SmartCode
+//*******************************-->
+<SmartSqlMapConfig xmlns="http://SmartSql.net/schemas/SmartSqlMapConfig.xsd">
+    <Settings IsCacheEnabled="true" EnablePropertyChangedTrack="false"/>
+    <Properties>
+        <Property Name="ConnectionString" Value="Data Source=localhost;port=3306;Initial Catalog=purchasing;uid=root;password=123456;Charset=utf8"/>
+        <Property Name="ScriptBuilder" Value="SmartSql.ScriptTag.ScriptBuilder,SmartSql.ScriptTag"/>
+        <Property Name="CryptoTypeHandler" Value="SmartSql.TypeHandler.CryptoTypeHandler,SmartSql.TypeHandler"/>
+            <Property Name="JsonTypeHandler" Value="SmartSql.TypeHandler.JsonTypeHandler`1,SmartSql.TypeHandler"/>
+            <Property Name="NamedJsonTypeHandler" Value="SmartSql.TypeHandler.JsonTypeHandler,SmartSql.TypeHandler"/>
+    </Properties>
+    <Database>
+        <DbProvider Name="MySql"/>
+        <Write Name="purchasing" ConnectionString="${ConnectionString}"/>
+    </Database>
+    <TypeHandlers>
+        <TypeHandler Name="Json" Type="${NamedJsonTypeHandler}">
+            <Properties>
+                <Property Name="DateFormat" Value="yyyy-MM-dd mm:ss"/>
+                <Property Name="NamingStrategy" Value="Camel"/>
+            </Properties>
+        </TypeHandler>
+        <TypeHandler Name="DES" Type="${CryptoTypeHandler}">
+            <Properties>
+                <Property Name="Algorithm" Value="DES"/>
+                <Property Name="Key" Value="qxMfZpmQ1Rk="/>
+                <Property Name="IV" Value="XaX73vwx694="/>
+            </Properties>
+        </TypeHandler>
+        <TypeHandler Name="AES" Type="${CryptoTypeHandler}">
+            <Properties>
+                <Property Name="Algorithm" Value="AES"/>
+                <Property Name="Key" Value="awVFRYPeTTrA9T7OOzaAFUvu8I/ZyYjAtIzEjCmzzYw="/>
+                <Property Name="IV" Value="7cFxoI3/k1wxN9P6rEyR/Q=="/>
+            </Properties>
+        </TypeHandler>
+    </TypeHandlers>
+    <TagBuilders>
+        <TagBuilder Name="Script" Type="${ScriptBuilder}"/>
+    </TagBuilders>
+    <IdGenerators>
+        <IdGenerator Name="SnowflakeId" Type="SnowflakeId">
+            <Properties>
+                <Property Name="WorkerIdBits" Value="5"/>
+                <Property Name="WorkerId" Value="1"/>
+                <Property Name="Sequence" Value="0"/>
+            </Properties>
+        </IdGenerator>
+    </IdGenerators>
+    <SmartSqlMaps>
+        <SmartSqlMap Path="Maps" Type="Directory"></SmartSqlMap>
+    </SmartSqlMaps>
+</SmartSqlMapConfig>

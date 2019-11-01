@@ -1,3 +1,6 @@
+F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.csprojAssemblyReference.cache
+F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.AssemblyInfoInputs.cache
+F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.AssemblyInfo.cs
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Purchasing.Api.exe
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Maps\ProcurementOrder.xml
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Maps\ProcurementOrderDetail.xml
@@ -18,6 +21,7 @@ F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\AutoMapper
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\BeetleX.dll
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\BeetleX.FastHttpApi.dll
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\BeetleX.FastHttpApi.Hosting.dll
+F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\BeetleX.Http.Clients.dll
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\BeetleX.XRPC.dll
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\BouncyCastle.Crypto.dll
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\EventNext.dll
@@ -73,15 +77,12 @@ F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Purcha
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Purchasing.Service.dll
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Service.dll
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Util.dll
+F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Service.pdb
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Util.pdb
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Purchasing.Model.pdb
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Purchasing.Entity.pdb
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Purchasing.Repository.pdb
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Purchasing.Service.pdb
-F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\Lmf.Service.pdb
-F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.csprojAssemblyReference.cache
-F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.AssemblyInfoInputs.cache
-F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.AssemblyInfo.cs
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.csproj.CopyComplete
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.dll
 F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\obj\Debug\netcoreapp3.0\Lmf.Purchasing.Api.pdb

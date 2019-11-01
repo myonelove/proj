@@ -22,7 +22,7 @@ namespace Lmf.GW
                 typeof(Bumblebee.Caching.default_request_cached_reader).Assembly,
                 typeof(Bumblebee.Caching.default_request_cached_writer).Assembly,
                 typeof(Bumblebee.Logs.DBLog).Assembly,
-                typeof(Bumblebee.ConcurrentLimits.UrlConcurrentLimits).Assembly
+                typeof(Bumblebee.ConcurrentLimits.UrlConcurrentLimits).Assembly 
                 );
             Console.Read();
         }

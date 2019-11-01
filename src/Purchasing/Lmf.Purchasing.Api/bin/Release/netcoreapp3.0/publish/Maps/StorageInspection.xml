@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+//*******************************
+// Create By mengfengli
+// Date 2019-10-22 02:05
+// Code Generate By SmartCode
+// Code Generate Github : https://github.com/Ahoo-Wang/SmartCode
+//*******************************-->
+
+<SmartSqlMap Scope="StorageInspection" xmlns="http://SmartSql.net/schemas/SmartSqlMap.xsd">
+
+    <ResultMaps>
+        <ResultMap Id="StorageInspectionResultMap">
+                <Result Column="id" Property="Id" />
+                <Result Column="order_no" Property="OrderNo" />
+                <Result Column="receiving_no" Property="ReceivingNo" />
+                <Result Column="operator_staff" Property="OperatorStaff" />
+                <Result Column="create_time" Property="CreateTime" />
+        </ResultMap>
+    </ResultMaps>
+    <Statements>
+
+<Statement Id="AllCols">
+T.id,T.order_no,T.receiving_no,T.operator_staff,T.create_time</Statement>        <Statement Id="QueryParams">
+            <Where>
+                    <IsNotEmpty Prepend="And" Property="Id">
+                        T.id = ?Id
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="OrderNo">
+                        T.order_no = ?OrderNo
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="ReceivingNo">
+                        T.receiving_no = ?ReceivingNo
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="OperatorStaff">
+                        T.operator_staff = ?OperatorStaff
+                    </IsNotEmpty>
+                    <IsNotEmpty Prepend="And" Property="CreateTime">
+                        T.create_time = ?CreateTime
+                    </IsNotEmpty>
+            </Where>
+        </Statement>
+
+
+<!--新增-->
+<Statement Id="Insert">
+    INSERT INTO storage_inspection
+    (
+      order_no,
+      receiving_no,
+      operator_staff,
+      create_time
+    )
+    VALUES
+    (
+      ?OrderNo,
+      ?ReceivingNo,
+      ?OperatorStaff,
+      ?CreateTime
+    )
+;Select Last_Insert_Id();
+</Statement>
+
+<!--删除-->
+<Statement Id="Delete">
+    Delete From storage_inspection
+    Where id=?Id
+</Statement>
+
+<!--更新-->
+<Statement Id="Update">
+    UPDATE storage_inspection
+    <Set>
+                <IsProperty Prepend="," Property="OrderNo">
+                    order_no = ?OrderNo
+                </IsProperty>
+                <IsProperty Prepend="," Property="ReceivingNo">
+                    receiving_no = ?ReceivingNo
+                </IsProperty>
+                <IsProperty Prepend="," Property="OperatorStaff">
+                    operator_staff = ?OperatorStaff
+                </IsProperty>
+                <IsProperty Prepend="," Property="CreateTime">
+                    create_time = ?CreateTime
+                </IsProperty>
+    </Set>
+    Where id=?Id
+</Statement>
+
+<!--获取数据列-->
+<Statement Id="Query" ResultMap="StorageInspectionResultMap">
+    SELECT 
+    <Include RefId="AllCols"/>
+    From storage_inspection T
+    <Include RefId="QueryParams" />
+    <Switch Prepend="Order By" Property="OrderBy">
+        <Default>
+            T.id Desc
+        </Default>
+    </Switch>
+    <IsNotEmpty Prepend="Limit" Property="Taken">?Taken</IsNotEmpty>
+</Statement>
+
+    <!--获取分页数据-->
+    <Statement Id="QueryByPage" ResultMap="StorageInspectionResultMap">
+        Select 
+        <Include RefId="AllCols"/>
+        From storage_inspection As T
+        <Include RefId="QueryParams" />
+        <Switch Prepend="Order By" Property="OrderBy">
+            <Default>
+                T.id Desc
+            </Default>
+        </Switch>
+        Limit ?Offset,?PageSize
+    </Statement>
+
+
+<!--获取记录数-->
+<Statement Id="GetRecord">
+    Select Count(1) From storage_inspection T
+    <Include RefId="QueryParams" />
+</Statement>
+
+<!--获取表映射实体-->
+<Statement Id="GetEntity" ResultMap="StorageInspectionResultMap">
+    Select 
+    <Include RefId="AllCols"/>
+    From storage_inspection As T
+    <Where Min="1">
+            <IsNotEmpty Prepend="And" Property="Id">
+                T.id= ?Id
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="OrderNo">
+                T.order_no= ?OrderNo
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="ReceivingNo">
+                T.receiving_no= ?ReceivingNo
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="OperatorStaff">
+                T.operator_staff= ?OperatorStaff
+            </IsNotEmpty>
+            <IsNotEmpty Prepend="And" Property="CreateTime">
+                T.create_time= ?CreateTime
+            </IsNotEmpty>
+    </Where>
+    Limit 1
+</Statement>
+
+<!--是否存在该记录-->
+<Statement Id="IsExist">
+    Select Count(1) From storage_inspection T
+    <Include RefId="QueryParams" />
+</Statement>
+
+
+    </Statements>
+</SmartSqlMap>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+//*******************************
+// Create By mengfeng
+// Date 2019-10-19 00:05
+// Code Generate By SmartCode
+// Code Generate Github : https://github.com/Ahoo-Wang/SmartCode
+//*******************************-->
+<SmartSqlMapConfig xmlns="http://SmartSql.net/schemas/SmartSqlMapConfig.xsd">
+    <Settings IsCacheEnabled="true" EnablePropertyChangedTrack="false" />
+    <Properties>
+        <Property Name="ConnectionString" Value="Data Source=localhost;port=3306;Initial Catalog=basedata;uid=root;password=123456;Charset=utf8" />
+        <Property Name="ScriptBuilder" Value="SmartSql.ScriptTag.ScriptBuilder,SmartSql.ScriptTag" />
+            <Property Name="JsonTypeHandler" Value="SmartSql.TypeHandler.JsonTypeHandler`1,SmartSql.TypeHandler" />
+    </Properties>
+    <Database>
+        <DbProvider Name="MySql" />
+        <Write Name="basedata" ConnectionString="${ConnectionString}" />
+    </Database>
+    <TagBuilders>
+        <TagBuilder Name="Script" Type="${ScriptBuilder}" />
+    </TagBuilders>
+    <IdGenerators>
+        <IdGenerator Name="SnowflakeId" Type="SnowflakeId">
+            <Properties>
+                <Property Name="WorkerIdBits" Value="5" />
+                <Property Name="WorkerId" Value="1" />
+                <Property Name="Sequence" Value="0" />
+            </Properties>
+        </IdGenerator>
+    </IdGenerators>
+    <SmartSqlMaps>
+        <SmartSqlMap Path="Maps" Type="Directory"></SmartSqlMap>
+    </SmartSqlMaps>
+</SmartSqlMapConfig>

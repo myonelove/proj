@@ -5,3 +5,4 @@ F:\git\proj\src\BasicData\Lmf.BasicData.Entity\obj\Debug\netstandard2.0\Lmf.Basi
 F:\git\proj\src\BasicData\Lmf.BasicData.Entity\obj\Debug\netstandard2.0\Lmf.BasicData.Entity.AssemblyInfo.cs
 F:\git\proj\src\BasicData\Lmf.BasicData.Entity\obj\Debug\netstandard2.0\Lmf.BasicData.Entity.dll
 F:\git\proj\src\BasicData\Lmf.BasicData.Entity\obj\Debug\netstandard2.0\Lmf.BasicData.Entity.pdb
+F:\git\proj\src\BasicData\Lmf.BasicData.Entity\obj\Debug\netstandard2.0\Lmf.BasicData.Entity.csprojAssemblyReference.cache

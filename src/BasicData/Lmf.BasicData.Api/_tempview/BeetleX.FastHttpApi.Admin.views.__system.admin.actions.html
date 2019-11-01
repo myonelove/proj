@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/ModuleLoader.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/FastHttpApi.js"></script>
+    <script src="js/AdminController.js"></script>
+    <title>Beetlex webapi gateway management</title>
+</head>
+<body>
+
+    <div class="page-title">
+        <img src="images/title.png" /> <h3>Actions</h3>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-left" slot="header">
+
+    </div>
+
+
+    <div class="container bs-docs-container" id="page">
+
+
+        <div class="row">
+            <div class="tool-bar-l">
+
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Class <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)" @click="Filter=''">All</a></li>
+                            <li v-for="item in Class"><a href="javascript:void(0)" @click="Filter=item">{{item}}</a></li>
+
+                        </ul>
+                    </div><!-- /btn-group -->
+                    <input type="text" class="form-control input-sm" style="width:300px;" v-model="Filter" placeholder="search filter">
+                </div>
+                <a href="javascript:void(0)" @click="listAction"><img src="images/refresh.png" /></a>
+            </div>
+
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Url</th>
+
+                        <th>Version</th>
+                        <th>MaxRps</th>
+                        <th>Thread info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr :title="item.AssmblyName" v-for="(item,i) in Items"
+                        v-if="!Filter || item.Url.toLowerCase().indexOf(Filter.toLowerCase()) >=0 || item.AssmblyName.toLowerCase().indexOf(Filter.toLowerCase())>=0 || item.ClassName.toLowerCase().indexOf(Filter.toLowerCase())>=0">
+                        <td style="width:60px;padding:0px;">{{item.Method}}</td>
+                        <td style="width:650px;padding:0px;" v-html="item.Url"></td>
+
+                        <td style="width:80px;padding:0px;">{{item.Version}}</td>
+                        <td style="width:90px;padding:0px;"><input style="text-align:right;" @change="item.Changed=true" type="number" min="0" class=" form-control input-sm" v-model="item.MaxRPS" max="100000" /></td>
+                        <td style="padding:0px;">
+                            <div class="tool-bar-l">
+                                <select v-model="item.ThreadInfo.Type" class="form-control input-sm" style="width:120px;margin-right:10px;" @change="item.Changed=true">
+                                    <option v-for="t in ThreadType" :value="t">
+                                        {{t}}
+                                    </option>
+                                </select>
+                                <input v-if="item.ThreadInfo.Type=='Multiple'" min="2" @change="item.Changed=true" type="number" class="form-control input-sm" style="width:100px;" v-model="item.ThreadInfo.Count">
+                                <input v-if="item.ThreadInfo.Type=='DataUnique'" @change="item.Changed=true" type="text" class="form-control input-sm" style="width:100px;" v-model="item.ThreadInfo.UniqueName">
+                                <a v-if="item.Changed" href="javascript:void(0)" @click="save(item)"><img src="images/save.png" /></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="container" style="text-align:center;" slot="footer">
+
+    </div>
+    <script>
+        var webapi = new _Admin();
+        var page = new Vue({
+            el: '#page',
+            data: {
+                ThreadType: [],
+                Items: [],
+                Class: [],
+                Filter: ''
+            },
+            methods: {
+                listAction: function () {
+                    this.Filter = '';
+                    var _this = this;
+                    webapi.ListActions().$(function (r) {
+                        _this.Items = r.Data.Items;
+                        _this.ThreadType = r.Data.ThreadType;
+                        _this.Class = r.Data.Class;
+                    });
+                },
+                save: function (item) {
+                    if (confirm('Change action setting?')) {
+                        webapi.SetActionInfo(item.ID, { MaxRps: item.MaxRPS, ThreadInfo: item.ThreadInfo }).$(function (r) {
+                            alert('Data saved successfully!');
+                            item.Changed = false;
+                        });
+                    }
+                }
+            }
+        });
+        page.listAction();
+    </script>
+</body>
+
+</html>

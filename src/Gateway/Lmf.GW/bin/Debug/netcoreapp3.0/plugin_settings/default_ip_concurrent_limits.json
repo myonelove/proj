@@ -1,1 +1,1 @@
-﻿{"Limit":100,"DisabledTime":100,"CleanTime":1800,"WhiteList":[]}
+﻿{"Limit":100,"DisabledTime":100,"CleanTime":1800,"WhiteList":["192.168.3.2/24","192.168.3.2"]}

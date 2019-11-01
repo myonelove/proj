@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/ModuleLoader.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/FastHttpApi.js"></script>
+    <script src="js/AdminController.js"></script>
+    <script src="js/echarts.js"></script>
+    <title>Beetlex webapi gateway management</title>
+</head>
+<body>
+
+    <div class="page-title">
+        <img src="images/title.png" /> <h3>Home</h3>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-left" slot="header">
+
+    </div>
+
+
+    <div class="container bs-docs-container" id="page">
+        <div class="row">
+            <div class="status-bar" style="text-align:center;">
+                <button class="btn  btn-sm" type="button">
+                    Time<span class="badge">{{System.Status.RunTime}}</span>
+                </button>
+                <button class="btn  btn-sm" type="button">
+                    Cpu<span class="badge">{{System.Status.Cpu}}</span>%
+                </button>
+
+                <button class="btn  btn-sm" type="button">
+                    Memory<span class="badge">{{__formatNumber(System.Status.Memory)}}</span>KB
+                </button>
+
+                <button class="btn  btn-sm" type="button">
+                    Connections<span class="badge">{{__formatNumber(System.Status.CurrentConnectinos)}}</span>
+                </button>
+
+                <button class="btn btn-sm" type="button">
+
+                    Request
+                    <span class="badge" title="rps">
+
+                        {{__formatNumber(System.Status.RequestPer)}}
+
+                    </span>/s
+                    <span class="badge" title="total">
+                        {{__formatNumber(System.Status.TotalRequest)}}
+
+                    </span>
+                </button>
+
+                <button class="btn btn-sm" type="button">
+                    Network W<span class="badge">
+                        {{__formatNumber(System.Status.SendBytesPer)}}MB
+                    </span>R<span class="badge">
+                        {{__formatNumber(System.Status.ReceiveBytesPer)}}MB
+                    </span>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center;">
+                <div class="_2xx_label">
+
+                    <span class="status-value">
+                        {{__formatNumber(System._2xx)}}
+                    </span>
+                    <br />
+                    2xx
+                </div>
+
+                <div class="_3xx_label">
+                    <span class="status-value">{{__formatNumber(System._3xx)}}</span>
+                    <br />
+                    3xx
+                </div>
+
+                <div class="_4xx_label">
+                    <span class="status-value">{{__formatNumber(System._4xx)}}</span>
+                    <br />
+                    4xx
+                </div>
+
+                <div class="_5xx_label">
+                    <span class="status-value">
+                        {{__formatNumber(System._5xx)}}
+                    </span>
+                    <br />
+                    5xx
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="container" style="height: 150px"></div>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top:20px;">
+            <div class="col-lg-6">
+
+
+
+                <div class="panel panel-default" style="min-height:320px;">
+                    <div class="panel-heading">Requests/s<small>(Top 10)</small></div>
+                    <div class="panel-body">
+                        <table class="table summary-item" v-for="item in Top.Rps">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">{{item.Url}}</td>
+                                    <td style="width:100px;text-align:right;">{{new Intl.NumberFormat().format(item.Rps)}}/s|</td>
+                                    <td style="width:100px;">
+                                        <div class="bar-rps" :style="{width:item.Percent+'%'}">
+                                            <span style="margin-left:10px; margin-top:-2px;">
+                                                {{item.Percent}}%
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                <div class="panel panel-default" style="min-height:320px;">
+                    <div class="panel-heading">Total <small>(Top 10)</small></div>
+                    <div class="panel-body">
+                        <table class="table summary-item" v-for="item in Top.Total">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2"> {{item.Url}}</td>
+                                    <td style="width:100px;text-align:right;">{{new Intl.NumberFormat().format(item.Count)}}|</td>
+                                    <td style="width:100px;">
+                                        <div class="bar-total" :style="{width:item.Percent+'%'}">
+                                            <span style="margin-left:10px; margin-top:-2px;">
+                                                {{item.Percent}}%
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container" style="text-align:center;" slot="footer">
+
+    </div>
+
+    <script>
+        var webapi = new _Admin();
+        var page = new Vue({
+            el: '#page',
+            data: {
+                System: {},
+                RequestChart: null,
+                XData: [],
+                _2XX: [],
+                _3xx: [],
+                _4xx: [],
+                _5xx: [],
+                Top: { Total: [], Rps: [] }
+            },
+            methods: {
+                GetStatus: function () {
+                    var _this = this;
+                    setTimeout(_this.GetStatus, 1000);
+                    webapi.GetStatus().$(function (r) {
+                        _this.System = r.Data;
+                    });
+
+                    if (!_this.RequestChart) {
+                        _this.initChart();
+                        _this.GetDayStats();
+                    }
+
+
+                },
+                GetDayStats: function () {
+
+                    var _this = this;
+                    setTimeout(_this.GetDayStats, 10000);
+                    if (!_this.RequestChart)
+                        return;
+                    webapi.GetDayStats().$(function (r) {
+                        _this.XData = [];
+                        _this._2XX = [];
+                        _this._3XX = [];
+                        _this._4XX = [];
+                        _this._5XX = [];
+                        r.Data.forEach(function (v) {
+                            _this.XData.push(v.Time);
+                            _this._2XX.push(v._2XX);
+                            _this._3XX.push(v._3XX);
+                            _this._4XX.push(v._4XX);
+                            _this._5XX.push(v._5XX);
+
+                        });
+                        _this.RequestChart.setOption({
+                            grid: {
+                                top: 20,
+                                bottom: 20,
+                                right: 20,
+                                left: 20
+                            },
+                            xAxis: {
+                                data: _this.XData
+                            },
+                            series: [
+                                {
+                                    data: _this._2XX
+                                },
+                                {
+                                    data: _this._3XX
+                                },
+                                ,
+                                {
+                                    data: _this._4XX
+                                },
+                                {
+                                    data: _this._5XX
+                                }]
+                        });
+                    });
+
+
+                },
+                initChart: function () {
+                    var dom = document.getElementById("container");
+                    this.RequestChart = echarts.init(dom);
+                    var option = null;
+                    option = {
+                        grid: {
+                            top: 20,
+                            bottom: 20,
+                            right: 20,
+                            left: 20
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                animation: false
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            splitLine: {
+                                show: false
+                            },
+                            data: this.XData,
+                            show: true,
+                            axisLine: {
+                                show: true,
+                            }
+                        },
+                        yAxis: {
+                            type: 'value',
+                            boundaryGap: [0, '100%'],
+                            splitLine: {
+                                show: true,
+                                lineStyle: {
+                                    type: 'dashed'
+                                }
+                            },
+                            axisLine: {
+                                show: false,
+                            },
+                            axisLabel: {
+                                inside: true,
+                            }
+                        },
+                        series: [
+                            {
+                                name: '2xx',
+                                type: 'line',
+                                showSymbol: false,
+                                hoverAnimation: false,
+                                data: this._2XX,
+                                itemStyle: {
+                                    color: '#009a1f',
+                                }, areaStyle: {
+
+                                }
+                            },
+                            {
+                                name: '3xx',
+                                type: 'line',
+                                showSymbol: false,
+                                hoverAnimation: false,
+                                data: this._3xx,
+                                itemStyle: {
+                                    color: '#b4b4b4',
+                                }, areaStyle: {
+
+                                }
+                            },
+                            {
+                                name: '4xx',
+                                type: 'line',
+                                showSymbol: false,
+                                hoverAnimation: false,
+                                data: this._4XX,
+                                itemStyle: {
+                                    color: '#e89c00',
+                                }, areaStyle: {
+
+                                }
+                            },
+                            {
+                                name: '5xx',
+                                type: 'line',
+                                showSymbol: false,
+                                hoverAnimation: false,
+                                data: this._5XX,
+                                itemStyle: {
+                                    color: '#ff130c',
+                                }, areaStyle: {
+
+                                }
+                            }
+                        ]
+                    };
+                    if (option && typeof option === "object") {
+                        this.RequestChart.setOption(option, true);
+                    }
+                },
+                GetTop: function () {
+                    var _this = this;
+                    setTimeout(_this.GetTop, 5000);
+                    webapi.SummaryUrl().$(function (r) {
+                        _this.Top = r.Data;
+                    });
+                }
+            }
+        });
+        setTimeout(function () {
+           
+            page.GetStatus();
+           
+        }, 1000);
+        setTimeout(function () {
+            page.GetTop();
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

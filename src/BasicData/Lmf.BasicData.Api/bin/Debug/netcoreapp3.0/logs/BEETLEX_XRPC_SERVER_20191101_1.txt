@@ -1,0 +1,81 @@
+﻿[2019/11/1 3:59:55] [Info] Register IStaffService->StaffRPCService@GetStaff to /IStaffService/GetStaff[ThreadType:None|UniqueID:]
+[2019/11/1 3:59:55] [Info] Register IStaffService->StaffRPCService@GetStaffs to /IStaffService/GetStaffs[ThreadType:None|UniqueID:]
+[2019/11/1 3:59:55] [Info] Register IStaffService->StaffRPCService@AddStaff to /IStaffService/AddStaff[ThreadType:None|UniqueID:]
+[2019/11/1 3:59:55] [Info] Register IStaffService->StaffRPCService@ModifyStaff to /IStaffService/ModifyStaff[ThreadType:None|UniqueID:]
+[2019/11/1 3:59:55] [Info] listen 127.0.0.1@9610 success ssl:False
+[2019/11/1 3:59:55] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/11/1 3:59:55] [Info] BeetleX [V:1.4.6.2]
+[2019/11/1 3:59:55] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/11/1 3:59:55] [Info] BeetleX XRPC started [0.6.2.0]
+[2019/11/1 4:00:34] [Info] session connected from 127.0.0.1:54482@3
+[2019/11/1 4:00:34] [Info] 127.0.0.1:54482 begin receive
+[2019/11/1 4:00:34] [Debug]  127.0.0.1:54482 connected
+[2019/11/1 4:00:34] [Info] 127.0.0.1:54482 receive 40 length completed
+[2019/11/1 4:00:34] [Debug] 127.0.0.1:54482 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 4:00:34] [Debug] [2]127.0.0.1:54482 receive message /IStaffService/GetStaff@2
+[2019/11/1 4:00:34] [Info] 127.0.0.1:54482 begin receive
+[2019/11/1 4:00:34] [Debug] [2]127.0.0.1:54482 receive event data:{"ID":2,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 4:00:34] [Debug] [2]127.0.0.1:54482 Process event /IStaffService/GetStaff
+[2019/11/1 4:00:34] [Debug] [2]127.0.0.1:54482 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 4:00:35] [Error] [2]127.0.0.1:54482 process event /IStaffService/GetStaff invoke method error Object reference not set to an instance of an object.@   at SmartSql.Deserializer.EntityDeserializer.CreateDeserialize[TResult](ExecutionContext executionContext)
+   at SmartSql.Deserializer.EntityDeserializer.<>c__DisplayClass6_0`1.<GetDeserialize>b__0(DeserializeIdentity _)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at SmartSql.Utils.CacheUtil`3.GetOrAdd(TKey key, Func`2 factory)
+   at SmartSql.Deserializer.EntityDeserializer.GetDeserialize[TResult](ExecutionContext executionContext)
+   at SmartSql.Deserializer.EntityDeserializer.ToSingleAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.ResultHandlerMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.CommandExecuterMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.DataSourceFilterMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.TransactionMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.InitializerMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.DbSession.DefaultDbSession.InvokeAsync[TResult](AbstractRequestContext requestContext)
+   at SmartSql.DbSession.DefaultDbSession.QuerySingleAsync[TResult](AbstractRequestContext requestContext)
+   at SmartSql.SqlMapper.ExecuteImplAsync[TResult](Func`2 executeFunc)
+   at SmartSql.SqlMapper.QuerySingleAsync[TResult](AbstractRequestContext requestContext)
+   at Lmf.BasicData.Service.StaffRPCService.GetStaff(Int32 id) in F:\git\proj\src\BasicData\Lmf.BasicData.Service\RPC\StaffRPCService.cs:line 24
+   at EventNext.EventActionHandlerContext.Execute()
+[2019/11/1 4:00:35] [Debug] [2]127.0.0.1:54482 send event data:{"ID":2,"EventPath":null,"Properties":{},"Data":["Process event /IStaffService/GetStaff error Object reference not set to an instance of an object."],"EventError":500,"ResponseTime":0.0,"Token":null}
+[2019/11/1 4:01:05] [Info] session connected from 127.0.0.1:54486@4
+[2019/11/1 4:01:05] [Info] 127.0.0.1:54486 begin receive
+[2019/11/1 4:01:05] [Info] 127.0.0.1:54486 receive 40 length completed
+[2019/11/1 4:01:05] [Debug] 127.0.0.1:54486 session packet decode completed BeetleX.XRPC.Request
+[2019/11/1 4:01:05] [Debug] [3]127.0.0.1:54486 receive message /IStaffService/GetStaff@3
+[2019/11/1 4:01:05] [Info] 127.0.0.1:54486 begin receive
+[2019/11/1 4:01:05] [Debug] [3]127.0.0.1:54486 receive event data:{"ID":3,"EventPath":"/IStaffService/GetStaff","Properties":{},"Data":[3],"Token":"Localhost"}
+[2019/11/1 4:01:05] [Debug]  127.0.0.1:54486 connected
+[2019/11/1 4:01:05] [Debug] [3]127.0.0.1:54486 Process event /IStaffService/GetStaff
+[2019/11/1 4:01:05] [Debug] [3]127.0.0.1:54486 process event /IStaffService/GetStaff beginning invoke method
+[2019/11/1 4:01:09] [Error] [3]127.0.0.1:54486 process event /IStaffService/GetStaff invoke method error Object reference not set to an instance of an object.@   at SmartSql.Deserializer.EntityDeserializer.CreateDeserialize[TResult](ExecutionContext executionContext)
+   at SmartSql.Deserializer.EntityDeserializer.<>c__DisplayClass6_0`1.<GetDeserialize>b__0(DeserializeIdentity _)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at SmartSql.Utils.CacheUtil`3.GetOrAdd(TKey key, Func`2 factory)
+   at SmartSql.Deserializer.EntityDeserializer.GetDeserialize[TResult](ExecutionContext executionContext)
+   at SmartSql.Deserializer.EntityDeserializer.ToSingleAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.ResultHandlerMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.CommandExecuterMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.DataSourceFilterMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.TransactionMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.AbstractMiddleware.InvokeNextAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.Middlewares.InitializerMiddleware.InvokeAsync[TResult](ExecutionContext executionContext)
+   at SmartSql.DbSession.DefaultDbSession.InvokeAsync[TResult](AbstractRequestContext requestContext)
+   at SmartSql.DbSession.DefaultDbSession.QuerySingleAsync[TResult](AbstractRequestContext requestContext)
+   at SmartSql.SqlMapper.ExecuteImplAsync[TResult](Func`2 executeFunc)
+   at SmartSql.SqlMapper.QuerySingleAsync[TResult](AbstractRequestContext requestContext)
+   at Lmf.BasicData.Service.StaffRPCService.GetStaff(Int32 id) in F:\git\proj\src\BasicData\Lmf.BasicData.Service\RPC\StaffRPCService.cs:line 24
+   at EventNext.EventActionHandlerContext.Execute()
+[2019/11/1 4:01:09] [Debug] [3]127.0.0.1:54486 send event data:{"ID":3,"EventPath":null,"Properties":{},"Data":["Process event /IStaffService/GetStaff error Object reference not set to an instance of an object."],"EventError":500,"ResponseTime":0.0,"Token":null}
+[2019/11/1 8:25:07] [Debug] 127.0.0.1:54482 receive close error ConnectionReset receive:0
+[2019/11/1 8:25:07] [Debug] 127.0.0.1:54486 receive close error ConnectionReset receive:0
+[2019/11/1 8:25:07] [Info] session 127.0.0.1:54482@3 disconnected
+[2019/11/1 8:25:07] [Info] session 127.0.0.1:54486@4 disconnected

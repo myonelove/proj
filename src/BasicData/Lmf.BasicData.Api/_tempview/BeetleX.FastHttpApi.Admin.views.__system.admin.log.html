@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/ModuleLoader.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/FastHttpApi.js"></script>
+
+    <script src="js/AdminController.js"></script>
+    <title>Beetlex webapi gateway management</title>
+</head>
+<body>
+
+    <div class="page-title">
+        <img src="images/title.png" /> <h3>Log</h3>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-left" slot="header">
+
+    </div>
+
+
+    <div class="container bs-docs-container" id="page">
+        <div class="row">
+            <table class="table log-table">
+                <tbody>
+                    <tr v-for="item in Items">
+                        <td style="width:80px"><div :class="GetCss(item)">{{item.Time}}</div></td>
+                        <td style="width:60px">{{item.Type}}</td>
+                        <td v-html="getHtml(item.Message)"></td>
+
+                    </tr>
+                    <tr v-if="Index<Pages-1">
+                        <td colspan="3" style="text-align:center"><a href="javascript:void(0)" @click="More">More...</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="container" style="text-align:center;" slot="footer">
+
+    </div>
+    <script>
+        var webapi = new _Admin();
+        var page = new Vue({
+            el: '#page',
+            data: {
+                Index: 0,
+                Items: [],
+                Pages: 0,
+            },
+            methods: {
+                More: function () {
+                    if (this.Index < this.Pages - 1) {
+                        this.Index++;
+                        this.Load();
+                    }
+                },
+                getHtml: function (data) {
+                    var reg = /(\/[^\s]+)/i;
+                    var n = data.match(reg);
+                    var text = data;
+                    if (n) {
+                        n.forEach(function (v) {
+                           
+                            text = text.replace(v, '<span class="url-label">' + v + '</span>');
+                        });
+                    }
+                    else {
+                        text = data;
+                    }
+                    reg = /\d{1,3}(.\d{1,3}){3}/ig
+                    n = text.match(reg);
+                    if (n) {
+                        n.forEach(function (v) {
+
+                            text = text.replace(v, '<span class="ip-label">' + v + '</span>');
+                        });
+                    }
+
+                    reg = /(\:[0-9A-Za-z]{0,4}){2,}/ig
+                    n = text.match(reg);
+                    if (n) {
+                        n.forEach(function (v) {
+
+                            text = text.replace(v, '<span class="ip-label">' + v + '</span>');
+                        });
+                    }
+                    return text;
+                },
+                GetCss: function (item) {
+
+                    return "log-" + item.Type;
+                },
+                Load: function () {
+                    //var text ="	session connected from [::ffff:192.168.2.18]:63257@27";
+                  
+                    //var reg = /(\:[0-9A-Za-z]{0,4}){2,}/ig
+                    //var n = text.match(reg);
+                    //alert(n);
+
+                    var _this = this;
+                    webapi.ListLog(this.Index).$(function (r) {
+                        _this.Index = r.Data.Index;
+                        _this.Pages = r.Data.Pages;
+                        r.Data.Items.forEach(function (v) {
+                            _this.Items.push(v);
+                        });
+                    });
+                },
+            }
+        });
+        page.Load();
+    </script>
+</body>
+
+</html>

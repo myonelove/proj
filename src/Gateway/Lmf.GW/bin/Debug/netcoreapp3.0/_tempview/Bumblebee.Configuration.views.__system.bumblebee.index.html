@@ -26,7 +26,7 @@
 
 
     <div class="container bs-docs-container" id="page">
-        <div class="status-bar">
+        <div class="status-bar" style="text-align:center;">
             <button class="btn  btn-sm" type="button">
                 Time<span class="badge">{{Status.RunTime}}</span>
             </button>
@@ -43,7 +43,7 @@
             </button>
 
             <button class="btn btn-sm" type="button">
-               Queue
+                Queue
                 <span class="badge" title="queue">{{new Intl.NumberFormat().format(Queue)}}</span>|
                 Request
                 <span class="badge" title="rps">
@@ -72,21 +72,21 @@
                 <div id="container" style="height: 150px"></div>
             </div>
         </div>
-        <h3 v-if="Server.length>0" style="color:#808080">Server summary</h3>
+        <h3 v-if="Server.length>0" style="color:#000;font-size:10pt;">Server summary</h3>
         <div v-if="Server.length>0" class="row">
             <div class="col-lg-12">
 
-                <div v-for="item in Server" class="col-lg-6 lst-servers-summary">
+                <div v-for="item in Server" class="col-lg-6 lst-servers-summary" v-if="item.Rps>0">
                     <div class="lst-servers-summary-table">
                         <a v-if="item.Available==false"><img style="width:16px;" src="images/server_error.png" />{{item.Host}}</a>
                         <a v-else><img style="width:16px;" src="images/server_ok.png" />{{item.Host}}</a>
 
-                        <span class="label label-success" style="min-width:120px;">
-                            {{new Intl.NumberFormat().format(item.Rps)}}/s[{{new Intl.NumberFormat().format(item.Count)}}]
+                        <span  class="success-text">
+                            {{new Intl.NumberFormat().format(item.Rps)}}/s | {{new Intl.NumberFormat().format(item.Count)}}
                         </span>
-
-                        <span class="label label-default" title="queue" style="min-width:90px;">
-                           Queue:{{new Intl.NumberFormat().format(item.WaitQueue)}}/s
+                    
+                        <span  class="queue-text" title="queue" >
+                            Queue:{{new Intl.NumberFormat().format(item.WaitQueue)}}/s
                         </span>
 
                     </div>
@@ -94,7 +94,7 @@
 
             </div>
         </div>
-        <h3 style="color:#808080">Webapi summary</h3>
+        <h3 style="color:#000;font-size:10pt;">Webapi summary</h3>
 
         <div class="row">
             <div class="col-lg-12">
@@ -104,14 +104,14 @@
                         <table class="table summary-item" v-for="item in UrlSummary.Error">
                             <tbody>
                                 <tr>
-                                    <td colspan="2"><b> {{item.Url}}</b></td>
+                                    <td colspan="2"> {{item.Url}}</td>
                                     <td style="width:300px;text-align:right;">
 
-                                        <a v-for="code in item.Codes" v-if="code.Rps>0">
-                                            (Status:{{code.Name}} <span class="badge">{{new Intl.NumberFormat().format(code.Rps)}}/s</span>)
+                                        <a v-for="code in item.Codes" v-if="code.Rps>0" class="error-text">
+                                            {{code.Name}} : <span class="badge">{{__formatNumber(code.Rps)}}/s</span>
                                         </a>
-                                        {{new Intl.NumberFormat().format(item.Value)}}/s
-                                        |
+                                        <span class="error-text">Total: {{__formatNumber(item.Value)}}/s</span>
+                                        
                                     </td>
                                     <td style="width:100px;">
                                         <div class="bar-error" :style="{width:item.Percent+'%'}">
@@ -135,13 +135,13 @@
 
 
 
-                <div class="panel panel-default">
+                <div class="panel panel-default" style="min-height:320px;" v-if="UrlSummary.Rps.length>0">
                     <div class="panel-heading">Requests/s<small>(Top 10)</small></div>
                     <div class="panel-body">
                         <table class="table summary-item" v-for="item in UrlSummary.Rps">
                             <tbody>
                                 <tr>
-                                    <td colspan="2"><b> {{item.Url}}</b></td>
+                                    <td colspan="2"> {{item.Url}}</td>
                                     <td style="width:100px;text-align:right;">{{new Intl.NumberFormat().format(item.Value)}}/s|</td>
                                     <td style="width:100px;">
                                         <div class="bar-rps" :style="{width:item.Percent+'%'}">
@@ -161,13 +161,13 @@
 
 
             <div class="col-lg-6">
-                <div class="panel panel-default">
+                <div class="panel panel-default"  style="min-height:320px;" v-if="UrlSummary.Total.length>0">
                     <div class="panel-heading">Total <small>(Top 10)</small></div>
                     <div class="panel-body">
                         <table class="table summary-item" v-for="item in UrlSummary.Total">
                             <tbody>
                                 <tr>
-                                    <td colspan="2" style="font-size:9pt;"><b> {{item.Url}}</b></td>
+                                    <td colspan="2"> {{item.Url}}</td>
                                     <td style="width:100px;text-align:right;">{{new Intl.NumberFormat().format(item.Value)}}|</td>
                                     <td style="width:100px;">
                                         <div class="bar-total" :style="{width:item.Percent+'%'}">

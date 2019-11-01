@@ -15,13 +15,27 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
-      "BeetleX/1.3.2": {
+      "BeetleX/1.3.7.2": {
         "type": "package",
         "compile": {
           "lib/netcoreapp2.1/BeetleX.dll": {}
         },
         "runtime": {
           "lib/netcoreapp2.1/BeetleX.dll": {}
+        }
+      },
+      "BeetleX.Http.Clients/0.8.8": {
+        "type": "package",
+        "dependencies": {
+          "BeetleX": "1.3.7.2",
+          "Newtonsoft.Json": "12.0.2",
+          "System.Reflection.DispatchProxy": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/BeetleX.Http.Clients.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BeetleX.Http.Clients.dll": {}
         }
       },
       "BeetleX.XRPC/0.6.2": {
@@ -550,6 +564,15 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Reflection.dll": {}
+        }
+      },
+      "System.Reflection.DispatchProxy/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.DispatchProxy.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Reflection.DispatchProxy.dll": {}
         }
       },
       "System.Reflection.Emit/4.3.0": {
@@ -1155,6 +1178,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BeetleX.Http.Clients": "0.8.8",
           "MessagePack": "1.8.74"
         },
         "compile": {
@@ -1184,17 +1208,29 @@
         "lib/netstandard2.0/AutoMapper.xml"
       ]
     },
-    "BeetleX/1.3.2": {
-      "sha512": "iG12z6WhIhK1DQ0iFIaGbUyBt0FQ5MtDnr2VmWOhB48dhoiFcCGddvqZd3GJaP5TduQE06xkS1LGR68JXdnuNg==",
+    "BeetleX/1.3.7.2": {
+      "sha512": "3mxzgfojvnabMDgkqy7F1muR7d9Qi0x5/PXOIpWk1wpsoZbQ4KJ2NpD//7UynLm9jdhGc2CXj5d3jSQzGVmJig==",
       "type": "package",
-      "path": "beetlex/1.3.2",
+      "path": "beetlex/1.3.7.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "beetlex.1.3.2.nupkg.sha512",
+        "beetlex.1.3.7.2.nupkg.sha512",
         "beetlex.nuspec",
         "lib/netcoreapp2.1/BeetleX.dll",
         "lib/netstandard2.0/BeetleX.dll"
+      ]
+    },
+    "BeetleX.Http.Clients/0.8.8": {
+      "sha512": "SuNfLg/goim/VKD6xC221oDBzRskJKkUSyhGH79pGIPJK4OrIj0CoTHYQEBl1qJD4WhAJrV79ZLWPAjIWlwN7A==",
+      "type": "package",
+      "path": "beetlex.http.clients/0.8.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "beetlex.http.clients.0.8.8.nupkg.sha512",
+        "beetlex.http.clients.nuspec",
+        "lib/netstandard2.0/BeetleX.Http.Clients.dll"
       ]
     },
     "BeetleX.XRPC/0.6.2": {
@@ -2578,6 +2614,55 @@
         "ref/xamarinwatchos10/_._",
         "system.reflection.4.3.0.nupkg.sha512",
         "system.reflection.nuspec"
+      ]
+    },
+    "System.Reflection.DispatchProxy/4.5.1": {
+      "sha512": "FsYDYPmR2coa1BCo9mquY5A1hy5RSQq7ZJH3qaMoy3lCTUMZvB4lEFqX1i4XQINVjda4e7p2PN1DHk8AV3wfXw==",
+      "type": "package",
+      "path": "system.reflection.dispatchproxy/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Reflection.DispatchProxy.dll",
+        "lib/netcoreapp2.0/System.Reflection.DispatchProxy.dll",
+        "lib/netstandard1.3/System.Reflection.DispatchProxy.dll",
+        "lib/netstandard2.0/System.Reflection.DispatchProxy.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.3/System.Reflection.DispatchProxy.dll",
+        "ref/netstandard1.3/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/de/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/es/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/fr/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/it/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ja/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ko/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ru/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/zh-hans/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/zh-hant/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard2.0/System.Reflection.DispatchProxy.dll",
+        "ref/netstandard2.0/System.Reflection.DispatchProxy.xml",
+        "ref/uap10.0.16299/System.Reflection.DispatchProxy.dll",
+        "ref/uap10.0.16299/System.Reflection.DispatchProxy.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.DispatchProxy.dll",
+        "runtimes/win-aot/lib/uap10.0.16299/System.Reflection.DispatchProxy.dll",
+        "runtimes/win/lib/uap10.0.16299/System.Reflection.DispatchProxy.dll",
+        "system.reflection.dispatchproxy.4.5.1.nupkg.sha512",
+        "system.reflection.dispatchproxy.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Reflection.Emit/4.3.0": {

@@ -1,0 +1,21 @@
+﻿[2019/10/31 12:21:02] [Info] HTTP set rewrite url [/api/purchasing/healthcheck] to [/api/purchasing/healthcheck]
+[2019/10/31 12:21:03] [Info] register HomeController.HealthCheck to [GET:/api/purchasing/healthcheck]
+[2019/10/31 12:21:03] [Info] HTTP set rewrite url [/api/purchasing/staff] to [/api/purchasing/getstaff]
+[2019/10/31 12:21:03] [Info] register HomeController.GetStaff to [GET:/api/purchasing/getstaff]
+[2019/10/31 12:21:03] [Info] init BeetleX.FastHttpApi.ServerController controller path F:\git\proj\src\Purchasing\Lmf.Purchasing.Api\bin\Debug\netcoreapp3.0\
+[2019/10/31 12:21:03] [Info] register ServerController.__ServerStatus to [GET/POST:/__system/__serverstatus]
+[2019/10/31 12:21:03] [Info] register ServerController.__SetSettings to [POST:/__system/__setsettings]
+[2019/10/31 12:21:03] [Info] register ServerController.__ChangeAccessKey to [GET/POST:/__system/__changeaccesskey]
+[2019/10/31 12:21:03] [Info] register ServerController.__GetSettings to [GET/POST:/__system/__getsettings]
+[2019/10/31 12:21:03] [Info] register ServerController.__LogConnect to [GET/POST:/__system/__logconnect]
+[2019/10/31 12:21:03] [Info] register ServerController.__ListLog to [GET/POST:/__system/__listlog]
+[2019/10/31 12:21:03] [Info] register ServerController.__GetOptions to [GET/POST:/__system/__getoptions]
+[2019/10/31 12:21:03] [Info] register ServerController.__UploadModule to [POST:/__system/__uploadmodule]
+[2019/10/31 12:21:03] [Info] register ServerController.__SetActionMaxrps to [POST:/__system/__setactionmaxrps]
+[2019/10/31 12:21:03] [Info] register ServerController.__SetOptions to [POST:/__system/__setoptions]
+[2019/10/31 12:21:03] [Info] detection sessions timeout with 3600s
+[2019/10/31 12:21:03] [Info] listen 127.0.0.1@8200 success ssl:False
+[2019/10/31 12:21:03] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/31 12:21:03] [Info] BeetleX [V:1.4.6.2]
+[2019/10/31 12:21:03] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|2048KB]
+[2019/10/31 12:21:03] [Info] BeetleX FastHttpApi [IOQueue:False|Threads:4] [V:1.7.1.0]

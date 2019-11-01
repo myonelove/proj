@@ -25,13 +25,16 @@
 
 
     <div class="container bs-docs-container" id="page">
+        <div class="tool-bar-l">
+            <a href="javascript:void(0)" @click="Index=0;Load()"><img src="images/refresh.png" /></a>
+        </div>
         <div class="row">
             <table class="table log-table">
                 <tbody>
-                    <tr v-for="item in Items"  >
+                    <tr v-for="item in Items">
                         <td style="width:80px"><div :class="GetCss(item)">{{item.Time}}</div></td>
                         <td style="width:60px">{{item.Type}}</td>
-                        <td>{{item.Message}}</td>
+                        <td v-html="getHtml(item.Message)"></td>
 
                     </tr>
                     <tr v-if="Index<Pages-1">
@@ -67,9 +70,36 @@
                    
                    return "log-" + item.Type;
                 },
+                getHtml: function (data) {
+                    var reg = /(\/[^\s\]]+)/ig;
+                    var n = data.match(reg);
+                    var text = data;
+                    text = text.replace(reg, function (x) {
+                        return '<span class="url-label">' + x + '</span>';
+                    });
+
+                    reg = /\s\d{9,}\s/i
+                    text = text.replace(reg, function (x) {
+                        return '<span class="requestid-label">' + x + '</span>';
+                    });
+
+                    reg = /\d{1,3}(\.\d{1,3}){3}/i
+                    text = text.replace(reg, function (x) {
+                        return '<span class="ip-label">' + x + '</span>';
+                    });
+
+                    reg = /(\:[0-9A-Za-z]{0,4}){2,}/i
+                    text = text.replace(reg, function (x) {
+                        return '<span class="ip-label">' + x + '</span>';
+                    });
+                  
+                    return text;
+                },
                 Load: function () {
                     var _this = this;
                     webapi.ListLog(this.Index).$(function (r) {
+                        if (page.Index == 0)
+                            page.Items = [];
                         _this.Index = r.Data.Index;
                         _this.Pages = r.Data.Pages;
                         r.Data.Items.forEach(function (v) {

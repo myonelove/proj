@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Lmf.Service\Lmf.Service.csproj" />
     <ProjectReference Include="..\..\Common\Lmf.Util\Lmf.Util.csproj" />
     <ProjectReference Include="..\Lmf.BasicData.Entity\Lmf.BasicData.Entity.csproj" />
     <ProjectReference Include="..\Lmf.BasicData.Model\Lmf.BasicData.Model.csproj" />

@@ -5,17 +5,14 @@ using Lmf.Service.PRC.BasicData;
 using SmartSql;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Lmf.BasicData.Service
 {
     [Service(typeof(IStaffService))]
     public class StaffRPCService : IStaffService
-    {
-        public StaffRPCService()
-        {
-        }
-
+    { 
         public Task<string> AddStaff(StaffModel param)
         {
             throw new NotImplementedException();
@@ -23,28 +20,29 @@ namespace Lmf.BasicData.Service
 
         public async Task<StaffModel> GetStaff(int id)
         {
-            ISqlMapper mapper = SmartSqlContainer.Instance.GetSmartSql("SmartSql").GetSqlMapper();
-            var data = await mapper.QuerySingleAsync<Staff>(new RequestContext
+            var mapper = SmartSqlContainer.Instance.GetSmartSql("SmartSql").GetSqlMapper();
+            var data = await mapper.QuerySingleAsync<StaffModel>(new RequestContext
             {
                 Scope = "Staff",
-                SqlId = "GetEntity",
+                SqlId = "GetEntityById",
                 Request = new { Id = id }
-            });
-
-            return new StaffModel()
-            {
-                Email = data.Email,
-                Id = data.Id,
-                LeadNo = data.LeadNo,
-                Mobile = data.Mobile,
-                Name = data.Name,
-                No = data.No
-            };
+            }); 
+            return data;
         }
 
-        public Task<List<StaffModel>> GetStaffs(IList<string> staffnos)
+        public async Task<IList<StaffModel>> GetStaffs(IList<string> staffnos)
         {
-            throw new NotImplementedException();
+            string strStaffnos = string.Join(',',staffnos.Select(s=>$"'{s}'"));
+            var mapper = SmartSqlContainer.Instance.GetSmartSql("SmartSql").GetSqlMapper();
+            var data = await mapper.QueryAsync<StaffModel>(new RequestContext { 
+                Scope = "Staff",
+                SqlId = "GetListByNos",
+                Request  = new
+                {
+                    No = strStaffnos
+                }
+            });
+            return data;
         }
 
         public Task<string> ModifyStaff(StaffModel param)

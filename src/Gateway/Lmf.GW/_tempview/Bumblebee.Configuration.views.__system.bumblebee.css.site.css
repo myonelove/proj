@@ -410,12 +410,12 @@ a:hover {
 
     .summary-item > tbody > tr > td {
         border: none;
-        padding: 0px;
+        padding: 2px;
         font-size: 10pt;
     }
 .route-servers > thead > tr > th {
     font-size: 9pt;
-    color: rgba(130,140,149,1);
+    color:rgb(97, 100, 103);
     border-bottom-width: 1px;
 }
 .log-table > tbody > tr > td {
@@ -551,8 +551,8 @@ a:hover {
     margin-left: 4px;
 }
 .lst-servers-summary {
-  
-   padding:2px;
+ 
+   padding:4px;
 }
 .lst-servers-summary-table {
     border-color: rgb(181,189,200);
@@ -560,15 +560,16 @@ a:hover {
     border-style: solid;
     border-radius: 4px;
     padding: 2px;
+
 }
 
-.lst-servers-summary span {
-    min-width: 80px;
-    float: right;
-    margin-right: 4px;
-    text-align:right;
-   cursor:pointer;
-}
+    .lst-servers-summary span {
+        min-width: 80px;
+        float: right;
+        margin-right: 4px;
+        text-align: right;
+        cursor: pointer;
+    }
 .plugins-lis >tbody>tr>td{
     vertical-align:middle;
 }
@@ -619,4 +620,57 @@ a:hover {
 .material-switch > input[type="checkbox"]:checked + label::after {
     background: inherit;
     left: 20px;
+}
+.error-text {
+    margin-right: 2px;
+    margin-left: 2px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-radius: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-color: #ff4646;
+
+    cursor: pointer;
+}
+.success-text {
+    margin-right: 2px;
+    margin-left: 2px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-radius: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-color: #00ac23;
+    cursor: pointer;
+}
+.queue-text {
+    margin-right: 2px;
+    margin-left: 2px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-radius: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-color: #b4b4b4;
+    cursor: pointer;
+}
+.url-label {
+    color: #00a148;
+    font-weight: bold;
+}
+
+.ip-label {
+    color: rgb(44, 126, 255);
+    font-weight: bold;
+}
+.requestid-label {
+    font-weight: bold;
+    color: #bb00d8;
 }

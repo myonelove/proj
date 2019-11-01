@@ -1,6 +1,7 @@
 ﻿using BeetleX.FastHttpApi;
-using Lmf.Purchasing.Service.RPCClient;
-using Lmf.Service.Model;
+using BeetleX.FastHttpApi.Clients;
+using Lmf.Purchasing.Service.RPCClient; 
+using Lmf.Service.Model; 
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -40,5 +41,6 @@ namespace Lmf.Purchasing.Api.Controllers
             var ret = await _staffClient.GetStaffById(id);
             return ret;
         }
+         
     }
 }

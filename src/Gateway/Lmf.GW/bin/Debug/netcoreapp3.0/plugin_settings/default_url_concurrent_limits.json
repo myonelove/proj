@@ -1,1 +1,1 @@
-﻿{"UrlLimits":[],"CleanTime":1800}
+﻿{"UrlLimits":[{"Url":"^/jso.*","Rps":300},{"Url":"^/emp.*","Rps":100}],"CleanTime":1800}

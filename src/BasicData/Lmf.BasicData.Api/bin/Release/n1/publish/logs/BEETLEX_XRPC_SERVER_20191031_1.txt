@@ -1,0 +1,12 @@
+﻿[2019/10/31 19:51:17] [Info] Register IStaffService->StaffRPCService@GetStaff to /IStaffService/GetStaff[ThreadType:None|UniqueID:]
+[2019/10/31 19:51:17] [Info] Register IStaffService->StaffRPCService@GetStaffs to /IStaffService/GetStaffs[ThreadType:None|UniqueID:]
+[2019/10/31 19:51:17] [Info] Register IStaffService->StaffRPCService@AddStaff to /IStaffService/AddStaff[ThreadType:None|UniqueID:]
+[2019/10/31 19:51:17] [Info] Register IStaffService->StaffRPCService@ModifyStaff to /IStaffService/ModifyStaff[ThreadType:None|UniqueID:]
+[2019/10/31 19:51:17] [Error] listen 127.0.0.1@9610 error 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。|   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at BeetleX.ListenHandler.BeginListen()!
+[2019/10/31 19:51:17] [Warring] no serverGC mode,please enable serverGC mode!
+[2019/10/31 19:51:17] [Info] BeetleX [V:1.4.6.2]
+[2019/10/31 19:51:17] [Info] Environment [ServerGC:False][IOQueue:False|n:4][Threads:8][Private Buffer:False|1024KB]
+[2019/10/31 19:51:17] [Info] BeetleX XRPC started [0.6.2.0]
