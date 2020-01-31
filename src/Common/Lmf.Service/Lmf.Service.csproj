@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="BeetleX.Http.Clients" Version="0.8.8" />
-    <PackageReference Include="MessagePack" Version="1.8.74" />
+    <PackageReference Include="MessagePack" Version="1.9.3" />
   </ItemGroup>
 
 </Project>
